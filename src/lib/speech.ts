@@ -1,33 +1,73 @@
-let currentUtterance: SpeechSynthesisUtterance | null = null;
+let cachedFrenchVoice: SpeechSynthesisVoice | null = null;
+let voicesLoaded = false;
 
-export function speakFrench(text: string, rate = 0.85): void {
+function findFrenchVoice(): SpeechSynthesisVoice | null {
+  const voices = window.speechSynthesis.getVoices();
+  if (voices.length === 0) return null;
+
+  // Prefer native French voices (Thomas, Amelie, etc.)
+  return (
+    voices.find((v) => v.lang === "fr-FR" && v.localService) ||
+    voices.find((v) => v.lang === "fr-FR") ||
+    voices.find((v) => v.lang.startsWith("fr") && v.localService) ||
+    voices.find((v) => v.lang.startsWith("fr")) ||
+    null
+  );
+}
+
+function ensureVoicesLoaded(): Promise<void> {
+  if (voicesLoaded && cachedFrenchVoice) return Promise.resolve();
+
+  return new Promise<void>((resolve) => {
+    const voices = window.speechSynthesis.getVoices();
+    if (voices.length > 0) {
+      cachedFrenchVoice = findFrenchVoice();
+      voicesLoaded = true;
+      resolve();
+      return;
+    }
+
+    // Voices not yet loaded — wait for the event
+    const handler = () => {
+      cachedFrenchVoice = findFrenchVoice();
+      voicesLoaded = true;
+      window.speechSynthesis.removeEventListener("voiceschanged", handler);
+      resolve();
+    };
+    window.speechSynthesis.addEventListener("voiceschanged", handler);
+
+    // Fallback timeout so we don't hang forever
+    setTimeout(() => {
+      cachedFrenchVoice = findFrenchVoice();
+      voicesLoaded = true;
+      window.speechSynthesis.removeEventListener("voiceschanged", handler);
+      resolve();
+    }, 1000);
+  });
+}
+
+export async function speakFrench(text: string, rate = 0.85): Promise<void> {
   if (typeof window === "undefined" || !window.speechSynthesis) return;
 
-  // Stop any ongoing speech
   window.speechSynthesis.cancel();
+
+  await ensureVoicesLoaded();
 
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "fr-FR";
   utterance.rate = rate;
   utterance.pitch = 1;
 
-  // Try to find a French voice
-  const voices = window.speechSynthesis.getVoices();
-  const frenchVoice = voices.find(
-    (v) => v.lang.startsWith("fr") && v.localService
-  ) || voices.find((v) => v.lang.startsWith("fr"));
-  if (frenchVoice) {
-    utterance.voice = frenchVoice;
+  if (cachedFrenchVoice) {
+    utterance.voice = cachedFrenchVoice;
   }
 
-  currentUtterance = utterance;
   window.speechSynthesis.speak(utterance);
 }
 
 export function stopSpeech(): void {
   if (typeof window === "undefined" || !window.speechSynthesis) return;
   window.speechSynthesis.cancel();
-  currentUtterance = null;
 }
 
 export function isSpeechSupported(): boolean {
