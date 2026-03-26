@@ -10,6 +10,7 @@ import {
   reviewCard,
   getDueCards,
 } from "@/lib/progress";
+import { parseRoute, navigateTo, replaceTo, Route } from "@/lib/router";
 import HomeView from "./HomeView";
 import ReadingView from "./ReadingView";
 import FlashCard from "./FlashCard";
@@ -29,16 +30,46 @@ interface AppProps {
   dictionary: Record<string, DictEntry>;
 }
 
+type View = "home" | "chapter" | "vocabList";
 type SubView = "reading" | "flashcard" | "conjugation" | "comprehension" | "summary";
 
 export default function App({ chapters, dictionary }: AppProps) {
   const [progress, setProgress] = useState<Progress | null>(null);
-  const [view, setView] = useState<"home" | "chapter" | "vocabList">("home");
+  const [view, setView] = useState<View>("home");
   const [subView, setSubView] = useState<SubView>("reading");
   const [activeChapter, setActiveChapter] = useState<number>(1);
   const [flashCardIdx, setFlashCardIdx] = useState(0);
   const [drillIdx, setDrillIdx] = useState(0);
   const [reviewMode, setReviewMode] = useState(false);
+
+  // Apply a parsed route to component state (no pushState)
+  const applyRoute = useCallback((route: Route) => {
+    setView(route.view);
+    if (route.subView) setSubView(route.subView);
+    if (route.chapterNum) setActiveChapter(route.chapterNum);
+    setReviewMode(!!route.reviewMode);
+    if (route.reviewMode) {
+      setFlashCardIdx(0);
+    }
+  }, []);
+
+  // Navigate: update state + push to history
+  const nav = useCallback((route: Route) => {
+    navigateTo(route);
+  }, []);
+
+  // Listen to popstate (back/forward) and initial load
+  useEffect(() => {
+    const handlePopState = () => {
+      applyRoute(parseRoute());
+    };
+    window.addEventListener("popstate", handlePopState);
+
+    // Apply initial route from URL
+    applyRoute(parseRoute());
+
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, [applyRoute]);
 
   // Load progress on mount
   useEffect(() => {
@@ -63,17 +94,13 @@ export default function App({ chapters, dictionary }: AppProps) {
   );
 
   const handleStartReading = (chapterNum: number) => {
-    setActiveChapter(chapterNum);
-    setSubView("reading");
-    setView("chapter");
     save((p) => ({ ...p, currentChapter: chapterNum }));
+    nav({ view: "chapter", subView: "reading", chapterNum });
   };
 
   const handleStartReview = () => {
-    setReviewMode(true);
+    nav({ view: "chapter", subView: "flashcard", reviewMode: true });
     setFlashCardIdx(0);
-    setView("chapter");
-    setSubView("flashcard");
   };
 
   const handleWordTap = (_entry: VocabEntry) => {
@@ -105,8 +132,9 @@ export default function App({ chapters, dictionary }: AppProps) {
   const handleChapterComplete = () => {
     // Move to vocab review for this chapter
     setFlashCardIdx(0);
-    setSubView("flashcard");
     setReviewMode(false);
+    replaceTo({ view: "chapter", subView: "flashcard", chapterNum: activeChapter });
+    setSubView("flashcard");
   };
 
   const handleFlashcardRate = (quality: 0 | 1 | 2 | 3 | 4 | 5) => {
@@ -127,7 +155,7 @@ export default function App({ chapters, dictionary }: AppProps) {
         setFlashCardIdx((i) => i + 1);
       } else {
         setReviewMode(false);
-        setView("home");
+        nav({ view: "home" });
       }
       return;
     }
@@ -140,8 +168,10 @@ export default function App({ chapters, dictionary }: AppProps) {
       // Move to conjugation drills
       setDrillIdx(0);
       if (chapter?.conjugations?.length) {
+        replaceTo({ view: "chapter", subView: "conjugation", chapterNum: activeChapter });
         setSubView("conjugation");
       } else if (chapter?.comprehension?.length) {
+        replaceTo({ view: "chapter", subView: "comprehension", chapterNum: activeChapter });
         setSubView("comprehension");
       } else {
         finishChapter();
@@ -175,6 +205,7 @@ export default function App({ chapters, dictionary }: AppProps) {
     if (drillIdx < drills.length - 1) {
       setDrillIdx((i) => i + 1);
     } else if (chapter?.comprehension?.length) {
+      replaceTo({ view: "chapter", subView: "comprehension", chapterNum: activeChapter });
       setSubView("comprehension");
     } else {
       finishChapter();
@@ -193,6 +224,7 @@ export default function App({ chapters, dictionary }: AppProps) {
         : [...p.completedChapters, activeChapter],
       currentChapter: Math.min(activeChapter + 1, 27),
     }));
+    replaceTo({ view: "chapter", subView: "summary", chapterNum: activeChapter });
     setSubView("summary");
   };
 
@@ -214,7 +246,7 @@ export default function App({ chapters, dictionary }: AppProps) {
         progress={progress}
         onStartReading={handleStartReading}
         onStartReview={handleStartReview}
-        onShowVocabList={() => setView("vocabList")}
+        onShowVocabList={() => nav({ view: "vocabList" })}
       />
     );
   }
@@ -224,7 +256,7 @@ export default function App({ chapters, dictionary }: AppProps) {
       <VocabList
         chapters={chapters}
         progress={progress}
-        onBack={() => setView("home")}
+        onBack={() => nav({ view: "home" })}
       />
     );
   }
@@ -248,7 +280,7 @@ export default function App({ chapters, dictionary }: AppProps) {
         onMarkKnown={handleMarkKnown}
         onAddToReview={handleAddToReview}
         onChapterComplete={handleChapterComplete}
-        onBack={() => setView("home")}
+        onBack={() => nav({ view: "home" })}
       />
     );
   }
@@ -265,7 +297,7 @@ export default function App({ chapters, dictionary }: AppProps) {
               今日の復習カードはすべて終わりました
             </p>
             <button
-              onClick={() => setView("home")}
+              onClick={() => nav({ view: "home" })}
               className="tap-target bg-gold text-white rounded-xl px-6 py-3 text-sm font-medium"
             >
               ホームに戻る
@@ -287,7 +319,7 @@ export default function App({ chapters, dictionary }: AppProps) {
         <div className="min-h-screen flex flex-col px-4 pt-8">
           <div className="flex items-center justify-between mb-6">
             <button
-              onClick={() => { setReviewMode(false); setView("home"); }}
+              onClick={() => { setReviewMode(false); nav({ view: "home" }); }}
               className="tap-target text-navy/50"
             >
               &larr; 戻る
@@ -324,7 +356,7 @@ export default function App({ chapters, dictionary }: AppProps) {
       <div className="min-h-screen flex flex-col px-4 pt-8">
         <div className="flex items-center justify-between mb-6">
           <button
-            onClick={() => setView("home")}
+            onClick={() => nav({ view: "home" })}
             className="tap-target text-navy/50"
           >
             &larr; 戻る
@@ -336,6 +368,7 @@ export default function App({ chapters, dictionary }: AppProps) {
             onClick={() => {
               if (chapter.conjugations?.length) {
                 setDrillIdx(0);
+                replaceTo({ view: "chapter", subView: "conjugation", chapterNum: activeChapter });
                 setSubView("conjugation");
               } else {
                 finishChapter();
@@ -361,6 +394,7 @@ export default function App({ chapters, dictionary }: AppProps) {
     const drills = chapter.conjugations || [];
     if (drills.length === 0) {
       if (chapter.comprehension?.length) {
+        replaceTo({ view: "chapter", subView: "comprehension", chapterNum: activeChapter });
         setSubView("comprehension");
         return null;
       }
@@ -376,7 +410,7 @@ export default function App({ chapters, dictionary }: AppProps) {
       <div className="min-h-screen flex flex-col px-4 pt-8">
         <div className="flex items-center justify-between mb-6">
           <button
-            onClick={() => setView("home")}
+            onClick={() => nav({ view: "home" })}
             className="tap-target text-navy/50"
           >
             &larr; 戻る
@@ -387,6 +421,7 @@ export default function App({ chapters, dictionary }: AppProps) {
           <button
             onClick={() => {
               if (chapter.comprehension?.length) {
+                replaceTo({ view: "chapter", subView: "comprehension", chapterNum: activeChapter });
                 setSubView("comprehension");
               } else {
                 finishChapter();
@@ -417,7 +452,7 @@ export default function App({ chapters, dictionary }: AppProps) {
       <div className="min-h-screen flex flex-col px-4 pt-8">
         <div className="flex items-center justify-between mb-6">
           <button
-            onClick={() => setView("home")}
+            onClick={() => nav({ view: "home" })}
             className="tap-target text-navy/50"
           >
             &larr; 戻る
@@ -445,7 +480,7 @@ export default function App({ chapters, dictionary }: AppProps) {
       <ChapterSummary
         chapter={chapter}
         progress={progress}
-        onContinue={() => setView("home")}
+        onContinue={() => nav({ view: "home" })}
       />
     );
   }
