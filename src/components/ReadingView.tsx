@@ -59,21 +59,33 @@ export default function ReadingView({
     return map;
   }, [chapter.vocabulary]);
 
-  // Build sentence translation map
+  // Normalize text for matching: strip newlines, collapse spaces, lowercase
+  const normalize = (s: string) =>
+    s.replace(/\n/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
+
+  // Build sentence translation map with normalized keys
   const translationMap = useMemo(() => {
     const map = new Map<string, string>();
     for (const t of chapter.sentenceTranslations || []) {
-      const key = t.french.trim().toLowerCase().slice(0, 60);
-      map.set(key, t.japanese);
+      map.set(normalize(t.french), t.japanese);
     }
     return map;
   }, [chapter.sentenceTranslations]);
 
   const findTranslation = useCallback(
     (sentence: string): string | null => {
-      const key = sentence.trim().toLowerCase().slice(0, 60);
+      const key = normalize(sentence);
+      // Exact match
       for (const [k, v] of translationMap) {
-        if (key.startsWith(k.slice(0, 30)) || k.startsWith(key.slice(0, 30))) {
+        if (k === key) return v;
+      }
+      // Fuzzy: first 25 chars match
+      for (const [k, v] of translationMap) {
+        if (
+          key.slice(0, 25) === k.slice(0, 25) ||
+          k.includes(key.slice(0, 30)) ||
+          key.includes(k.slice(0, 30))
+        ) {
           return v;
         }
       }
@@ -82,9 +94,27 @@ export default function ReadingView({
     [translationMap]
   );
 
+  // Collect all translations for the current paragraph
+  const paragraphTranslations = useMemo(() => {
+    const results: { french: string; japanese: string }[] = [];
+    for (const t of chapter.sentenceTranslations || []) {
+      const normPara = normalize(paragraph);
+      const normFr = normalize(t.french);
+      // Check if this translation's source sentence appears in this paragraph
+      if (
+        normPara.includes(normFr.slice(0, 30)) ||
+        normFr.includes(normPara.slice(0, 30))
+      ) {
+        results.push({ french: t.french, japanese: t.japanese });
+      }
+    }
+    return results;
+  }, [paragraph, chapter.sentenceTranslations]);
+
   // Split paragraph into sentences
   const sentences = useMemo(() => {
-    return paragraph.split(/(?<=[.!?])\s+/).filter(Boolean);
+    const normalized = paragraph.replace(/\n/g, " ");
+    return normalized.split(/(?<=[.!?])\s+/).filter(Boolean);
   }, [paragraph]);
 
   // Look up a word: first in chapter vocab, then in full dictionary
@@ -127,6 +157,7 @@ export default function ReadingView({
   const goNext = () => {
     if (paragraphIndex < totalParagraphs - 1) {
       setParagraphIndex((i) => i + 1);
+      setShowGrammar(false);
     } else {
       onChapterComplete();
     }
@@ -135,6 +166,7 @@ export default function ReadingView({
   const goPrev = () => {
     if (paragraphIndex > 0) {
       setParagraphIndex((i) => i - 1);
+      setShowGrammar(false);
     }
   };
 
@@ -253,6 +285,20 @@ export default function ReadingView({
             );
           })}
         </div>
+
+        {/* Fallback: show paragraph-level translations if no inline matches found */}
+        {showAllTranslations &&
+          sentences.every((s) => !findTranslation(s)) &&
+          paragraphTranslations.length > 0 && (
+            <div className="bg-cream-dark rounded-xl p-3 mb-4 fade-in">
+              <p className="text-xs text-navy/40 mb-2">この段落の翻訳</p>
+              {paragraphTranslations.map((t, i) => (
+                <p key={i} className="text-sm text-navy/60 mb-1 last:mb-0">
+                  {t.japanese}
+                </p>
+              ))}
+            </div>
+          )}
 
         {/* Grammar section */}
         {showGrammar && chapter.grammar.length > 0 && (
