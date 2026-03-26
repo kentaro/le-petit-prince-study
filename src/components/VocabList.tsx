@@ -22,40 +22,70 @@ const posColors: Record<string, string> = {
   "prép": "bg-gold/20 text-gold",
 };
 
+interface DictEntry {
+  pos: string;
+  gender: string | null;
+  japanese: string;
+}
+
 interface VocabListProps {
   chapters: Chapter[];
+  dictionary: Record<string, DictEntry>;
   progress: Progress;
   onBack: () => void;
 }
 
 type FilterPos = "all" | "nom" | "verbe" | "adj" | "adv" | "expr" | "prép";
 type FilterStatus = "all" | "known" | "reviewing" | "new";
+type FilterSource = "all" | "chapter" | "dictionary";
 
 export default function VocabList({
   chapters,
+  dictionary,
   progress,
   onBack,
 }: VocabListProps) {
   const [search, setSearch] = useState("");
   const [filterPos, setFilterPos] = useState<FilterPos>("all");
   const [filterStatus, setFilterStatus] = useState<FilterStatus>("all");
+  const [filterSource, setFilterSource] = useState<FilterSource>("all");
   const [selectedChapter, setSelectedChapter] = useState<number | null>(null);
 
-  // Collect all unique vocabulary across chapters
+  // Collect all unique vocabulary: chapter vocab + full dictionary
   const allVocab = useMemo(() => {
     const seen = new Set<string>();
-    const result: (VocabEntry & { chapterNum: number })[] = [];
+    const result: (VocabEntry & { chapterNum: number | null; source: "chapter" | "dictionary" })[] = [];
+
+    // 1. Chapter vocabulary (richer data with examples, CEFR)
     for (const ch of chapters) {
       for (const v of ch.vocabulary) {
         const key = v.french.toLowerCase();
         if (!seen.has(key)) {
           seen.add(key);
-          result.push({ ...v, chapterNum: ch.number });
+          result.push({ ...v, chapterNum: ch.number, source: "chapter" });
         }
       }
     }
+
+    // 2. Full dictionary entries not already covered
+    for (const [word, entry] of Object.entries(dictionary)) {
+      if (!seen.has(word)) {
+        seen.add(word);
+        result.push({
+          french: word,
+          pos: entry.pos as VocabEntry["pos"],
+          gender: entry.gender as VocabEntry["gender"],
+          japanese: entry.japanese,
+          example: "",
+          cefr: "A2",
+          chapterNum: null,
+          source: "dictionary",
+        });
+      }
+    }
+
     return result;
-  }, [chapters]);
+  }, [chapters, dictionary]);
 
   const filtered = useMemo(() => {
     return allVocab.filter((v) => {
@@ -71,6 +101,8 @@ export default function VocabList({
       }
       // POS filter
       if (filterPos !== "all" && v.pos !== filterPos) return false;
+      // Source filter
+      if (filterSource !== "all" && v.source !== filterSource) return false;
       // Chapter filter
       if (selectedChapter !== null && v.chapterNum !== selectedChapter) return false;
       // Status filter
@@ -82,7 +114,7 @@ export default function VocabList({
       if (filterStatus === "new" && (isKnown || isReviewing)) return false;
       return true;
     });
-  }, [allVocab, search, filterPos, filterStatus, selectedChapter, progress]);
+  }, [allVocab, search, filterPos, filterStatus, filterSource, selectedChapter, progress]);
 
   const stats = useMemo(() => {
     const total = allVocab.length;
@@ -175,6 +207,28 @@ export default function VocabList({
                     : status === "reviewing"
                       ? "復習中"
                       : "未学習"}
+              </button>
+            )
+          )}
+        </div>
+
+        <div className="flex gap-1.5 mb-4">
+          {(["all", "chapter", "dictionary"] as FilterSource[]).map(
+            (source) => (
+              <button
+                key={source}
+                onClick={() => setFilterSource(source)}
+                className={`px-2.5 py-1 rounded-full text-xs transition-colors ${
+                  filterSource === source
+                    ? "bg-navy text-white"
+                    : "bg-cream-dark text-navy/50"
+                }`}
+              >
+                {source === "all"
+                  ? "全ソース"
+                  : source === "chapter"
+                    ? "章の語彙"
+                    : "辞書"}
               </button>
             )
           )}

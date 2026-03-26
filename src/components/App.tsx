@@ -255,6 +255,7 @@ export default function App({ chapters, dictionary }: AppProps) {
     return (
       <VocabList
         chapters={chapters}
+        dictionary={dictionary}
         progress={progress}
         onBack={() => nav({ view: "home" })}
       />
