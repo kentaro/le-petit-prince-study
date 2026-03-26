@@ -1,6 +1,7 @@
 "use client";
 
 import { VocabEntry } from "@/lib/types";
+import { speakFrench, isSpeechSupported } from "@/lib/speech";
 
 const posLabels: Record<string, string> = {
   nom: "名詞",
@@ -74,6 +75,16 @@ export default function WordPopup({
             &times;
           </button>
         </div>
+
+        {/* Pronunciation button */}
+        {isSpeechSupported() && (
+          <button
+            onClick={() => speakFrench(entry.french, 0.7)}
+            className="tap-target mb-3 flex items-center gap-1.5 text-sm text-navy/50 hover:text-gold transition-colors"
+          >
+            <span className="text-base">&#x1f50a;</span> 発音を聞く
+          </button>
+        )}
 
         {/* Meaning */}
         <div className="bg-cream-dark rounded-xl p-3 mb-3">

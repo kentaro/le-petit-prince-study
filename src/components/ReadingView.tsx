@@ -4,6 +4,7 @@ import { useState, useMemo, useCallback } from "react";
 import { Chapter, VocabEntry } from "@/lib/types";
 import WordPopup from "./WordPopup";
 import GrammarPanel from "./GrammarPanel";
+import { speakFrench, stopSpeech, isSpeechSupported } from "@/lib/speech";
 
 interface DictEntry {
   pos: string;
@@ -41,6 +42,25 @@ export default function ReadingView({
   const [showGrammar, setShowGrammar] = useState(false);
   const [highlightMode, setHighlightMode] = useState(false);
   const [showAllTranslations, setShowAllTranslations] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [fontSize, setFontSize] = useState<"small" | "medium" | "large">(() => {
+    if (typeof window !== "undefined") {
+      return (localStorage.getItem("lpp-fontsize") as "small" | "medium" | "large") || "medium";
+    }
+    return "medium";
+  });
+
+  const fontSizeClass = {
+    small: "text-base leading-relaxed",
+    medium: "text-lg leading-relaxed",
+    large: "text-xl leading-loose",
+  }[fontSize];
+
+  const cycleFontSize = () => {
+    const next = fontSize === "small" ? "medium" : fontSize === "medium" ? "large" : "small";
+    setFontSize(next);
+    localStorage.setItem("lpp-fontsize", next);
+  };
 
   const paragraph = chapter.paragraphs[paragraphIndex] || "";
   const totalParagraphs = chapter.paragraphs.length;
@@ -264,7 +284,7 @@ export default function ReadingView({
         </p>
 
         {/* French text with inline translations */}
-        <div className="french-text mb-4">
+        <div className={`french-text mb-4 ${fontSizeClass}`}>
           {sentences.map((sentence, sIdx) => {
             const translation = showAllTranslations
               ? findTranslation(sentence)
@@ -318,6 +338,29 @@ export default function ReadingView({
           </button>
 
           <div className="flex gap-1.5">
+            {isSpeechSupported() && (
+              <button
+                onClick={() => {
+                  if (isSpeaking) {
+                    stopSpeech();
+                    setIsSpeaking(false);
+                  } else {
+                    setIsSpeaking(true);
+                    speakFrench(paragraph);
+                    // Reset after speech ends (approximate)
+                    const wordCount = paragraph.split(/\s+/).length;
+                    setTimeout(() => setIsSpeaking(false), wordCount * 400 + 1000);
+                  }
+                }}
+                className={`tap-target px-3 py-2 rounded-xl text-xs transition-colors ${
+                  isSpeaking
+                    ? "bg-gold/20 text-gold"
+                    : "bg-cream-dark text-navy/50"
+                }`}
+              >
+                {isSpeaking ? "&#9632;" : "&#x1f50a;"}
+              </button>
+            )}
             <button
               onClick={() => setShowAllTranslations(!showAllTranslations)}
               className={`tap-target px-3 py-2 rounded-xl text-xs transition-colors ${
@@ -347,6 +390,13 @@ export default function ReadingView({
               }`}
             >
               文法
+            </button>
+            <button
+              onClick={cycleFontSize}
+              className="tap-target px-3 py-2 rounded-xl text-xs transition-colors bg-cream-dark text-navy/50"
+              title={`フォントサイズ: ${fontSize === "small" ? "小" : fontSize === "medium" ? "中" : "大"}`}
+            >
+              {fontSize === "small" ? "A" : fontSize === "medium" ? "A+" : "A++"}
             </button>
           </div>
 

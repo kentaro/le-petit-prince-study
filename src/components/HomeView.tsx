@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import { Chapter, Progress } from "@/lib/types";
 import { getDueCards } from "@/lib/progress";
 import ChapterSelect from "./ChapterSelect";
@@ -9,6 +10,7 @@ interface HomeViewProps {
   progress: Progress;
   onStartReading: (chapterNumber: number) => void;
   onStartReview: () => void;
+  onShowVocabList: () => void;
 }
 
 export default function HomeView({
@@ -16,6 +18,7 @@ export default function HomeView({
   progress,
   onStartReading,
   onStartReview,
+  onShowVocabList,
 }: HomeViewProps) {
   const dueCards = getDueCards(progress);
   const totalVocab = chapters.reduce(
@@ -86,6 +89,30 @@ export default function HomeView({
           </div>
         </div>
 
+        {/* Weekly activity heatmap */}
+        <WeeklyActivity studyLog={progress.studyLog || []} />
+
+        {/* SRS distribution */}
+        <SRSDistribution progress={progress} chapters={chapters} />
+
+        {/* Vocab list button */}
+        <button
+          onClick={onShowVocabList}
+          className="w-full bg-periwinkle/10 hover:bg-periwinkle/20 rounded-xl p-4 mb-4 text-left transition-colors tap-target"
+        >
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-periwinkle">
+                語彙一覧
+              </p>
+              <p className="text-xs text-navy/40">
+                学習した語彙を検索・フィルター
+              </p>
+            </div>
+            <span className="text-periwinkle text-xl">&rarr;</span>
+          </div>
+        </button>
+
         {/* Review reminder */}
         {dueCards.length > 0 && (
           <button
@@ -139,6 +166,135 @@ export default function HomeView({
           onSelect={onStartReading}
         />
       </main>
+    </div>
+  );
+}
+
+// --- Sub-components ---
+
+const DAY_LABELS = ["月", "火", "水", "木", "金", "土", "日"];
+
+function WeeklyActivity({ studyLog }: { studyLog: { date: string; wordsReviewed: number }[] }) {
+  const days = useMemo(() => {
+    const result: { label: string; date: string; active: boolean; words: number }[] = [];
+    const today = new Date();
+    for (let i = 6; i >= 0; i--) {
+      const d = new Date(today);
+      d.setDate(d.getDate() - i);
+      const dateStr = d.toISOString().slice(0, 10);
+      const dayOfWeek = (d.getDay() + 6) % 7; // Mon=0
+      const entry = studyLog.find((e) => e.date === dateStr);
+      result.push({
+        label: DAY_LABELS[dayOfWeek],
+        date: dateStr,
+        active: !!entry,
+        words: entry?.wordsReviewed || 0,
+      });
+    }
+    return result;
+  }, [studyLog]);
+
+  return (
+    <div className="bg-white rounded-xl p-4 shadow-sm mb-4">
+      <p className="text-sm font-medium mb-3">今週の学習</p>
+      <div className="flex justify-between gap-1">
+        {days.map((day) => (
+          <div key={day.date} className="flex-1 text-center">
+            <div
+              className={`w-full aspect-square rounded-lg mb-1 flex items-center justify-center text-xs ${
+                day.active
+                  ? "bg-sage/30 text-sage font-medium"
+                  : "bg-cream-dark text-navy/20"
+              }`}
+            >
+              {day.active ? day.words || "✓" : ""}
+            </div>
+            <p className="text-xs text-navy/30">{day.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function SRSDistribution({ progress, chapters }: { progress: Progress; chapters: Chapter[] }) {
+  const stats = useMemo(() => {
+    const allVocab = chapters.flatMap((ch) => ch.vocabulary || []);
+    const posCount: Record<string, { total: number; known: number }> = {};
+    for (const v of allVocab) {
+      if (!posCount[v.pos]) posCount[v.pos] = { total: 0, known: 0 };
+      posCount[v.pos].total++;
+      if (progress.knownWords.includes(v.french.toLowerCase())) {
+        posCount[v.pos].known++;
+      }
+    }
+
+    // SRS intervals distribution
+    const cards = Object.values(progress.vocab);
+    const newCards = cards.filter((c) => c.repetitions === 0).length;
+    const learning = cards.filter((c) => c.repetitions > 0 && c.interval <= 7).length;
+    const mature = cards.filter((c) => c.interval > 7).length;
+
+    return { posCount, newCards, learning, mature, totalCards: cards.length };
+  }, [progress, chapters]);
+
+  const posLabels: Record<string, string> = {
+    nom: "名詞", verbe: "動詞", adj: "形容詞", adv: "副詞", expr: "表現", "prép": "前置詞",
+  };
+  const posColors: Record<string, string> = {
+    nom: "bg-periwinkle", verbe: "bg-sage", adj: "bg-rose", adv: "bg-lavender", expr: "bg-sand", "prép": "bg-gold",
+  };
+
+  return (
+    <div className="bg-white rounded-xl p-4 shadow-sm mb-4">
+      <p className="text-sm font-medium mb-3">学習分析</p>
+
+      {/* SRS stages */}
+      {stats.totalCards > 0 && (
+        <div className="mb-4">
+          <p className="text-xs text-navy/40 mb-2">SRS ステージ</p>
+          <div className="flex gap-2">
+            <div className="flex-1 bg-rose/10 rounded-lg p-2 text-center">
+              <p className="text-sm font-bold text-rose">{stats.newCards}</p>
+              <p className="text-xs text-navy/40">新規</p>
+            </div>
+            <div className="flex-1 bg-gold/10 rounded-lg p-2 text-center">
+              <p className="text-sm font-bold text-gold">{stats.learning}</p>
+              <p className="text-xs text-navy/40">学習中</p>
+            </div>
+            <div className="flex-1 bg-sage/10 rounded-lg p-2 text-center">
+              <p className="text-sm font-bold text-sage">{stats.mature}</p>
+              <p className="text-xs text-navy/40">定着</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* POS breakdown */}
+      <p className="text-xs text-navy/40 mb-2">品詞別進捗</p>
+      <div className="space-y-2">
+        {Object.entries(stats.posCount)
+          .sort((a, b) => b[1].total - a[1].total)
+          .map(([pos, { total, known }]) => {
+            const pct = total > 0 ? Math.round((known / total) * 100) : 0;
+            return (
+              <div key={pos}>
+                <div className="flex justify-between text-xs mb-0.5">
+                  <span className="text-navy/60">{posLabels[pos] || pos}</span>
+                  <span className="text-navy/30">
+                    {known}/{total} ({pct}%)
+                  </span>
+                </div>
+                <div className="h-1.5 bg-cream-dark rounded-full overflow-hidden">
+                  <div
+                    className={`h-full rounded-full progress-fill ${posColors[pos] || "bg-navy/20"}`}
+                    style={{ width: `${pct}%` }}
+                  />
+                </div>
+              </div>
+            );
+          })}
+      </div>
     </div>
   );
 }

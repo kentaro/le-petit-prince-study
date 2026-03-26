@@ -15,6 +15,8 @@ import ReadingView from "./ReadingView";
 import FlashCard from "./FlashCard";
 import ConjugationDrill from "./ConjugationDrill";
 import ComprehensionQuiz from "./ComprehensionQuiz";
+import VocabList from "./VocabList";
+import ChapterSummary from "./ChapterSummary";
 
 interface DictEntry {
   pos: string;
@@ -27,11 +29,11 @@ interface AppProps {
   dictionary: Record<string, DictEntry>;
 }
 
-type SubView = "reading" | "flashcard" | "conjugation" | "comprehension";
+type SubView = "reading" | "flashcard" | "conjugation" | "comprehension" | "summary";
 
 export default function App({ chapters, dictionary }: AppProps) {
   const [progress, setProgress] = useState<Progress | null>(null);
-  const [view, setView] = useState<"home" | "chapter">("home");
+  const [view, setView] = useState<"home" | "chapter" | "vocabList">("home");
   const [subView, setSubView] = useState<SubView>("reading");
   const [activeChapter, setActiveChapter] = useState<number>(1);
   const [flashCardIdx, setFlashCardIdx] = useState(0);
@@ -191,7 +193,7 @@ export default function App({ chapters, dictionary }: AppProps) {
         : [...p.completedChapters, activeChapter],
       currentChapter: Math.min(activeChapter + 1, 27),
     }));
-    setView("home");
+    setSubView("summary");
   };
 
   if (!progress) {
@@ -212,6 +214,17 @@ export default function App({ chapters, dictionary }: AppProps) {
         progress={progress}
         onStartReading={handleStartReading}
         onStartReview={handleStartReview}
+        onShowVocabList={() => setView("vocabList")}
+      />
+    );
+  }
+
+  if (view === "vocabList") {
+    return (
+      <VocabList
+        chapters={chapters}
+        progress={progress}
+        onBack={() => setView("home")}
       />
     );
   }
@@ -424,6 +437,16 @@ export default function App({ chapters, dictionary }: AppProps) {
           onComplete={handleComprehensionComplete}
         />
       </div>
+    );
+  }
+
+  if (subView === "summary") {
+    return (
+      <ChapterSummary
+        chapter={chapter}
+        progress={progress}
+        onContinue={() => setView("home")}
+      />
     );
   }
 

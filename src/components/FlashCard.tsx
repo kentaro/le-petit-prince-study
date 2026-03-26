@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { VocabEntry, SRSCard } from "@/lib/types";
+import { speakFrench, isSpeechSupported } from "@/lib/speech";
 
 interface FlashCardProps {
   entry: VocabEntry;
@@ -38,7 +39,7 @@ export default function FlashCard({
         </p>
 
         {/* Part of speech & gender */}
-        <div className="flex items-center gap-2 mb-4">
+        <div className="flex items-center gap-2 mb-2">
           <span className="text-xs text-navy/40">{entry.pos}</span>
           {entry.gender && (
             <span className="text-xs text-navy/40">
@@ -46,6 +47,17 @@ export default function FlashCard({
             </span>
           )}
         </div>
+
+        {/* Pronunciation */}
+        {isSpeechSupported() && (
+          <button
+            onClick={(e) => { e.stopPropagation(); speakFrench(entry.french, 0.7); }}
+            className="tap-target mb-2 text-navy/40 hover:text-gold transition-colors text-lg"
+            title="発音を聞く"
+          >
+            &#x1f50a;
+          </button>
+        )}
 
         {/* Context sentence */}
         <p className="font-[family-name:var(--font-serif)] text-sm italic text-navy/50 text-center leading-relaxed mb-4">

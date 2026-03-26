@@ -11,6 +11,7 @@ const defaultProgress: Progress = {
   completedChapters: [],
   conjugationScores: {},
   totalWordsLearned: 0,
+  studyLog: [],
 };
 
 export function loadProgress(): Progress {
@@ -38,7 +39,42 @@ export function updateStreak(progress: Progress): Progress {
   const newStreak =
     progress.lastStudyDate === yesterday ? progress.streak + 1 : 1;
 
-  return { ...progress, streak: newStreak, lastStudyDate: today };
+  // Add today's study log entry if not already present
+  const log = progress.studyLog || [];
+  const hasToday = log.some((e) => e.date === today);
+  const updatedLog = hasToday
+    ? log
+    : [...log.slice(-29), { date: today, wordsReviewed: 0, chaptersCompleted: 0 }];
+
+  return { ...progress, streak: newStreak, lastStudyDate: today, studyLog: updatedLog };
+}
+
+export function recordStudyActivity(
+  progress: Progress,
+  wordsReviewed: number,
+  chaptersCompleted: number
+): Progress {
+  const today = new Date().toISOString().slice(0, 10);
+  const log = progress.studyLog || [];
+  const todayIdx = log.findIndex((e) => e.date === today);
+
+  if (todayIdx >= 0) {
+    const updated = [...log];
+    updated[todayIdx] = {
+      ...updated[todayIdx],
+      wordsReviewed: updated[todayIdx].wordsReviewed + wordsReviewed,
+      chaptersCompleted: updated[todayIdx].chaptersCompleted + chaptersCompleted,
+    };
+    return { ...progress, studyLog: updated };
+  }
+
+  return {
+    ...progress,
+    studyLog: [
+      ...log.slice(-29),
+      { date: today, wordsReviewed, chaptersCompleted },
+    ],
+  };
 }
 
 // SM-2 Spaced Repetition Algorithm

@@ -71,6 +71,12 @@ export interface SRSCard {
   lastReview: string;
 }
 
+export interface StudyLogEntry {
+  date: string; // ISO date (YYYY-MM-DD)
+  wordsReviewed: number;
+  chaptersCompleted: number;
+}
+
 export interface Progress {
   currentChapter: number;
   streak: number;
@@ -80,6 +86,7 @@ export interface Progress {
   completedChapters: number[];
   conjugationScores: Record<string, number>;
   totalWordsLearned: number;
+  studyLog: StudyLogEntry[];
 }
 
 export type ViewMode = "reading" | "vocab" | "conjugation" | "comprehension" | "home";
