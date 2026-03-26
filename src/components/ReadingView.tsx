@@ -1,12 +1,19 @@
 "use client";
 
 import { useState, useMemo, useCallback } from "react";
-import { Chapter, VocabEntry, SentenceTranslation } from "@/lib/types";
+import { Chapter, VocabEntry } from "@/lib/types";
 import WordPopup from "./WordPopup";
 import GrammarPanel from "./GrammarPanel";
 
+interface DictEntry {
+  pos: string;
+  gender: string | null;
+  japanese: string;
+}
+
 interface ReadingViewProps {
   chapter: Chapter;
+  dictionary: Record<string, DictEntry>;
   knownWords: string[];
   onWordTap: (entry: VocabEntry) => void;
   onMarkKnown: (word: string) => void;
@@ -15,8 +22,13 @@ interface ReadingViewProps {
   onBack: () => void;
 }
 
+function cleanWord(word: string): string {
+  return word.toLowerCase().replace(/[.,;:!?«»"'()\-–—\n\r]/g, "").trim();
+}
+
 export default function ReadingView({
   chapter,
+  dictionary,
   knownWords,
   onWordTap,
   onMarkKnown,
@@ -34,10 +46,14 @@ export default function ReadingView({
   const totalParagraphs = chapter.paragraphs.length;
   const progressPct = ((paragraphIndex + 1) / totalParagraphs) * 100;
 
-  // Build a lookup map for vocabulary words
+  // Build a lookup map for chapter vocabulary (richer data with examples)
   const vocabMap = useMemo(() => {
     const map = new Map<string, VocabEntry>();
     for (const v of chapter.vocabulary) {
+      // Strip leading articles for matching: "la forêt" → "forêt", "le serpent" → "serpent"
+      const key = v.french.toLowerCase().replace(/^(le |la |l'|les |un |une |des )/, "");
+      map.set(key, v);
+      // Also add the full form
       map.set(v.french.toLowerCase(), v);
     }
     return map;
@@ -47,7 +63,6 @@ export default function ReadingView({
   const translationMap = useMemo(() => {
     const map = new Map<string, string>();
     for (const t of chapter.sentenceTranslations || []) {
-      // Normalize: trim and lowercase first few chars for matching
       const key = t.french.trim().toLowerCase().slice(0, 60);
       map.set(key, t.japanese);
     }
@@ -67,14 +82,42 @@ export default function ReadingView({
     [translationMap]
   );
 
-  // Split paragraph into sentences for tap-to-translate
+  // Split paragraph into sentences
   const sentences = useMemo(() => {
     return paragraph.split(/(?<=[.!?])\s+/).filter(Boolean);
   }, [paragraph]);
 
-  const handleWordClick = (word: string) => {
-    const cleaned = word.toLowerCase().replace(/[.,;:!?«»"'()\-–—]/g, "");
-    const entry = vocabMap.get(cleaned);
+  // Look up a word: first in chapter vocab, then in full dictionary
+  const lookupWord = useCallback(
+    (raw: string): VocabEntry | null => {
+      const cleaned = cleanWord(raw);
+      if (!cleaned) return null;
+
+      // 1. Check chapter vocabulary (has examples, CEFR, etc.)
+      const fromVocab = vocabMap.get(cleaned);
+      if (fromVocab) return fromVocab;
+
+      // 2. Check full dictionary
+      const dictEntry = dictionary[cleaned];
+      if (dictEntry) {
+        return {
+          french: cleaned,
+          pos: dictEntry.pos as VocabEntry["pos"],
+          gender: dictEntry.gender as VocabEntry["gender"],
+          japanese: dictEntry.japanese,
+          example: "",
+          cefr: "A2",
+        };
+      }
+
+      return null;
+    },
+    [vocabMap, dictionary]
+  );
+
+  const handleWordClick = (e: React.MouseEvent, word: string) => {
+    e.stopPropagation(); // Prevent sentence click from firing
+    const entry = lookupWord(word);
     if (entry) {
       setSelectedWord(entry);
       onWordTap(entry);
@@ -107,11 +150,19 @@ export default function ReadingView({
   };
 
   const renderWord = (word: string, idx: number) => {
-    const cleaned = word.toLowerCase().replace(/[.,;:!?«»"'()\-–—]/g, "");
-    const entry = vocabMap.get(cleaned);
+    const cleaned = cleanWord(word);
+    const entry = lookupWord(word);
+    const isChapterVocab = vocabMap.has(cleaned);
     const isKnown = knownWords.includes(cleaned);
 
-    let className = "cursor-pointer hover:bg-gold/20 rounded px-0.5 transition-colors";
+    let className = "cursor-pointer rounded px-0.5 transition-colors";
+
+    // All tappable words get hover effect
+    if (entry) {
+      className += " hover:bg-gold/20";
+    }
+
+    // POS highlight mode (only for words we know the POS of)
     if (entry && highlightMode) {
       const posClass: Record<string, string> = {
         verbe: "bg-sage/30 text-[#1a5c28]",
@@ -119,21 +170,32 @@ export default function ReadingView({
         adj: "bg-rose/30 text-[#8a3a55]",
         adv: "bg-lavender/30 text-[#5a3a8a]",
         expr: "bg-sand/30 text-[#7a5a2d]",
+        "prép": "bg-gold/20 text-[#8a6a1a]",
+        pron: "bg-cream-dark text-navy/70",
+        "dét": "bg-cream-dark text-navy/50",
+        conj: "bg-cream-dark text-navy/50",
       };
       className += " rounded-sm py-0.5 " + (posClass[entry.pos] || "");
     }
-    if (entry && isKnown) {
-      className += " opacity-60";
+
+    // Known words are dimmed
+    if (isKnown) {
+      className += " opacity-50";
     }
-    if (entry) {
+
+    // Chapter vocabulary words get dotted underline
+    if (isChapterVocab) {
       className += " underline decoration-dotted decoration-gold/60 underline-offset-4";
+    } else if (entry) {
+      // Dictionary words get subtle underline
+      className += " underline decoration-dotted decoration-navy/20 underline-offset-4";
     }
 
     return (
       <span
         key={idx}
         className={className}
-        onClick={() => handleWordClick(word)}
+        onClick={(e) => handleWordClick(e, word)}
       >
         {word}{" "}
       </span>

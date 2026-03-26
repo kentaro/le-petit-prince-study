@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { Chapter, ViewMode, VocabEntry, Progress } from "@/lib/types";
+import { Chapter, VocabEntry, Progress } from "@/lib/types";
 import {
   loadProgress,
   saveProgress,
@@ -16,13 +16,20 @@ import FlashCard from "./FlashCard";
 import ConjugationDrill from "./ConjugationDrill";
 import ComprehensionQuiz from "./ComprehensionQuiz";
 
+interface DictEntry {
+  pos: string;
+  gender: string | null;
+  japanese: string;
+}
+
 interface AppProps {
   chapters: Chapter[];
+  dictionary: Record<string, DictEntry>;
 }
 
 type SubView = "reading" | "flashcard" | "conjugation" | "comprehension";
 
-export default function App({ chapters }: AppProps) {
+export default function App({ chapters, dictionary }: AppProps) {
   const [progress, setProgress] = useState<Progress | null>(null);
   const [view, setView] = useState<"home" | "chapter">("home");
   const [subView, setSubView] = useState<SubView>("reading");
@@ -222,6 +229,7 @@ export default function App({ chapters }: AppProps) {
     return (
       <ReadingView
         chapter={chapter}
+        dictionary={dictionary}
         knownWords={progress.knownWords}
         onWordTap={handleWordTap}
         onMarkKnown={handleMarkKnown}
