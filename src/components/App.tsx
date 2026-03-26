@@ -191,7 +191,7 @@ export default function App({ chapters }: AppProps) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="text-gold text-3xl mb-2">&#9734;</p>
+          <p className="text-gold text-3xl mb-2">☆</p>
           <p className="text-navy/40 text-sm">Chargement...</p>
         </div>
       </div>
@@ -238,7 +238,7 @@ export default function App({ chapters }: AppProps) {
       if (dueCards.length === 0) {
         return (
           <div className="min-h-screen flex flex-col items-center justify-center px-4">
-            <p className="text-sage text-3xl mb-2">&#10003;</p>
+            <p className="text-sage text-3xl mb-2">✓</p>
             <p className="text-lg font-medium mb-1">復習完了!</p>
             <p className="text-sm text-navy/50 mb-4">
               今日の復習カードはすべて終わりました

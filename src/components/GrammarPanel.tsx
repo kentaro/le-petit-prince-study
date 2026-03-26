@@ -13,7 +13,7 @@ export default function GrammarPanel({ grammar }: GrammarPanelProps) {
   return (
     <div className="space-y-3 mb-4 fade-in">
       <h3 className="text-sm font-medium text-navy/50 flex items-center gap-1">
-        <span className="text-periwinkle">&#9670;</span> Grammaire
+        <span className="text-periwinkle">◆</span> Grammaire
       </h3>
       {grammar.map((point, idx) => (
         <div
@@ -26,7 +26,7 @@ export default function GrammarPanel({ grammar }: GrammarPanelProps) {
           >
             <span className="text-sm font-medium">{point.title}</span>
             <span className="text-navy/30 text-xs">
-              {expanded === idx ? "&#9650;" : "&#9660;"}
+              {expanded === idx ? "\▲" : "\▼"}
             </span>
           </button>
           {expanded === idx && (

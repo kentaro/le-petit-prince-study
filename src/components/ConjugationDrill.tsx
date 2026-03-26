@@ -126,10 +126,10 @@ export default function ConjugationDrill({
               </div>
               <span className="w-6 text-center">
                 {status === "correct" && (
-                  <span className="text-sage">&#10003;</span>
+                  <span className="text-sage">✓</span>
                 )}
                 {status === "wrong" && (
-                  <span className="text-rose">&#10007;</span>
+                  <span className="text-rose">✗</span>
                 )}
               </span>
             </div>

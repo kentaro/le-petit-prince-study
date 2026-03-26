@@ -114,19 +114,19 @@ export default function ReadingView({
     let className = "cursor-pointer hover:bg-gold/20 rounded px-0.5 transition-colors";
     if (entry && highlightMode) {
       const posClass: Record<string, string> = {
-        verbe: "bg-sage/15",
-        nom: "bg-periwinkle/15",
-        adj: "bg-rose/15",
-        adv: "bg-lavender/15",
-        expr: "bg-sand/15",
+        verbe: "bg-sage/30 text-[#1a5c28]",
+        nom: "bg-periwinkle/30 text-[#3a4a8a]",
+        adj: "bg-rose/30 text-[#8a3a55]",
+        adv: "bg-lavender/30 text-[#5a3a8a]",
+        expr: "bg-sand/30 text-[#7a5a2d]",
       };
-      className += " " + (posClass[entry.pos] || "");
+      className += " rounded-sm py-0.5 " + (posClass[entry.pos] || "");
     }
     if (entry && isKnown) {
-      className += " opacity-50";
+      className += " opacity-60";
     }
     if (entry) {
-      className += " underline decoration-dotted decoration-gold/40 underline-offset-4";
+      className += " underline decoration-dotted decoration-gold/60 underline-offset-4";
     }
 
     return (

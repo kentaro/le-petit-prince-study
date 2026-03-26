@@ -100,13 +100,13 @@ export default function WordPopup({
                 : "bg-cream-dark hover:bg-sage/20 text-navy/60 hover:text-sage"
             }`}
           >
-            {isKnown ? "&#10003; 覚えた" : "&#10003; 覚えた"}
+            {isKnown ? "\u2713 覚えた" : "\u2713 覚えた"}
           </button>
           <button
             onClick={onAddToReview}
             className="flex-1 tap-target flex items-center justify-center gap-1 rounded-xl px-4 py-3 text-sm font-medium bg-gold/10 hover:bg-gold/20 text-gold transition-colors"
           >
-            &#9734; 復習リスト
+            {"\u2606"} 復習リスト
           </button>
         </div>
       </div>

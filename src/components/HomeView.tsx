@@ -31,7 +31,7 @@ export default function HomeView({
       {/* Hero */}
       <header className="bg-gradient-to-b from-navy to-navy-light text-cream px-4 pt-10 pb-8">
         <div className="max-w-lg mx-auto text-center">
-          <p className="text-gold text-2xl mb-2">&#9734;</p>
+          <p className="text-gold text-2xl mb-2">☆</p>
           <h1 className="font-[family-name:var(--font-serif)] text-2xl font-bold mb-1">
             Le Petit Prince
           </h1>
