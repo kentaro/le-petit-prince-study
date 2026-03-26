@@ -38,9 +38,9 @@ export default function ReadingView({
 }: ReadingViewProps) {
   const [paragraphIndex, setParagraphIndex] = useState(0);
   const [selectedWord, setSelectedWord] = useState<VocabEntry | null>(null);
-  const [showTranslation, setShowTranslation] = useState<string | null>(null);
   const [showGrammar, setShowGrammar] = useState(false);
   const [highlightMode, setHighlightMode] = useState(false);
+  const [showAllTranslations, setShowAllTranslations] = useState(false);
 
   const paragraph = chapter.paragraphs[paragraphIndex] || "";
   const totalParagraphs = chapter.paragraphs.length;
@@ -124,19 +124,9 @@ export default function ReadingView({
     }
   };
 
-  const handleSentenceClick = (sentence: string) => {
-    const translation = findTranslation(sentence);
-    if (translation) {
-      setShowTranslation(
-        showTranslation === translation ? null : translation
-      );
-    }
-  };
-
   const goNext = () => {
     if (paragraphIndex < totalParagraphs - 1) {
       setParagraphIndex((i) => i + 1);
-      setShowTranslation(null);
     } else {
       onChapterComplete();
     }
@@ -145,7 +135,6 @@ export default function ReadingView({
   const goPrev = () => {
     if (paragraphIndex > 0) {
       setParagraphIndex((i) => i - 1);
-      setShowTranslation(null);
     }
   };
 
@@ -242,27 +231,28 @@ export default function ReadingView({
           {paragraphIndex + 1} / {totalParagraphs}
         </p>
 
-        {/* French text */}
+        {/* French text with inline translations */}
         <div className="french-text mb-4">
-          {sentences.map((sentence, sIdx) => (
-            <span
-              key={sIdx}
-              className="cursor-pointer hover:bg-gold/10 rounded transition-colors"
-              onClick={() => handleSentenceClick(sentence)}
-            >
-              {sentence.split(/\s+/).map((word, wIdx) =>
-                renderWord(word, sIdx * 1000 + wIdx)
-              )}
-            </span>
-          ))}
+          {sentences.map((sentence, sIdx) => {
+            const translation = showAllTranslations
+              ? findTranslation(sentence)
+              : null;
+            return (
+              <span key={sIdx}>
+                <span>
+                  {sentence.split(/\s+/).map((word, wIdx) =>
+                    renderWord(word, sIdx * 1000 + wIdx)
+                  )}
+                </span>
+                {translation && (
+                  <span className="block text-sm text-navy/50 ml-1 mb-2 pl-3 border-l-2 border-gold/30 fade-in">
+                    {translation}
+                  </span>
+                )}
+              </span>
+            );
+          })}
         </div>
-
-        {/* Sentence translation (tap to reveal) */}
-        {showTranslation && (
-          <div className="bg-cream-dark rounded-xl p-3 mb-4 fade-in">
-            <p className="text-sm text-navy/70">{showTranslation}</p>
-          </div>
-        )}
 
         {/* Grammar section */}
         {showGrammar && chapter.grammar.length > 0 && (
@@ -281,7 +271,17 @@ export default function ReadingView({
             &larr; 前
           </button>
 
-          <div className="flex gap-2">
+          <div className="flex gap-1.5">
+            <button
+              onClick={() => setShowAllTranslations(!showAllTranslations)}
+              className={`tap-target px-3 py-2 rounded-xl text-xs transition-colors ${
+                showAllTranslations
+                  ? "bg-gold/20 text-gold"
+                  : "bg-cream-dark text-navy/50"
+              }`}
+            >
+              訳
+            </button>
             <button
               onClick={() => setHighlightMode(!highlightMode)}
               className={`tap-target px-3 py-2 rounded-xl text-xs transition-colors ${
