@@ -51,9 +51,9 @@ export default function ReadingView({
   });
 
   const fontSizeClass = {
-    small: "text-base leading-relaxed",
-    medium: "text-lg leading-relaxed",
-    large: "text-xl leading-loose",
+    small: "text-base leading-[1.8]",
+    medium: "text-lg leading-[1.8]",
+    large: "text-xl leading-[2]",
   }[fontSize];
 
   const cycleFontSize = () => {
@@ -358,7 +358,7 @@ export default function ReadingView({
                     : "bg-cream-dark text-navy/50"
                 }`}
               >
-                {isSpeaking ? "&#9632;" : "&#x1f50a;"}
+                {isSpeaking ? "\u25A0" : "\uD83D\uDD0A"}
               </button>
             )}
             <button

@@ -58,8 +58,6 @@ body {
 /* French text styling */
 .french-text {
   font-family: var(--font-serif);
-  font-size: 1.125rem;
-  line-height: 1.8;
   max-width: 42rem;
 }
 

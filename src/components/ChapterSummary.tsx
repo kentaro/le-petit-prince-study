@@ -35,7 +35,7 @@ export default function ChapterSummary({
       <div className="max-w-sm w-full text-center">
         {/* Celebration */}
         <div className="mb-6">
-          <p className="text-5xl mb-3">&#x2728;</p>
+          <p className="text-5xl mb-3">{"\u2728"}</p>
           <h2 className="font-[family-name:var(--font-serif)] text-2xl font-bold mb-1">
             Chapitre {chapter.number} terminé !
           </h2>

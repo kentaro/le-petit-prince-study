@@ -55,7 +55,7 @@ export default function FlashCard({
             className="tap-target mb-2 text-navy/40 hover:text-gold transition-colors text-lg"
             title="発音を聞く"
           >
-            &#x1f50a;
+            {"\uD83D\uDD0A"}
           </button>
         )}
 

@@ -277,7 +277,7 @@ export default function VocabList({
                     onClick={() => speakFrench(v.french, 0.7)}
                     className="text-navy/30 hover:text-gold transition-colors flex-shrink-0"
                   >
-                    &#x1f50a;
+                    {"\uD83D\uDD0A"}
                   </button>
                 )}
 
@@ -307,7 +307,7 @@ export default function VocabList({
                 <div className="flex-shrink-0 flex items-center gap-1.5">
                   <span className="text-xs text-gold/60">{v.cefr}</span>
                   {isKnown && (
-                    <span className="text-sage text-sm">&#x2713;</span>
+                    <span className="text-sage text-sm">{"\u2713"}</span>
                   )}
                   {srsCard && (
                     <span className="text-xs text-navy/30">

@@ -82,7 +82,7 @@ export default function WordPopup({
             onClick={() => speakFrench(entry.french, 0.7)}
             className="tap-target mb-3 flex items-center gap-1.5 text-sm text-navy/50 hover:text-gold transition-colors"
           >
-            <span className="text-base">&#x1f50a;</span> 発音を聞く
+            <span className="text-base">{"\uD83D\uDD0A"}</span> 発音を聞く
           </button>
         )}
 
