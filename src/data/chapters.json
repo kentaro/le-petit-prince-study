@@ -207,49 +207,79 @@
     "grammar": [
       {
         "title": "複合過去 (passé composé) と助動詞 avoir",
-        "explanation": "過去の完了した行為を表す。avoir の現在形 + 過去分詞。日常会話で最もよく使われる過去時制。",
+        "explanation": "過去の完了した行為を表す最も一般的な過去時制。avoir の現在形＋過去分詞で構成する。日本語の「〜した」に近いが、現在との関連性を持つ点が半過去と異なる。日本語話者は半過去との使い分けに注意が必要。移動・状態変化の動詞（aller, venirなど）はêtreを助動詞に取り、過去分詞が主語に性数一致する点も要注意。",
         "examples": [
           {
             "french": "j'ai vu une magnifique image",
-            "breakdown": "j'(je) + ai(avoir現在) + vu(voir過去分詞)",
+            "breakdown": "j'(=je、母音前で省略) + ai(avoir現在形1人称単数) + vu(voir の過去分詞、不規則形)",
             "japanese": "私は素晴らしい絵を見た"
           },
           {
             "french": "J'ai montré mon chef-d'oeuvre aux grandes personnes",
-            "breakdown": "J' + ai(avoir現在) + montré(montrer過去分詞)",
+            "breakdown": "J'(=je) + ai(avoir現在形) + montré(montrer の過去分詞、-er動詞は-é) + aux(=à+les) grandes personnes(大人たちに)",
             "japanese": "私は傑作を大人たちに見せた"
+          },
+          {
+            "french": "J'ai ainsi vécu seul, sans personne avec qui parler véritablement",
+            "breakdown": "ai vécu(vivre の複合過去、過去分詞vécu) + seul(一人で) + sans personne(誰もなしに) + avec qui parler(話し相手となる人)",
+            "japanese": "こうして私は、本当に話ができる相手もなく、ひとりぼっちで暮らしてきた"
+          },
+          {
+            "french": "J'ai beaucoup réfléchi sur les aventures de la jungle",
+            "breakdown": "ai réfléchi(réfléchir の複合過去) + beaucoup(たくさん) + sur les aventures(冒険について) + de la jungle(ジャングルの)",
+            "japanese": "私はジャングルの冒険についてたくさん考えた"
           }
         ]
       },
       {
         "title": "半過去 (imparfait) — 過去の状態・習慣",
-        "explanation": "過去の継続的な状態や習慣を表す。語幹 + -ais, -ais, -ait, -ions, -iez, -aient。複合過去が「点」なら半過去は「線」。",
+        "explanation": "過去の継続的な状態・習慣・背景描写に使う時制。nous形の語幹＋-ais/-ais/-ait/-ions/-iez/-aientで活用する。複合過去が「完了した点」を表すのに対し、半過去は「未完了の線・面」を表す。日本語の「〜していた」に近いが、日本語には時制の明確な区別がないため混同しやすい。物語では背景・状況描写に半過去、出来事に複合過去を使い分ける。",
         "examples": [
           {
             "french": "Lorsque j'avais six ans",
-            "breakdown": "j' + avais(avoir半過去) — 当時の年齢（状態）",
+            "breakdown": "Lorsque(〜の時) + j'avais(avoir の半過去1人称単数、語幹av-) — 当時の年齢という継続的状態を表す",
             "japanese": "6歳の頃"
           },
           {
             "french": "Mon dessin ne représentait pas un chapeau",
-            "breakdown": "représentait(représenter半過去) — 絵の状態を描写",
+            "breakdown": "représentait(représenter の半過去3人称単数、語幹représent-) — 絵の状態を描写する半過去",
             "japanese": "私の絵は帽子を表していたのではなかった"
+          },
+          {
+            "french": "Elles disaient: \"C'est un chapeau.\"",
+            "breakdown": "disaient(dire の半過去3人称複数、語幹dis-) — 大人たちの繰り返す習慣的反応を半過去で表現",
+            "japanese": "大人たちは「帽子だね」と言うのだった"
+          },
+          {
+            "french": "Je leur parlais de bridge, de golf, de politique et de cravates",
+            "breakdown": "parlais(parler の半過去1人称単数) + de(〜について) — 習慣的行為を半過去で表す",
+            "japanese": "私はブリッジやゴルフ、政治やネクタイの話をした"
           }
         ]
       },
       {
         "title": "否定の ne...jamais / ne...rien",
-        "explanation": "ne...pas 以外の否定表現。ne...jamais（決して〜ない）、ne...rien（何も〜ない）で動詞を挟む。",
+        "explanation": "ne...pas以外の否定表現。ne...jamais（決して〜ない）、ne...rien（何も〜ない）は動詞を挟む形で使う。複合時制では助動詞を挟む（ne + avoir/être + jamais/rien + 過去分詞）。複数の否定語を重ねて強調することも可能。ne...ni...niは「〜も〜もない」で、英語のneither...norに相当する。",
         "examples": [
           {
             "french": "Les grandes personnes ne comprennent jamais rien toutes seules",
-            "breakdown": "ne + comprennent + jamais rien — 二重否定で強調",
+            "breakdown": "ne + comprennent(comprendre現在形3人称複数) + jamais(決して) + rien(何も) — jamaisとrienの二重否定で強い否定を表す",
             "japanese": "大人たちは自分では何も理解できない"
           },
           {
             "french": "je ne lui parlais ni de serpents boas, ni de forêts vierges, ni d'étoiles",
-            "breakdown": "ne...ni...ni...ni — 「〜も〜も〜もない」の否定",
+            "breakdown": "ne + parlais + ni...ni...ni — 3つの要素を並列否定。deは否定後にdeのまま残る",
             "japanese": "ボアの話も、原生林の話も、星の話もしなかった"
+          },
+          {
+            "french": "je ne dessinais plus rien",
+            "breakdown": "ne + dessinais + plus(もはや) + rien(何も) — plusとrienの二重否定で「もう何も描かなかった」",
+            "japanese": "私はもう何も描かなくなった"
+          },
+          {
+            "french": "Je n'ai jamais trouvé personne qui comprît",
+            "breakdown": "n'ai + jamais(決して) + trouvé + personne(誰も) — 複合過去でjamaisは助動詞の後に置く。personneは過去分詞の後に来る",
+            "japanese": "理解してくれる人を一度も見つけられなかった"
           }
         ]
       }
@@ -667,49 +697,74 @@
     "grammar": [
       {
         "title": "命令形 (impératif) — 依頼・命令",
-        "explanation": "tu/nous/vous の3形で活用。-er動詞のtuは語尾のsが消える（dessine）。主語代名詞は省略する。",
+        "explanation": "tu/nous/vousの3つの人称で活用する。主語代名詞は省略する。-er動詞のtu形は語尾の-sが消える（dessine, regarde）。代名詞は肯定命令では動詞の後にハイフンで、否定命令では動詞の前に置く（dessine-moi / ne me dessine pas）。日本語話者は代名詞の位置に注意。",
         "examples": [
           {
             "french": "Dessine-moi un mouton!",
-            "breakdown": "Dessine(dessiner命令形tu) + moi(間接目的語) — 「私に描いて」",
+            "breakdown": "Dessine(dessiner命令形tu、-er動詞なので-sなし) + -moi(間接目的語、肯定命令で動詞の後) + un mouton(直接目的語)",
             "japanese": "羊を描いて！"
           },
           {
             "french": "Fais-en un autre.",
-            "breakdown": "Fais(faire命令形tu) + en(それの) — 「もう一つ作って」",
+            "breakdown": "Fais(faire命令形tu、不規則動詞) + -en(=de cela、中性代名詞、肯定命令で動詞の後) + un autre(もう一つ)",
             "japanese": "別のを描いて。"
+          },
+          {
+            "french": "S'il vous plaît... dessine-moi un mouton...",
+            "breakdown": "S'il vous plaît(お願いします、丁寧表現) + dessine-moi(命令形+間接目的語) — 丁寧な依頼に命令形を使う例",
+            "japanese": "お願い……羊を描いて……"
+          },
+          {
+            "french": "Regarde bien pour être sûr de le reconnaître.",
+            "breakdown": "Regarde(regarder命令形tu) + bien(よく) + pour être sûr(確実にするために) + de le reconnaître(それを見分ける)",
+            "japanese": "見分けがつくようによく見てごらん。"
           }
         ]
       },
       {
         "title": "大過去 (plus-que-parfait) — 過去のさらに前の過去",
-        "explanation": "avoir/être の半過去形 + 過去分詞。ある過去の時点よりさらに前の出来事を表す。",
+        "explanation": "avoir/êtreの半過去形＋過去分詞で構成する。ある過去の時点（複合過去・半過去）よりさらに前に完了した出来事を表す。英語の過去完了(had done)に相当する。日本語には対応する時制がないため、文脈から「すでに〜していた」という前後関係を読み取る力が必要。代名動詞はêtreを助動詞に取り、過去分詞は主語に一致する。",
         "examples": [
           {
             "french": "Quelque chose s'était cassé dans mon moteur",
-            "breakdown": "s'était cassé = être半過去(était) + cassé(過去分詞) — 代名動詞の大過去",
+            "breakdown": "s'(=se、再帰代名詞) + était(être半過去3人称単数) + cassé(casser過去分詞) — 代名動詞の大過去、êtreを助動詞に取る",
             "japanese": "エンジンの中で何かが壊れていた"
           },
           {
             "french": "J'avais été découragé dans ma carrière de peintre",
-            "breakdown": "avais été découragé = avoir半過去 + été + 過去分詞 — 受動態の大過去",
+            "breakdown": "avais(avoir半過去) + été(être過去分詞) + découragé(décourager過去分詞) — 受動態の大過去（avoir + été + p.p.）",
             "japanese": "画家のキャリアでくじけてしまっていた"
+          },
+          {
+            "french": "la panne de mon avion avait commencé de m'apparaître comme très grave",
+            "breakdown": "avait(avoir半過去3人称単数) + commencé(commencer過去分詞) + de m'apparaître(私に思えること) — 物語の時点より前にすでに始まっていた状態",
+            "japanese": "飛行機の故障がとても深刻に思え始めていた"
           }
         ]
       },
       {
         "title": "冠詞の使い分け — 不定冠詞と定冠詞",
-        "explanation": "un/une/des（不定冠詞）は初出・不特定のものに、le/la/les（定冠詞）は既知・特定のものに使う。",
+        "explanation": "un/une/des（不定冠詞）は初出・不特定のものに、le/la/les（定冠詞）は既知・特定・総称のものに使う。文脈の中で初めて言及する名詞にはun/uneを使い、2回目以降はle/laに切り替える。日本語には冠詞がないため、この使い分けは最大の難関の一つ。抽象名詞や総称には通常定冠詞を使う。否定文ではde/d'に変わる点にも注意。",
         "examples": [
           {
             "french": "j'ai vu un petit bonhomme... Voilà le meilleur portrait",
-            "breakdown": "un(初登場) → le(既に話題に出た)",
-            "japanese": "小さな男の子を見た... これが最も良くできた肖像画だ"
+            "breakdown": "un petit bonhomme(初出→不定冠詞un) → le meilleur portrait(すでに話題→定冠詞le) — 不定から定冠詞への自然な移行",
+            "japanese": "小さな男の子を見た……これが最も良くできた肖像画だ"
           },
           {
             "french": "Le mouton que tu veux est dedans",
-            "breakdown": "le mouton — 相手が欲しがっている特定の羊",
+            "breakdown": "Le mouton(相手が欲しがっている特定の羊→定冠詞le) + que tu veux(関係節で限定)",
             "japanese": "君が欲しい羊は中にいるよ"
+          },
+          {
+            "french": "C'est une caisse. Le mouton que tu veux est dedans.",
+            "breakdown": "une caisse(初出→不定冠詞une) → Le mouton(特定→定冠詞le) — 同じ文の中での冠詞の使い分け",
+            "japanese": "これは箱だよ。君が欲しい羊はこの中にいるよ。"
+          },
+          {
+            "french": "Il me faut des moutons. Dessine-moi un mouton.",
+            "breakdown": "des moutons(不特定複数→部分冠詞des) / un mouton(不特定単数→不定冠詞un) — 総称と個別の使い分け",
+            "japanese": "羊が要るんだ。羊を一匹描いて。"
           }
         ]
       }
@@ -1225,44 +1280,69 @@
     "grammar": [
       {
         "title": "現在形 — 不規則動詞 être / venir",
-        "explanation": "être（〜である）と venir（来る）は最頻出の不規則動詞。venir de + 場所で「〜から来る」。",
+        "explanation": "êtreとvenirはフランス語で最も頻出する不規則動詞。être: suis/es/est/sommes/êtes/sont。venir: viens/viens/vient/venons/venez/viennent。venir de＋場所で「〜から来る」、venir de＋不定詞で近接過去「〜したところだ」を表す。日本語話者はêtreの多様な用法（存在・属性・受動態の助動詞）に注意。",
         "examples": [
           {
             "french": "De quelle planète es-tu?",
-            "breakdown": "es(être現在tu形) — 「君は〜なの？」",
+            "breakdown": "De quelle planète(どの惑星から) + es(être現在形2人称単数) + -tu(主語代名詞、倒置疑問文) — est-ce queを使わない倒置疑問",
             "japanese": "君はどの惑星から来たの？"
           },
           {
             "french": "D'où viens-tu, mon petit bonhomme?",
-            "breakdown": "viens(venir現在tu形) — 倒置疑問文",
+            "breakdown": "D'où(どこから) + viens(venir現在形2人称単数) + -tu(倒置) + mon petit bonhomme(呼びかけ)",
             "japanese": "どこから来たの、坊や？"
+          },
+          {
+            "french": "Tu es d'une autre planète?",
+            "breakdown": "Tu es(être現在形2人称単数) + d'une autre planète(別の惑星の出身) — être de＋場所で「出身」を表す",
+            "japanese": "君は別の惑星の出なの？"
+          },
+          {
+            "french": "C'est tout petit chez moi",
+            "breakdown": "C'est(=ce+est、提示構文) + tout petit(とても小さい) + chez moi(私の家では/私の星では) — être＋形容詞で状態描写",
+            "japanese": "僕のところはとても小さいんだ"
           }
         ]
       },
       {
         "title": "関係代名詞 qui — 主語の関係節",
-        "explanation": "qui は関係節の中で主語の役割を果たす。先行詞（人・物）の説明を追加する。",
+        "explanation": "quiは関係節の中で主語の役割を果たし、先行詞（人・物）に説明を追加する。先行詞が人でも物でもquiを使う点が英語のwho/whichと異なる。関係節の動詞は先行詞の人称・数に一致する。queとの混同に注意：quiは主語、queは直接目的語を受ける。quiの前にはエリジオン（省略）が起こらない点も特徴。",
         "examples": [
           {
             "french": "Le petit prince, qui me posait beaucoup de questions, ne semblait jamais entendre les miennes",
-            "breakdown": "qui = le petit prince（主語の説明）",
+            "breakdown": "qui(=le petit prince、関係節の主語) + me posait(poser半過去) + beaucoup de questions — 挿入的な関係節で背景情報を補足",
             "japanese": "たくさん質問してくる小さな王子は、私の質問には全く耳を貸さないようだった"
           },
           {
             "french": "Ce sont des mots prononcés par hasard qui m'ont tout révélé",
-            "breakdown": "qui = des mots（偶然言われた言葉が主語）",
+            "breakdown": "des mots prononcés par hasard(先行詞) + qui(関係代名詞、主語) + m'ont révélé(révéler複合過去) — quiの後の動詞はdes motsに一致して複数形",
             "japanese": "偶然発せられた言葉が全てを明らかにしてくれた"
+          },
+          {
+            "french": "un petit bonhomme tout à fait extraordinaire qui me regardait gravement",
+            "breakdown": "un petit bonhomme(先行詞) + qui(主語の関係代名詞) + me regardait(regarder半過去) + gravement(真剣に)",
+            "japanese": "真剣な目で私を見つめている、とても不思議な小さな男の子"
           }
         ]
       },
       {
         "title": "条件法現在 (conditionnel présent) — 丁寧な提案",
-        "explanation": "語幹（未来形と同じ）+ 半過去の語尾。丁寧な提案や仮定の話に使う。",
+        "explanation": "未来形の語幹＋半過去の語尾（-ais/-ais/-ait/-ions/-iez/-aient）で構成する。丁寧な提案・依頼（voudrais, pourriez）、仮定の帰結（si＋半過去の帰結節）、推量に使う。未来形と語幹は同じだが語尾が異なる。日本語話者は「〜でしょう」「〜たらいいのに」の感覚で理解すると良い。",
         "examples": [
           {
             "french": "Et si tu es gentil, je te donnerai aussi une corde",
-            "breakdown": "donnerai(donner未来形) — ここでは未来形だが条件付き",
+            "breakdown": "si tu es(現在形の条件節) + donnerai(donner未来形1人称単数) — si＋現在形→未来形の実現可能な条件文",
             "japanese": "もし君がいい子なら、紐もあげよう"
+          },
+          {
+            "french": "Ça ne serait pas gentil",
+            "breakdown": "serait(être条件法現在3人称単数) + gentil(親切な) — 仮定的な判断を条件法で柔らかく表現",
+            "japanese": "それは親切じゃないよ"
+          },
+          {
+            "french": "Pourriez-vous me dire où je suis?",
+            "breakdown": "Pourriez(pouvoir条件法現在2人称複数) + -vous(倒置) + me dire(私に言う) — 条件法による丁寧な質問表現",
+            "japanese": "ここはどこか教えていただけますか？"
           }
         ]
       }
@@ -1705,44 +1785,69 @@
     "grammar": [
       {
         "title": "比較級 (comparatif) — plus... que",
-        "explanation": "形容詞・副詞の比較。plus + 形容詞 + que（〜より...だ）。不規則形: bon → meilleur。",
+        "explanation": "形容詞・副詞の比較はplus＋形容詞/副詞＋que（〜より…だ）で表す。moins...que（〜ほど…でない）、aussi...que（〜と同じくらい）もある。不規則形としてbon→meilleur、bien→mieux、mauvais→pireがある。日本語の「より」に相当するが、語順が異なるので注意。queの後は主語代名詞の強勢形を使う。",
         "examples": [
           {
             "french": "sa planète d'origine était à peine plus grande qu'une maison",
-            "breakdown": "plus grande que = 〜より大きい。à peine = かろうじて",
+            "breakdown": "plus grande(大きい の比較級) + qu'une maison(家と比べて) + à peine(かろうじて、副詞) — 比較の差を副詞で修飾",
             "japanese": "彼の故郷の星は、家よりかろうじて大きいだけだった"
           },
           {
             "french": "ça aurait eu l'air beaucoup plus vrai",
-            "breakdown": "plus vrai = より本当らしい",
+            "breakdown": "plus vrai(より本当の、比較級) + beaucoup(ずっと、比較を強調する副詞) — beaucoup/bienで比較級を強める",
             "japanese": "ずっと本当らしく聞こえただろう"
+          },
+          {
+            "french": "Cette planète-là est plus petite que la planète du roi",
+            "breakdown": "plus petite(小さい の比較級) + que la planète du roi(王の星と比較) — 具体的な2つの対象の比較",
+            "japanese": "この星は王の星より小さい"
+          },
+          {
+            "french": "Il n'y a rien de plus beau que les couchers de soleil",
+            "breakdown": "rien de plus beau(これより美しいものは何もない) + que les couchers de soleil — ne...rienと比較級の組み合わせで最上級的意味",
+            "japanese": "夕日ほど美しいものはない"
           }
         ]
       },
       {
         "title": "条件法過去 (conditionnel passé) — 実現しなかった願望",
-        "explanation": "avoir/être の条件法現在 + 過去分詞。過去の非現実、後悔、実現しなかった願望を表す。",
+        "explanation": "avoir/êtreの条件法現在＋過去分詞で構成する。過去の非現実・後悔・実現しなかった願望を表す。「〜したかったのだが（実際はしなかった）」というニュアンス。si＋大過去の帰結節としても使う。日本語の「〜すればよかったのに」「〜したかったなぁ」に近い。英語のwould have doneに相当する。第4章では著者の物語への姿勢が条件法過去で表現される。",
         "examples": [
           {
             "french": "J'aurais aimé commencer cette histoire à la façon des contes de fées",
-            "breakdown": "aurais(avoir条件法) + aimé(aimer過去分詞) — 「〜したかったのだが」",
+            "breakdown": "aurais(avoir条件法現在1人称単数) + aimé(aimer過去分詞) + commencer(始めること) — 実現しなかった願望「始めたかったのだが」",
             "japanese": "おとぎ話のようにこの物語を始めたかった"
           },
           {
             "french": "J'aurais aimé dire: \"Il était une fois un petit prince...\"",
-            "breakdown": "aurais aimé dire = 言いたかったのだが（実際は言えなかった）",
-            "japanese": "「むかしむかし、小さな王子がいました...」と言いたかった"
+            "breakdown": "aurais aimé(条件法過去) + dire(言うこと) — 実際には言えなかった。Il était une foisは「昔々」の定型表現",
+            "japanese": "「むかしむかし、小さな王子がいました……」と言いたかった"
+          },
+          {
+            "french": "J'aurais voulu raconter cette histoire simplement",
+            "breakdown": "aurais voulu(vouloir条件法過去) + raconter(語ること) + simplement(素朴に) — vouloir条件法過去は「〜したかったのだが」",
+            "japanese": "この物語を素朴に語りたかったのだが"
           }
         ]
       },
       {
         "title": "間接疑問文 — Combien / Quel / Est-ce que 節",
-        "explanation": "疑問詞 + 主語 + 動詞の語順になる。直接疑問文の倒置は不要。",
+        "explanation": "疑問詞＋主語＋動詞の語順になり、直接疑問文の倒置は不要になる。「Je me demande combien il pèse」（彼の体重はいくらだろう）のように、主節の動詞（demander, savoir等）の後に置く。日本語話者は英語のthat節と混同しがちだが、フランス語ではque/si/疑問詞で導く。",
         "examples": [
           {
             "french": "Quel âge a-t-il? Combien a-t-il de frères? Combien pèse-t-il?",
-            "breakdown": "直接疑問文の形（倒置あり）。大人が好む典型的質問",
+            "breakdown": "Quel âge(何歳) + a-t-il(倒置疑問、-t-は発音のためのリエゾン) / Combien(いくつ) + a-t-il + de frères(兄弟) — 直接疑問文の典型",
             "japanese": "何歳？兄弟は何人？体重は？"
+          },
+          {
+            "french": "Je sais bien d'où il venait",
+            "breakdown": "Je sais(知っている) + d'où(どこから) + il venait(venir半過去) — 間接疑問文では倒置しない",
+            "japanese": "彼がどこから来たかはよく知っている"
+          },
+          {
+            "french": "Il ne comprenait pas combien cet ami était rare",
+            "breakdown": "ne comprenait pas(理解していなかった) + combien(どれほど) + cet ami était rare(この友がまれか) — 感嘆的な間接疑問文",
+            "japanese": "彼はこの友人がどれほど稀有な存在か分かっていなかった"
           }
         ]
       }
@@ -2199,44 +2304,69 @@
     "grammar": [
       {
         "title": "命令法 (impératif) — 注意喚起・忠告",
-        "explanation": "vous 形の命令法で読者への呼びかけ。否定命令は ne + 動詞 + pas。Faites attention = 気をつけて。",
+        "explanation": "vous形の命令法で読者・聴衆全体への呼びかけに使う。否定命令はne＋動詞＋pasで、代名詞は動詞の前に戻る。Faites attention à＝「〜に気をつけて」は重要な慣用表現。tu形との使い分けは親しさ・距離感で決まる。第5章では語り手が読者に直接呼びかける独特の語り口で命令法が効果的に使われている。",
         "examples": [
           {
             "french": "Enfants! Faites attention aux baobabs!",
-            "breakdown": "Faites(faire命令形vous) + attention à — 「〜に気をつけて」",
+            "breakdown": "Enfants(呼びかけ) + Faites(faire命令形vous) + attention à(〜に注意) + aux(=à+les) baobabs — vous形で読者全体に呼びかけ",
             "japanese": "子供たちよ！バオバブに気をつけて！"
+          },
+          {
+            "french": "Méfiez-vous des baobabs!",
+            "breakdown": "Méfiez(se méfier命令形vous) + -vous(再帰代名詞、肯定命令で動詞の後) + des baobabs — 代名動詞の命令形",
+            "japanese": "バオバブを警戒しなさい！"
+          },
+          {
+            "french": "Regardez bien cette image pour être sûrs de les reconnaître",
+            "breakdown": "Regardez(regarder命令形vous) + bien(よく) + pour être sûrs(確かにするために) + de les reconnaître(それらを見分ける)",
+            "japanese": "よくこの絵を見て、見分けがつくようにしなさい"
           }
         ]
       },
       {
         "title": "非人称構文 il faut + 不定詞 — 義務・必要",
-        "explanation": "il faut + 不定詞で「〜しなければならない」。主語のilは形式上のもの。否定はil ne faut pas。",
+        "explanation": "il faut＋不定詞で「〜しなければならない」という義務・必要を表す。ilは形式主語で、特定の人を指さない。否定形il ne faut pasは「〜してはならない」（禁止）。il faut que＋接続法も可能。日本語の「〜しなきゃ」に近いが、主語が不明確な点で英語のone must / you have toに近い。devoir（〜すべき）との違いは個人的義務感の有無。",
         "examples": [
           {
             "french": "il faut arracher la plante aussitôt, dès qu'on a su la reconnaître",
-            "breakdown": "il faut + arracher(不定詞) — 義務を表す非人称構文",
+            "breakdown": "il faut(〜しなければならない) + arracher(引き抜く、不定詞) + aussitôt(すぐに) + dès qu'on a su(見分けがつき次第) + la reconnaître(それを見分ける)",
             "japanese": "見分けがつき次第、すぐにその植物を引き抜かなければならない"
           },
           {
             "french": "il faut faire soigneusement la toilette de la planète",
-            "breakdown": "il faut + faire — 「星の手入れをきちんとしなければならない」",
+            "breakdown": "il faut + faire(する) + soigneusement(丁寧に) + la toilette(身支度・手入れ) + de la planète(星の) — 比喩的に星の手入れを表現",
             "japanese": "星の手入れを丁寧にしなければならない"
+          },
+          {
+            "french": "Il faut bien que je supporte les chenilles",
+            "breakdown": "Il faut(必要だ) + bien(確かに) + que je supporte(supporter接続法) — il faut que＋接続法の構文",
+            "japanese": "毛虫を我慢しなければならないのだ"
+          },
+          {
+            "french": "il ne faut jamais écouter les fleurs",
+            "breakdown": "il ne faut(してはならない) + jamais(決して) + écouter(聞く) + les fleurs(花たちの言うこと) — 否定＋jamaisで強い禁止",
+            "japanese": "花の言うことは決して聞いてはいけない"
           }
         ]
       },
       {
         "title": "代名詞 en — 「それの」「そこから」",
-        "explanation": "de + 名詞 の代わりとなる代名詞。数量・部分を受ける場合や、de から始まる表現の代用。",
+        "explanation": "de＋名詞の代わりとなる中性代名詞。用法は多岐にわたる：(1)数量・部分を受ける（j'en veux trois＝3つ欲しい）、(2)de＋場所の代用（j'en viens＝そこから来た）、(3)de＋名詞を取る動詞の代用（s'en débarrasser）。動詞の前に置く。命令肯定形では動詞の後（fais-en）。日本語話者はenの指す内容を文脈から読み取る訓練が必要。",
         "examples": [
           {
             "french": "Le sol de la planète en était infesté",
-            "breakdown": "en = de graines de baobabs（バオバブの種で）",
+            "breakdown": "en(=de graines de baobabs、バオバブの種で) + était infesté(infester受動態半過去) — de＋名詞の代用",
             "japanese": "星の土壌はバオバブの種だらけだった"
           },
           {
             "french": "on ne peut jamais plus s'en débarrasser",
-            "breakdown": "s'en débarrasser = se débarrasser de ça（それを取り除く）",
+            "breakdown": "s'en débarrasser(=se débarrasser de cela、それを取り除く) — 代名動詞＋enの組み合わせ",
             "japanese": "もう二度と取り除くことができない"
+          },
+          {
+            "french": "Si un baobab, on s'y prend trop tard, on ne peut jamais plus s'en débarrasser",
+            "breakdown": "s'y prend(=se prendre à cela、取りかかる) + s'en débarrasser(=se débarrasser de cela) — yとenの対比",
+            "japanese": "バオバブは手遅れになると、もう取り除けない"
           }
         ]
       }
@@ -2643,39 +2773,69 @@
     "grammar": [
       {
         "title": "条件法現在 (conditionnel présent) — 仮定の話",
-        "explanation": "未来形の語幹 + 半過去の語尾（-ais, -ais, -ait...）。非現実の仮定や丁寧な表現に使う。",
+        "explanation": "未来形の語幹＋半過去の語尾（-ais/-ais/-ait/-ions/-iez/-aient）で構成する。非現実の仮定や推量・丁寧な表現に使う。si＋半過去の帰結節として現在の事実に反する仮定を述べる。単独で使うと婉曲的な推量になる。日本語の「〜だろうに」「〜なのだが」に近い。suffire（十分である）は不規則動詞で条件法はsuffirait。",
         "examples": [
           {
             "french": "Il suffirait de pouvoir aller en France en une minute pour assister au coucher du soleil",
-            "breakdown": "suffirait(suffire条件法) — 「〜すれば十分だろう」仮定の話",
+            "breakdown": "suffirait(suffire条件法現在3人称単数) + de pouvoir(できること) + aller en France(フランスに行く) + en une minute(1分で) — 非現実の仮定",
             "japanese": "日没を見るには、1分でフランスに行ければ十分なのだが"
+          },
+          {
+            "french": "On dirait que tu viens d'une planète toute petite",
+            "breakdown": "dirait(dire条件法現在3人称、on dirait que=〜のようだ) + viens de(〜から来た) — 条件法で推量・婉曲を表す慣用表現",
+            "japanese": "とても小さな星から来たみたいだね"
+          },
+          {
+            "french": "Je voudrais voir un coucher de soleil",
+            "breakdown": "voudrais(vouloir条件法現在1人称単数) + voir(見ること) — 条件法で丁寧な希望表現「見たいのですが」",
+            "japanese": "夕日が見たいんだけど"
           }
         ]
       },
       {
         "title": "代名動詞 (verbes pronominaux) — se coucher, se croire",
-        "explanation": "se + 動詞の形。再帰（自分に対する行為）や本質的な意味を持つ。活用時に再帰代名詞も人称変化する。",
+        "explanation": "se＋動詞の形で、再帰（自分に対する行為：se laver＝自分を洗う）、相互（互いに：se parler＝話し合う）、本質的（se souvenir＝思い出す）、受動的（se vendre＝売られている）の4用法がある。活用時に再帰代名詞（me/te/se/nous/vous/se）も人称変化する。複合時制ではêtreを助動詞に取り、過去分詞は主語に性数一致する。",
         "examples": [
           {
             "french": "Attendre que le soleil se couche",
-            "breakdown": "se coucher = 沈む（太陽が自ら横になる）",
+            "breakdown": "se coucher(沈む/横になる、再帰的用法) — 太陽が「自ら横になる」という比喩。que＋接続法を要求する構文",
             "japanese": "太陽が沈むのを待つ"
           },
           {
             "french": "Je me crois toujours chez moi!",
-            "breakdown": "se croire = 自分が〜だと思う。me = je の再帰代名詞",
+            "breakdown": "se croire(自分が〜だと思う、本質的用法) + me(je の再帰代名詞) + chez moi(自分の家に) — 主語と再帰代名詞の人称一致",
             "japanese": "いつも自分の家にいると思ってしまう！"
+          },
+          {
+            "french": "Le soleil venait de se coucher",
+            "breakdown": "venait de(近接過去：〜したばかり) + se coucher(沈む) — 近接過去＋代名動詞の組み合わせ",
+            "japanese": "太陽が沈んだばかりだった"
+          },
+          {
+            "french": "Un jour, j'ai vu le soleil se coucher quarante-trois fois!",
+            "breakdown": "ai vu(voir複合過去) + le soleil(知覚動詞の目的語) + se coucher(不定詞) — 知覚動詞＋代名動詞の構文",
+            "japanese": "ある日、夕日を43回も見たんだ！"
           }
         ]
       },
       {
         "title": "関係代名詞 que — 目的語の関係節",
-        "explanation": "que は関係節の中で直接目的語の役割を果たす。qui（主語）との使い分けが重要。",
+        "explanation": "queは関係節の中で直接目的語の役割を果たす。qui（主語）との使い分けが重要：queの後は必ず主語が来る。母音の前ではqu'にエリジオンする。複合時制ではqueが直接目的語なので過去分詞が先行詞に性数一致する（la fleur que j'ai vue）。日本語話者はquiとqueの区別が難しいが、「後ろに主語＋動詞が来るならque、動詞だけならqui」と覚えると良い。",
         "examples": [
           {
             "french": "Et tu regardais le crépuscule chaque fois que tu le désirais",
-            "breakdown": "que = chaque fois の後に続く接続詞的用法。「〜するたびに」",
+            "breakdown": "chaque fois que(〜するたびに、接続詞的用法) + tu le désirais(望む、半過去) — queは接続詞として時の表現にも使われる",
             "japanese": "望むたびに黄昏を眺めていたんだね"
+          },
+          {
+            "french": "Le coucher de soleil que tu voulais voir",
+            "breakdown": "Le coucher de soleil(先行詞) + que(直接目的語の関係代名詞) + tu voulais voir(見たがっていた) — queの後に主語tuが来る",
+            "japanese": "君が見たがっていた夕焼け"
+          },
+          {
+            "french": "la planète que tu habites est tellement petite",
+            "breakdown": "la planète(先行詞) + que(関係代名詞、目的語) + tu habites(habiter現在形) — 「君が住んでいる星」",
+            "japanese": "君が住んでいる星はとても小さくて"
           }
         ]
       }
@@ -3018,44 +3178,74 @@
     "grammar": [
       {
         "title": "人称代名詞の間接目的語 (pronoms personnels compléments indirects) — me, te, lui",
-        "explanation": "動詞の前に置かれ、「〜に」の意味。me(私に), te(君に), lui(彼/彼女に), nous, vous, leur。",
+        "explanation": "「〜に」を表す間接目的語代名詞。me(私に)/te(君に)/lui(彼・彼女に)/nous(私たちに)/vous(あなた方に)/leur(彼ら・彼女らに)。動詞の前に置く（否定文でも同様）。肯定命令では動詞の後にハイフンで繋ぐ（donne-moi）。日本語話者は直接目的語（le/la/les）との混同に注意。動詞によってà＋人を取るかどうかが決まる。",
         "examples": [
           {
             "french": "il me lança, avec une sorte de rancune",
-            "breakdown": "me = à moi（私に向かって）、動詞の前に置く",
+            "breakdown": "me(=à moi、私に向かって、間接目的語) + lança(lancer単純過去3人称単数) — 動詞の前に代名詞を置く",
             "japanese": "彼は一種の恨みを込めて私に言い放った"
           },
           {
             "french": "Je ne te crois pas!",
-            "breakdown": "te = à toi（君を）、否定文でも動詞の前",
+            "breakdown": "ne + te(=toi、君を/君に) + crois(croire現在形1人称単数) + pas — croire qqnで直接目的語。否定文でも動詞の前",
             "japanese": "君の言うことは信じない！"
+          },
+          {
+            "french": "Je lui dessinerai une muselière, à ton mouton",
+            "breakdown": "lui(=à ton mouton、君の羊に) + dessinerai(dessiner未来形1人称単数) + une muselière(口輪を) — à ton moutonは強調的に後置",
+            "japanese": "君の羊に口輪を描いてあげよう"
+          },
+          {
+            "french": "Si quelqu'un aime une fleur, ça lui suffit pour être heureux",
+            "breakdown": "lui(=à quelqu'un、その人に) + suffit(suffire現在形3人称単数) — 間接目的語で「その人にとって十分」",
+            "japanese": "誰かが花を愛しているなら、それだけで幸せになれる"
           }
         ]
       },
       {
         "title": "人称代名詞の直接目的語 (pronoms personnels compléments directs) — le, la, les",
-        "explanation": "動詞の前に置かれ、「〜を」の意味。le(彼を/それを), la(彼女を/それを), les(彼らを/それらを)。",
+        "explanation": "「〜を」を表す直接目的語代名詞。le(彼を/それを)/la(彼女を/それを)/les(彼らを/それらを)。動詞の前に置く。複合時制では過去分詞が直接目的語代名詞に性数一致する（je l'ai vue＝彼女を見た）。me/te/nous/vousは直接・間接両方の機能を持つ。2つの代名詞が並ぶ場合の語順（me le, te la, le lui等）にも注意が必要。",
         "examples": [
           {
             "french": "Je le pris dans les bras. Je le berçai.",
-            "breakdown": "le = le petit prince（小さな王子を）",
+            "breakdown": "le(=le petit prince、彼を、直接目的語) + pris(prendre単純過去) / berçai(bercer単純過去) — 同じle を2文で繰り返し、テンポを作る",
             "japanese": "私は彼を腕に抱いた。あやした。"
           },
           {
             "french": "Je lui dessinerai une muselière, à ton mouton",
-            "breakdown": "lui = à ton mouton（君の羊に）、dessinerai = 未来形",
+            "breakdown": "lui(=à ton mouton、間接目的語) + une muselière(直接目的語) — luiは間接目的語で「〜に」。直接目的語との共存",
             "japanese": "君の羊に口輪を描いてあげよう"
+          },
+          {
+            "french": "les épines ne servent à rien, les fleurs non plus! Je ne la crois pas.",
+            "breakdown": "la(=la fleur/une fleur、それを/彼女を) + crois(croire現在形) — laは女性名詞の花を指す直接目的語",
+            "japanese": "棘は何の役にも立たない、花だって！僕はそんなこと信じない。"
+          },
+          {
+            "french": "Tu les confonds, tu mélanges tout!",
+            "breakdown": "les(=les choses/les sujets、それらを、直接目的語複数) + confonds(confondre現在形2人称単数) — 複数の物事を指す",
+            "japanese": "君はごっちゃにしている、全部ごちゃ混ぜだ！"
           }
         ]
       },
       {
         "title": "疑問文 à quoi + 動詞 — 「何の役に立つ？」",
-        "explanation": "à quoi + 動詞で「何のために？何の役に？」。servir à = 〜に役立つ。",
+        "explanation": "à quoi＋動詞で「何のために？何の役に？」を問う疑問文。servir à＝「〜に役立つ」との組み合わせが頻出。倒置疑問文ではà quoi＋動詞＋主語の語順になる。前置詞＋quoiの形はde quoi（何について）、pour quoi/pourquoi（なぜ）、avec quoi（何で）など多様。日本語の「何のため？」に近いが、前置詞の選択が動詞によって決まる点に注意。",
         "examples": [
           {
             "french": "les épines, à quoi servent-elles?",
-            "breakdown": "à quoi(何に) + servent(servir現在ils形) + elles(主語の倒置)",
+            "breakdown": "à quoi(何に) + servent(servir現在形3人称複数) + -elles(主語倒置、les épinesを受ける女性複数) — 倒置疑問文",
             "japanese": "棘は、何の役に立つの？"
+          },
+          {
+            "french": "Mais à quoi ça sert de posséder les étoiles?",
+            "breakdown": "à quoi(何のために) + ça sert(それは役立つ) + de posséder(所有すること) — ça sert de＋不定詞で「〜することに役立つ」",
+            "japanese": "でも星を持っていて何の役に立つの？"
+          },
+          {
+            "french": "À quoi penses-tu?",
+            "breakdown": "À quoi(何について) + penses(penser à、〜について考える) + -tu(倒置) — penser àの疑問形",
+            "japanese": "何を考えているの？"
           }
         ]
       }
@@ -3597,54 +3787,79 @@
     "grammar": [
       {
         "title": "条件法現在 (conditionnel présent) — 丁寧な依頼",
-        "explanation": "voudrais, auriez, pourriez など、丁寧な依頼やお願いに使う。直接的な命令より柔らかい表現。",
+        "explanation": "voudrais/auriez/pourriezなど、丁寧な依頼やお願いに使う。直接的な命令法より柔らかく、距離感のある表現になる。第8章ではバラが条件法を使って間接的に要求を出す場面が印象的。日本語の「〜していただけませんか」に相当。否定疑問の条件法（N'auriez-vous pas...?）はさらに丁寧度が増す。vouloir/pouvoir/avoirの条件法が特に頻出。",
         "examples": [
           {
             "french": "Vous n'auriez pas un paravent?",
-            "breakdown": "auriez(avoir条件法vous) — 「〜はお持ちでない？」丁寧な要求",
+            "breakdown": "Vous(敬称) + n'auriez pas(avoir条件法現在2人称複数、否定) + un paravent(衝立) — 否定疑問の条件法でさらに丁寧に",
             "japanese": "衝立はお持ちではないかしら？"
           },
           {
             "french": "auriez-vous la bonté de penser à moi...",
-            "breakdown": "auriez-vous la bonté de — 「〜してくださる親切はおありかしら」",
-            "japanese": "私のことを考えてくださる優しさはおありかしら..."
+            "breakdown": "auriez-vous(avoir条件法現在倒置) + la bonté de(〜する親切さ) + penser à moi(私のことを考える) — 極めて丁寧な依頼表現",
+            "japanese": "私のことを考えてくださる優しさはおありかしら……"
+          },
+          {
+            "french": "Je voudrais un peu d'eau fraîche",
+            "breakdown": "voudrais(vouloir条件法現在1人称単数) + un peu de(少しの) + eau fraîche(冷たい水) — 丁寧な希望表現",
+            "japanese": "新鮮な水が少し欲しいのですが"
+          },
+          {
+            "french": "Pourriez-vous me protéger du vent?",
+            "breakdown": "Pourriez(pouvoir条件法現在2人称複数) + -vous(倒置) + me protéger(私を守る) + du vent(風から) — 条件法で丁寧な依頼",
+            "japanese": "風から守っていただけませんか？"
           }
         ]
       },
       {
         "title": "条件法過去 (conditionnel passé) — 後悔の表現 「〜すべきだった」",
-        "explanation": "aurais/aurais dû + 不定詞。過去にしなかったことへの後悔を表す。devoir の条件法過去が特に頻出。",
+        "explanation": "aurais/aurais dû＋不定詞で過去にしなかったことへの後悔を表す。devoirの条件法過去（aurais dû）は「〜すべきだった（のにしなかった）」で特に頻出。第8章は王子がバラとの関係を振り返り、後悔する場面が中心で、この時制が繰り返し使われる。日本語の「〜すればよかった」「〜すべきだったのに」に相当。英語のshould have doneに近い。",
         "examples": [
           {
             "french": "J'aurais dû ne pas l'écouter",
-            "breakdown": "aurais dû(devoir条件法過去) + ne pas écouter — 「聞かなければよかった」",
+            "breakdown": "aurais dû(devoir条件法過去1人称単数) + ne pas écouter(聞かないこと) — 否定の不定詞はne pasを不定詞の前にまとめる",
             "japanese": "彼女の言うことを聞かなければよかった"
           },
           {
             "french": "J'aurais dû deviner sa tendresse derrière ses pauvres ruses",
-            "breakdown": "aurais dû deviner — 「見抜くべきだった」",
+            "breakdown": "aurais dû(〜すべきだった) + deviner(見抜く) + sa tendresse(彼女の優しさ) + derrière(〜の裏に) + ses pauvres ruses(彼女のあわれな策略)",
             "japanese": "彼女のあわれな策略の裏にある優しさを見抜くべきだった"
           },
           {
             "french": "Je n'aurais jamais dû m'enfuir!",
-            "breakdown": "n'aurais jamais dû — 「決して逃げるべきではなかった」",
+            "breakdown": "n'aurais + jamais(決して) + dû(devoir過去分詞) + m'enfuir(s'enfuir不定詞、逃げる) — jamaisで後悔を強調",
             "japanese": "決して逃げ出すべきではなかった！"
+          },
+          {
+            "french": "J'aurais dû la juger sur les actes et non sur les mots",
+            "breakdown": "aurais dû(〜すべきだった) + la juger(彼女を判断する) + sur les actes(行為で) + et non sur les mots(言葉ではなく) — 深い後悔の表現",
+            "japanese": "言葉ではなく行動で彼女を判断すべきだった"
           }
         ]
       },
       {
         "title": "単純過去 (passé simple) 入門 — 文学的な過去時制",
-        "explanation": "文学作品でのみ使われる過去時制。話し言葉では複合過去で代用。3群は不規則が多い。この章で頻出。",
+        "explanation": "文学作品の地の文でのみ使われる過去時制で、話し言葉では複合過去で代用する。-er動詞: -ai/-as/-a/-âmes/-âtes/-èrent。-ir/-re動詞: -is/-is/-it/-îmes/-îtes/-irent。不規則形も多い（pouvoir→put, venir→vint）。日本語話者は読解で出会う時制として理解しておくべきだが、会話では使わない。第8章から本格的に登場する。",
         "examples": [
           {
             "french": "Le petit prince devina bien qu'elle n'était pas trop modeste",
-            "breakdown": "devina(deviner単純過去il形) — -er動詞は -ai, -as, -a, -âmes, -âtes, -èrent",
+            "breakdown": "devina(deviner単純過去3人称単数) — -er動詞は-ai/-as/-a/-âmes/-âtes/-èrentの活用パターン",
             "japanese": "小さな王子は彼女がそれほど控えめでないことを見抜いた"
           },
           {
             "french": "le petit prince ne put contenir son admiration",
-            "breakdown": "put(pouvoir単純過去il形) — 不規則形",
+            "breakdown": "put(pouvoir単純過去3人称単数、不規則形pus/pus/put/pûmes/pûtes/purent) + contenir(抑える) — 不規則動詞の単純過去",
             "japanese": "小さな王子は賞賛を抑えられなかった"
+          },
+          {
+            "french": "Elle commença bien vite à le tourmenter par sa vanité",
+            "breakdown": "commença(commencer単純過去3人称単数) + à le tourmenter(彼を苦しめること) + par sa vanité(虚栄心で) — -er動詞の規則的な単純過去",
+            "japanese": "花はすぐに虚栄心で彼を苦しめ始めた"
+          },
+          {
+            "french": "Il se trouva dans la région des astéroïdes",
+            "breakdown": "se trouva(se trouver単純過去3人称単数) — 代名動詞の単純過去。再帰代名詞seはそのまま",
+            "japanese": "彼は小惑星の地域にいた"
           }
         ]
       }
@@ -4119,49 +4334,79 @@
     "grammar": [
       {
         "title": "単純過去 (passé simple) — 文学的過去時制の続き",
-        "explanation": "小説で物語の出来事を語る時制。-er動詞: -ai/-as/-a/-âmes/-âtes/-èrent。-ir/-re動詞: -is/-is/-it/-îmes/-îtes/-irent。不規則動詞も多い。",
+        "explanation": "小説で物語の出来事を語る時制。第9章では王子がバラに別れを告げ旅立つ場面で多用される。-er動詞: -ai/-as/-a/-âmes/-âtes/-èrent。-ir/-re動詞: -is/-is/-it/-îmes/-îtes/-irent。êtreの単純過去（fus/fus/fut/fûmes/fûtes/furent）やmettreの単純過去（mis/mis/mit）など不規則形も頻出。半過去（背景描写）と単純過去（出来事）の使い分けに注意。",
         "examples": [
           {
             "french": "il mit sa planète bien en ordre",
-            "breakdown": "mit(mettre単純過去il形) — 不規則。mettre → mis → mit",
+            "breakdown": "mit(mettre単純過去3人称単数、不規則形mis/mis/mit) + sa planète(自分の星を) + bien en ordre(きちんと整えて) — 出発前の具体的行動",
             "japanese": "彼は星をきちんと整えた"
           },
           {
             "french": "Il fut surpris par l'absence de reproches",
-            "breakdown": "fut(être単純過去il形) — être → fus/fus/fut/fûmes/fûtes/furent",
+            "breakdown": "fut(être単純過去3人称単数、fus/fus/fut/fûmes/fûtes/furent) + surpris(surprendre過去分詞) + par l'absence de reproches(非難がないことに) — être＋過去分詞の受動態の単純過去",
             "japanese": "彼は非難がないことに驚いた"
+          },
+          {
+            "french": "Il ramona soigneusement ses volcans en activité",
+            "breakdown": "ramona(ramoner単純過去3人称単数) + soigneusement(丁寧に) + ses volcans en activité(活火山を) — -er動詞の規則的な単純過去",
+            "japanese": "彼は活火山を丁寧に掃除した"
+          },
+          {
+            "french": "Il arracha aussi les dernières pousses de baobabs",
+            "breakdown": "arracha(arracher単純過去3人称単数) + les dernières pousses(最後の芽を) + de baobabs(バオバブの) — 出発準備の一連の行動を単純過去で列挙",
+            "japanese": "バオバブの最後の芽も引き抜いた"
           }
         ]
       },
       {
         "title": "接続法現在 (subjonctif présent) — il faut que / pour que",
-        "explanation": "il faut que + 接続法、pour que + 接続法。義務・目的・感情の表現の後に使う。主語が変わる場合に接続法が必要。",
+        "explanation": "il faut que＋接続法で「〜しなければならない」、pour que＋接続法で「〜するために」。義務・目的・感情・判断の表現の後に使う。主節と従属節の主語が異なる場合に接続法が必要（同じならil faut＋不定詞）。日本語にない概念で最大の難関の一つ。活用はnous/vous形以外が不規則になることが多い。être→sois/soit、avoir→aie/ait、pouvoir→puisseなど。",
         "examples": [
           {
             "french": "Il faut bien que je supporte deux ou trois chenilles si je veux connaître les papillons",
-            "breakdown": "que je supporte(supporter接続法) — il faut que + 接続法",
+            "breakdown": "Il faut que(〜しなければならない) + je supporte(supporter接続法現在1人称単数) — 主節と従属節の主語が同じだが、queがあるため接続法",
             "japanese": "蝶を知りたいなら、毛虫の二、三匹は我慢しなければ"
           },
           {
             "french": "elle ne voulait pas qu'il la vît pleurer",
-            "breakdown": "vît(voir接続法半過去il形) — 文学的表現。日常会話ではvoie",
+            "breakdown": "ne voulait pas que(〜を望まない) + il la vît(voir接続法半過去3人称単数) — 文学的表現で接続法半過去を使用。日常会話ではqu'il la voie",
             "japanese": "彼に泣いているところを見られたくなかった"
+          },
+          {
+            "french": "Je veux que tu sois heureux",
+            "breakdown": "veux que(望む) + tu sois(être接続法現在2人称単数) + heureux(幸せな) — vouloir que＋接続法の基本形",
+            "japanese": "君に幸せでいてほしい"
+          },
+          {
+            "french": "Pour que les papillons viennent, il faut supporter les chenilles",
+            "breakdown": "Pour que(〜するために) + viennent(venir接続法現在3人称複数) — pour que＋接続法の目的構文",
+            "japanese": "蝶が来るためには、毛虫を我慢しなければならない"
           }
         ]
       },
       {
         "title": "命令法 — 別れの場面での用法",
-        "explanation": "tu形の命令法で直接的な指示。Tâche de = 〜するよう努めて。Va-t'en = 行ってしまえ。",
+        "explanation": "tu形の命令法で直接的な指示を表す。Tâche de＝「〜するよう努めて」、Va-t'en＝「行ってしまえ」（s'en allerの命令形）。第9章ではバラが王子に別れを告げる場面で、強がりと優しさが交錯する命令法が印象的に使われる。否定命令（Ne traîne pas）と肯定命令（Va-t'en）を交互に使うことで、バラの複雑な感情が表現されている。",
         "examples": [
           {
             "french": "Tâche d'être heureux",
-            "breakdown": "Tâche(tâcher命令形tu) + de + être — 「幸せになるよう努めて」",
+            "breakdown": "Tâche(tâcher命令形tu、-er動詞なので-sなし) + d'être(être不定詞) + heureux(幸せな) — 「幸せになるよう努めて」という別れの言葉",
             "japanese": "幸せになるのよ"
           },
           {
             "french": "Ne traîne pas comme ça, c'est agaçant. Tu as décidé de partir. Va-t'en.",
-            "breakdown": "Ne traîne pas(否定命令) / Va-t'en(s'en aller命令形tu) — 「ぐずぐずしないで。行って。」",
+            "breakdown": "Ne traîne pas(否定命令：ぐずぐずするな) / Va-t'en(s'en aller命令形tu：行ってしまえ。-t'=te、en=そこから) — バラの強がりを表す突き放す命令",
             "japanese": "ぐずぐずしないで、いらいらするわ。出発すると決めたんでしょ。行って。"
+          },
+          {
+            "french": "Dépêche-toi si tu veux arriver avant la nuit",
+            "breakdown": "Dépêche(se dépêcher命令形tu) + -toi(再帰代名詞、肯定命令で動詞の後) + si tu veux(望むなら) — 代名動詞の肯定命令",
+            "japanese": "夜までに着きたいなら急いで"
+          },
+          {
+            "french": "Laisse ce globe tranquille. Je n'en veux plus.",
+            "breakdown": "Laisse(laisser命令形tu) + ce globe(このガラスの覆い) + tranquille(そっとしておく) + Je n'en veux plus(もうそれは要らない) — 命令法＋否定文の組み合わせ",
+            "japanese": "そのガラスの覆いはそのままにして。もう要らないわ。"
           }
         ]
       }
@@ -4675,50 +4920,90 @@
     "grammar": [
       {
         "title": "接続法半過去（le subjonctif imparfait）",
-        "explanation": "文語的な表現で、主節が過去時制のとき従属節に接続法半過去が使われます。現代フランス語では接続法現在で代用されることが多いですが、文学作品ではよく見られます。「fût」はêtreの接続法半過去形です。",
+        "explanation": "文語・文学作品で使われる接続法の過去形。主節が過去時制（半過去・単純過去等）のとき、従属節で接続法が必要な場面で用いられる。現代フランス語の会話では接続法現在で代用されるが、星の王子さまのような文学作品では頻出。日本語話者は「時制の一致」の概念に馴染みが薄いため、主節の時制に注目して使い分ける意識が重要。fût（être）、eût（avoir）等の形を覚えておくと読解力が上がる。",
         "examples": [
           {
             "french": "Car le roi tenait essentiellement à ce que son autorité fût respectée.",
-            "breakdown": "tenait（半過去）→ à ce que + fût（être の接続法半過去）+ respectée（過去分詞）",
+            "breakdown": "tenait（tenir半過去）→ à ce que + fût（êtreの接続法半過去3人称単数）+ respectée（過去分詞・女性形でautoritéに一致）。tenir à ce que〜は「〜であることにこだわる」。",
             "japanese": "なぜなら王は自分の権威が尊重されることに本質的にこだわっていたからだ。"
+          },
+          {
+            "french": "Il exigeait que sa volonté fût obéie.",
+            "breakdown": "exigeait（exiger半過去）+ que + fût obéie（obéirの接続法半過去受動態）。exiger que〜は接続法を要求する動詞。",
+            "japanese": "彼は自分の意志が従われることを要求していた。"
+          },
+          {
+            "french": "Il ne souffrait pas qu'on lui désobéît.",
+            "breakdown": "ne souffrait pas（souffrir半過去・否定）+ que + désobéît（désobéirの接続法半過去3人称単数）。souffrir queも接続法を要求。",
+            "japanese": "彼は自分に逆らわれることを許さなかった。"
           }
         ]
       },
       {
         "title": "命令法（l'impératif）",
-        "explanation": "命令・指示・依頼を表す動詞の活用形。tu/nous/vous の3つの人称があり、主語代名詞は省略されます。この章では王が頻繁に命令法を使います。",
+        "explanation": "命令・指示・依頼を表す活用形で、tu/nous/vousの3人称がある。主語代名詞は省略される。-er動詞のtu形は語尾の-sが脱落する（例：approche）。代名動詞の肯定命令では再帰代名詞が動詞の後に来て-toiとなる（否定では前：ne te...pas）。この章では王が頻繁に命令法を使い、権威的な性格を表現している。日本語の命令形と異なり、フランス語では丁寧な依頼にも用いられる点に注意。",
         "examples": [
           {
             "french": "Approche-toi que je te voie mieux.",
-            "breakdown": "Approche-toi（s'approcherの命令法tu）+ que je te voie（接続法：目的の que）",
+            "breakdown": "Approche-toi（s'approcherの命令法tu・代名動詞なので-toiが後置）+ que je te voie（接続法現在：目的のque節）。「近づきなさい、よく見えるように」。",
             "japanese": "もっと近づきなさい、よく見えるように。"
           },
           {
             "french": "Ne pars pas, je te fais ministre!",
-            "breakdown": "Ne pars pas（partirの命令法tu・否定形）",
+            "breakdown": "Ne pars pas（partirの命令法tu・否定形：ne + 動詞 + pas）。fais（faire現在1人称単数）+ ministre（大臣に任命する）。",
             "japanese": "行かないでくれ、君を大臣にしよう！"
+          },
+          {
+            "french": "Ordonne à ce soleil de se coucher.",
+            "breakdown": "Ordonne（ordonnerの命令法tu）+ à ce soleil（この太陽に）+ de se coucher（沈むよう：ordonner à qqn de + 不定詞）。",
+            "japanese": "あの太陽に沈めと命令してください。"
+          },
+          {
+            "french": "Assieds-toi, je t'ordonne.",
+            "breakdown": "Assieds-toi（s'asseoirの命令法tu）+ je t'ordonne（私が命令する）。代名動詞の肯定命令で-toiが後置。",
+            "japanese": "座りなさい、命令だ。"
           }
         ]
       },
       {
         "title": "条件法過去（le conditionnel passé）- 非現実の仮定",
-        "explanation": "過去の事実に反する仮定の帰結を表します。「もし～だったら、…だっただろう」という意味。構造：si + 大過去、条件法過去。",
+        "explanation": "過去の事実に反する仮定の帰結を表す時制。構造は「si + 大過去（条件節）→ 条件法過去（帰結節）」。avoir/êtreの条件法現在 + 過去分詞で作る。「もし〜だったなら、〜だっただろうに」という実現しなかった事態を表す。日本語では「〜だったら〜だったのに」に相当するが、フランス語では時制が厳密に区別される点に注意。条件法現在（現在の非現実）との混同に気をつけること。",
         "examples": [
           {
             "french": "S'il l'avait détenu lui-même, il aurait pu assister à soixante-douze couchers de soleil.",
-            "breakdown": "si + avait détenu（大過去）→ aurait pu（条件法過去）+ assister（不定詞）",
+            "breakdown": "si + avait détenu（détenir大過去：もし自分で持っていたなら）→ aurait pu（pouvoir条件法過去）+ assister à（〜に出席する）。72回の日没を見られただろう。",
             "japanese": "もし自分がその力を持っていたら、72回の日没を見ることができただろう。"
+          },
+          {
+            "french": "Il aurait été obéi instantanément.",
+            "breakdown": "aurait été obéi（obéir条件法過去・受動態）+ instantanément（即座に）。avoir条件法 + été + 過去分詞。",
+            "japanese": "彼は即座に従われていただろう。"
+          },
+          {
+            "french": "Il lui aurait demandé un coucher de soleil à l'heure qu'il souhaitait.",
+            "breakdown": "aurait demandé（demander条件法過去）+ un coucher de soleil（日没を）+ à l'heure qu'il souhaitait（望む時間に：半過去）。",
+            "japanese": "彼は望む時間に日没を求めていただろう。"
           }
         ]
       },
       {
         "title": "感嘆文と修辞疑問（Exclamations et questions rhétoriques）",
-        "explanation": "驚き・感情を表す感嘆文や、答えを期待しない修辞疑問。この章では小さな王子の驚きが多く表現されています。",
+        "explanation": "驚き・感情・皮肉を表す感嘆文や、答えを期待しない修辞疑問文。感嘆文はComment/Comme/Queなどで始まり、感嘆符で終わる。修辞疑問は疑問形だが答えを求めず、主張を強調する効果がある。この章では小さな王子が王の論理に驚く場面で多用される。日本語でも「なんて〜なんだ！」に近いが、フランス語ではcomment/combienなど疑問詞を使う点が特徴的。puisque（〜なのだから）と組み合わせて論理的な驚きを表現する。",
         "examples": [
           {
             "french": "Comment peut-il me reconnaître puisqu'il ne m'a encore jamais vu!",
-            "breakdown": "Comment（どうやって）+ peut-il（倒置疑問）+ puisque（～なのだから）→ 感嘆符で終わる修辞疑問",
+            "breakdown": "Comment（どうやって）+ peut-il（pouvoir倒置疑問）+ me reconnaître（私を認識する）+ puisque（〜なのだから）+ ne...jamais vu（一度も見たことがない）。感嘆符で終わる修辞疑問。",
             "japanese": "一度も会ったことがないのに、どうして僕のことがわかるんだ！"
+          },
+          {
+            "french": "Les grandes personnes sont bien étranges!",
+            "breakdown": "Les grandes personnes（大人たち）+ sont（être現在）+ bien étranges（本当に変だ）。bienは「とても」の強調副詞。",
+            "japanese": "大人たちは本当に変だなあ！"
+          },
+          {
+            "french": "Que faut-il que je fasse pour être ton ministre?",
+            "breakdown": "Que（何を）+ faut-il que（il faut que倒置：〜しなければならない）+ je fasse（faire接続法現在）+ pour être（〜になるために）。",
+            "japanese": "あなたの大臣になるには何をすればいいのですか？"
           }
         ]
       }
@@ -5407,39 +5692,69 @@
     "grammar": [
       {
         "title": "命令法（l'impératif）- tu形の用法",
-        "explanation": "tu形の命令法は、-er動詞では語尾の-sが脱落します（例：frappe）。代名動詞の命令法では「-toi」が後ろに付きます。否定命令では代名詞は動詞の前に置きます。",
+        "explanation": "tu形の命令法は親しい相手への命令・依頼に使う。-er動詞では語尾の-sが脱落する（例：frappe、admire）。代名動詞の肯定命令では再帰代名詞が-toiの形で動詞の後に付く。否定命令では「ne + 代名詞 + 動詞 + pas」の語順になる。日本語話者が間違えやすい点として、faire（fais）やdire（dis）等の不規則動詞の命令形がある。また、命令法に人称代名詞を付ける場合、肯定ではハイフンで後置（fais-moi）、否定では前置（ne me fais pas）となる。",
         "examples": [
           {
             "french": "Frappe tes mains l'une contre l'autre.",
-            "breakdown": "Frappe（frapperの命令法tu：-er動詞なので-sなし）+ tes mains（目的語）",
+            "breakdown": "Frappe（frapperの命令法tu：-er動詞なので-sなし）+ tes mains（君の手を）+ l'une contre l'autre（互いに）。「手を打ち合わせなさい」。",
             "japanese": "手を叩きなさい。"
           },
           {
             "french": "Fais-moi ce plaisir. Admire-moi quand-même!",
-            "breakdown": "Fais（faireの命令法tu）+ moi（間接目的語）/ Admire（admirerの命令法tu）+ moi",
+            "breakdown": "Fais（faireの命令法tu：不規則）+ moi（間接目的語・後置）/ Admire（admirerの命令法tu：-er動詞で-sなし）+ moi（目的語・後置）。quand-même = それでも。",
             "japanese": "お願いだから。とにかく私を称賛してくれ！"
+          },
+          {
+            "french": "Dis-moi que tu m'admires beaucoup.",
+            "breakdown": "Dis（direの命令法tu：不規則）+ moi（間接目的語後置）+ que tu m'admires（que節：君が僕を大いに称賛すると）。",
+            "japanese": "僕をとても称賛しているって言ってくれ。"
+          },
+          {
+            "french": "Baisse modestement les yeux.",
+            "breakdown": "Baisse（baisserの命令法tu）+ modestement（控えめに：副詞）+ les yeux（目を）。うぬぼれ屋が帽子の礼をした後の指示。",
+            "japanese": "控えめに目を伏せなさい。"
           }
         ]
       },
       {
         "title": "ne...que（限定の副詞表現）",
-        "explanation": "「ne...que」は「～しか…ない」「～だけ」を意味する限定表現です。否定ではなく制限を表します。queの後に限定される要素が来ます。",
+        "explanation": "「ne...que」は「〜しか…ない」「〜だけ」を表す限定表現で、否定ではなく制限を意味する。queの後に限定される要素が置かれる。ne...pasやne...jamaisと組み合わせ可能（ne...jamais que = 決して〜しか…ない）。英語のonlyに相当するが、フランス語ではneを伴う点が独特。日本語話者は否定表現と混同しやすいが、「〜だけ」と肯定的に訳すのがコツ。seulement（ただ〜だけ）と言い換え可能だが、ne...queの方が文学的。",
         "examples": [
           {
             "french": "Les vaniteux n'entendent jamais que les louanges.",
-            "breakdown": "n'entendent（否定のne）+ jamais que（決して～しか…ない）+ les louanges（限定される対象）",
+            "breakdown": "n'entendent（entendre否定のne）+ jamais que（決して〜しか…ない）+ les louanges（称賛だけ）。jamaisとqueが共起して「称賛以外は決して聞かない」。",
             "japanese": "うぬぼれ屋は称賛しか聞こえない。"
+          },
+          {
+            "french": "Il n'y a qu'un seul habitant sur cette planète.",
+            "breakdown": "Il n'y a que（〜しかいない）+ un seul habitant（たった一人の住人）。ne...queで限定。",
+            "japanese": "この星にはたった一人の住人しかいない。"
+          },
+          {
+            "french": "Je ne peux que t'admirer si tu y tiens.",
+            "breakdown": "ne peux que（〜することしかできない）+ t'admirer（君を称賛する）+ si tu y tiens（君がそれを望むなら）。pouvoir + ne...queの組み合わせ。",
+            "japanese": "君がどうしてもと言うなら、称賛するしかないね。"
           }
         ]
       },
       {
         "title": "感嘆文 — 「Que + 主語 + 動詞」型",
-        "explanation": "間接疑問文や感嘆文で使われる「que」の用法。signifierを使った「何を意味するのか」という構文がこの章で繰り返されます。",
+        "explanation": "疑問詞queを使った構文で、「Qu'est-ce que + 動詞？」（〜とは何か？）は直接疑問、「ce que + 動詞」は間接疑問。この章ではsignifier（意味する）を使った「何を意味するのか」が繰り返され、小さな王子の純粋な好奇心を表す。また「Que + 主語 + être + 形容詞」型の感嘆文は「なんて〜なのだろう」の意味。日本語の「〜ってどういう意味？」に相当するが、フランス語では倒置や代名詞の使い方に注意が必要。",
         "examples": [
           {
             "french": "Qu'est-ce que signifie admirer?",
-            "breakdown": "Qu'est-ce que（何を）+ signifie（signifierの3人称単数）+ admirer（不定詞：主語の役割）",
+            "breakdown": "Qu'est-ce que（何を：直接疑問）+ signifie（signifierの3人称単数現在）+ admirer（不定詞が主語の役割）。「称賛するとはどういう意味？」。",
             "japanese": "「称賛する」とはどういう意味ですか？"
+          },
+          {
+            "french": "Que les grandes personnes sont bien bizarres!",
+            "breakdown": "Que（なんて：感嘆）+ les grandes personnes（大人たちは）+ sont（être現在）+ bien bizarres（本当に奇妙だ）。bien = とても（強調）。",
+            "japanese": "大人たちはなんて奇妙なのだろう！"
+          },
+          {
+            "french": "Qu'est-ce que cela veut dire?",
+            "breakdown": "Qu'est-ce que（何を）+ cela veut dire（それは意味する）。vouloir dire = 意味する（signifierより口語的）。",
+            "japanese": "それはどういう意味ですか？"
           }
         ]
       }
@@ -5754,28 +6069,43 @@
     "grammar": [
       {
         "title": "s'enquérir / s'informer — 丁寧な質問表現",
-        "explanation": "「s'enquérir（尋ねる）」と「s'informer（問い合わせる）」は「demander」より文語的で丁寧な表現です。両方とも代名動詞で、単純過去形で使われています。この章では小さな王子の質問が段階的に深まる様子が描かれています。",
+        "explanation": "s'enquérir（尋ねる）とs'informer（問い合わせる）はdemanderより格式高く文語的な代名動詞。単純過去ではs'enquit（s'enquérirの3人称単数）、s'informa（s'informerの3人称単数）の形をとる。小説の地の文で「〜と尋ねた」を表すのに多用される。s'enquérir de qqch（〜について尋ねる）のようにdeを伴う。日本語の「伺う」「お聞きする」のような丁寧さに対応する。星の王子さまでは対話の導入部で頻出し、物語のリズムを作っている。",
         "examples": [
           {
             "french": "Pour oublier quoi? s'enquit le petit prince.",
-            "breakdown": "s'enquit（s'enquérirの単純過去・3人称単数）— 倒置形で使用",
+            "breakdown": "Pour oublier quoi?（何を忘れるため？）+ s'enquit（s'enquérirの単純過去3人称単数：不規則活用）+ le petit prince（倒置形の主語）。",
             "japanese": "何を忘れるため？と小さな王子は尋ねた。"
           },
           {
             "french": "Honte de quoi? s'informa le petit prince.",
-            "breakdown": "s'informa（s'informerの単純過去・3人称単数）— 倒置形",
+            "breakdown": "Honte de quoi?（何が恥ずかしいの？）+ s'informa（s'informerの単純過去3人称単数：規則活用-er動詞）+ le petit prince（倒置主語）。",
             "japanese": "何が恥ずかしいの？と小さな王子は聞いた。"
+          },
+          {
+            "french": "Le petit prince s'enquit de ce qu'il faisait là.",
+            "breakdown": "s'enquit de（〜について尋ねた）+ ce qu'il faisait là（そこで何をしていたか：間接疑問文）。de + ce que の組み合わせ。",
+            "japanese": "小さな王子はそこで何をしているのか尋ねた。"
           }
         ]
       },
       {
         "title": "循環論法の構造（tautologie）",
-        "explanation": "この章全体が循環論法（トートロジー）の構造です。「飲むのは恥ずかしいから → 何が恥ずかしい？ → 飲むことが恥ずかしい」。フランス語では「pour + 不定詞」が理由・目的を表し、この繰り返し構造が悲喜劇的な効果を生みます。",
+        "explanation": "同じ論理が堂々巡りする構造で、フランス語ではtautologieと呼ぶ。この章の呑み助は「飲む→恥ずかしい→忘れたい→飲む」という悪循環を体現する。文法的には「pour + 不定詞」（〜するために：目的）と「de + 不定詞」（〜の：原因・対象）が連鎖し、原因と結果が入れ替わる皮肉な構造を作る。日本語では「〜するために〜する」の繰り返しだが、フランス語ではpour/de/queの使い分けが論理関係を明確にしている点に注目。文学的修辞としての理解が読解の鍵となる。",
         "examples": [
           {
             "french": "Pourquoi bois-tu? — Pour oublier. — Pour oublier quoi? — Pour oublier que j'ai honte. — Honte de quoi? — Honte de boire!",
-            "breakdown": "Pourquoi（なぜ）→ Pour + 不定詞（～するため）→ que + 節（～ということ）→ de + 不定詞（～の恥）の連鎖",
+            "breakdown": "Pourquoi（なぜ）→ Pour + oublier（忘れるために）→ que j'ai honte（恥ずかしいことを：que節）→ Honte de + boire（飲むことの恥：de + 不定詞）。循環が完成。",
             "japanese": "なぜ飲むの？ — 忘れるため。— 何を忘れるため？ — 恥ずかしいことを。— 何が恥ずかしいの？ — 飲むことが！"
+          },
+          {
+            "french": "Il buvait pour oublier qu'il avait honte de boire.",
+            "breakdown": "buvait（boire半過去）+ pour oublier（忘れるために）+ qu'il avait honte（恥ずかしかったこと：avoir honte）+ de boire（飲むことの：de + 不定詞）。地の文での要約。",
+            "japanese": "彼は飲むことが恥ずかしいのを忘れるために飲んでいた。"
+          },
+          {
+            "french": "Le petit prince s'en alla, perplexe.",
+            "breakdown": "s'en alla（s'en aller単純過去：立ち去った）+ perplexe（当惑して：形容詞が状態を補足）。循環論法に困惑した王子の退場。",
+            "japanese": "小さな王子は当惑しながら立ち去った。"
           }
         ]
       }
@@ -6126,44 +6456,69 @@
     "grammar": [
       {
         "title": "単純過去（le passé simple）- 規則動詞",
-        "explanation": "文学的な過去時制で、物語の完了した出来事を表します。-er動詞：-ai, -as, -a, -âmes, -âtes, -èrent。-ir/-re動詞：-is, -is, -it, -îmes, -îtes, -irent。この章では多くの単純過去が使われています。",
+        "explanation": "文学作品で物語の完了した出来事を語る過去時制。口語では複合過去で代用される。活用パターン：-er動詞は-ai/-as/-a/-âmes/-âtes/-èrent、-ir/-re動詞は-is/-is/-it/-îmes/-îtes/-irent。3人称単数（-a, -it）が最頻出。日本語話者にとっては複合過去との使い分けが難しいが、小説・物語＝単純過去、日常会話＝複合過去と覚えるのが基本。星の王子さまでは地の文がほぼ全て単純過去で書かれている。",
         "examples": [
           {
             "french": "Le businessman leva la tête.",
-            "breakdown": "leva（leverの単純過去・3人称単数：-er動詞 → -a）",
+            "breakdown": "leva（leverの単純過去3人称単数：-er動詞 → -a）。lever la tête = 顔を上げる。",
             "japanese": "実業家は顔を上げた。"
           },
           {
             "french": "Le businessman comprit qu'il n'était point d'espoir de paix.",
-            "breakdown": "comprit（comprendreの単純過去・3人称単数：不規則 → -it）",
+            "breakdown": "comprit（comprendreの単純過去3人称単数：不規則 → -it型）。point = pas（否定の文語形）。",
             "japanese": "実業家は平和の望みがないことを理解した。"
+          },
+          {
+            "french": "Le petit prince posa encore une question.",
+            "breakdown": "posa（poserの単純過去3人称単数：-er動詞 → -a）+ encore une question（もう一つの質問を）。",
+            "japanese": "小さな王子はもう一つ質問をした。"
+          },
+          {
+            "french": "Il renonça à comprendre.",
+            "breakdown": "renonça（renoncerの単純過去3人称単数：-er動詞 → -a、cの前でçに変化）+ à comprendre（理解することを諦める）。",
+            "japanese": "彼は理解することを諦めた。"
           }
         ]
       },
       {
         "title": "間接疑問文（l'interrogation indirecte）",
-        "explanation": "直接疑問文を別の文に埋め込む構文。主節の動詞（demander, savoir等）+ 疑問詞 + 主語 + 動詞の語順（倒置しない）。",
+        "explanation": "直接疑問文を別の文に埋め込む構文。主節の動詞（demander, savoir, comprendre等）+ 疑問詞 + 主語 + 動詞の語順で、倒置しない。直接疑問：Comment peut-on...? → 間接疑問：Je me demande comment on peut...。日本語では「〜かどうか」「〜かを」に相当する。est-ce queは間接疑問では使わず、si（〜かどうか）に変える。疑問詞のない場合もsi（if）を使う。日本語話者は語順の変化（倒置の解除）を忘れやすいので注意。",
         "examples": [
           {
             "french": "Comment peut-on posséder les étoiles?",
-            "breakdown": "Comment（どうやって）+ peut-on（倒置形：直接疑問）→ 間接形なら「je me demande comment on peut posséder...」",
+            "breakdown": "Comment（どうやって）+ peut-on（pouvoir倒置形：直接疑問）。間接形なら「je me demande comment on peut posséder les étoiles」となり倒置が消える。",
             "japanese": "どうやって星を所有できるのですか？"
+          },
+          {
+            "french": "Je me demande si cet homme est sérieux.",
+            "breakdown": "Je me demande（私は疑問に思う）+ si（〜かどうか）+ cet homme est sérieux（この人は真面目か：倒置なし）。直接疑問ではEst-ce que cet homme est sérieux?",
+            "japanese": "この人は真面目なのだろうかと私は思った。"
+          },
+          {
+            "french": "Il ne savait pas ce que signifiait le mot \"posséder\".",
+            "breakdown": "ne savait pas（savoir半過去・否定）+ ce que（〜ということを：間接疑問）+ signifiait（signifier半過去）+ le mot（その単語が）。",
+            "japanese": "彼は「所有する」という言葉が何を意味するか知らなかった。"
           }
         ]
       },
       {
         "title": "不定代名詞 on の多義性",
-        "explanation": "「on」は文脈によって「人々一般」「私たち」「誰か」など様々な意味を持ちます。この章では一般論を述べる際に多用されています。",
+        "explanation": "onは文脈によって「人々一般」「私たち（nous）」「誰か（quelqu'un）」「あなた（tu/vous）」など多様な意味を持つ代名詞。動詞は常に3人称単数で活用する。文語的文体では母音の後でl'onとなることがある（euphonie：音韻上の調整）。英語のone/they/weに相当するが、フランス語ではより広く使われる。日本語の主語省略に似た曖昧さがあるが、フランス語では明示的にonを置く点が異なる。この章ではonが「世間一般」と「特定の誰か」の間を揺れ動き、実業家の論理の曖昧さを暗示する。",
         "examples": [
           {
             "french": "On ne sait jamais.",
-            "breakdown": "On（人は誰でも・一般的に）+ ne sait jamais（決してわからない）",
+            "breakdown": "On（人は誰でも・一般論）+ ne sait jamais（決してわからない）。「誰にもわからないものだ」という一般的真理。",
             "japanese": "わからないものだ。（誰にもわからない。）"
           },
           {
             "french": "Des petites choses que l'on voit quelquefois dans le ciel.",
-            "breakdown": "l'on（onのやや文語的な形：母音の後でl'を付ける）+ voit（見る）+ quelquefois（時々）",
+            "breakdown": "l'on（onの文語形：queの後で音韻を整えるためl'を付加）+ voit（voir現在3人称単数）+ quelquefois（時々）。",
             "japanese": "空に時々見える小さなもの。"
+          },
+          {
+            "french": "Quand on trouve un diamant qui n'est à personne, il est à vous.",
+            "breakdown": "on（一般的に人が）+ trouve（見つける）+ qui n'est à personne（誰のものでもない：否定代名詞personne）+ il est à vous（それはあなたのもの）。",
+            "japanese": "誰のものでもないダイヤモンドを見つけたら、それはあなたのものだ。"
           }
         ]
       }
@@ -6816,39 +7171,69 @@
     "grammar": [
       {
         "title": "単純過去（le passé simple）- 不規則動詞",
-        "explanation": "不規則動詞の単純過去は語幹が変化します。主な型：-us型（avoir→eus, être→fus, pouvoir→pus）、-is型（faire→fis, dire→dis, prendre→pris）、-int型（venir→vint, tenir→tint）。",
+        "explanation": "不規則動詞の単純過去は語幹が大きく変化し、主に3つの型がある。-us型：avoir→eus、être→fus、pouvoir→pus、vouloir→voulus。-is型：faire→fis、dire→dis、prendre→pris、mettre→mis。-int型：venir→vint、tenir→tint。3人称単数のeut/fut/fit/vint等は文学作品で頻出するため暗記が必須。日本語話者は活用の多さに圧倒されがちだが、まず3人称単数形を優先して覚えると読解が楽になる。複合過去の過去分詞と語幹が異なる場合がある点に注意（例：voir→vit/vu）。",
         "examples": [
           {
             "french": "Il eut un soupir de regret et se dit encore.",
-            "breakdown": "eut（avoirの単純過去・3人称単数：eus型）+ se dit（se direの単純過去）",
+            "breakdown": "eut（avoirの単純過去3人称単数：-us型→eut）+ se dit（se direの単純過去：-is型→dit）。avoir un soupir = ため息をつく。",
             "japanese": "彼は後悔のため息をつき、さらに言った。"
           },
           {
             "french": "Le petit prince le regarda et il aima cet allumeur.",
-            "breakdown": "regarda（regarderの単純過去：-er動詞→-a）+ aima（aimerの単純過去→-a）",
+            "breakdown": "regarda（regarderの単純過去：-er規則→-a）+ aima（aimerの単純過去→-a）。規則動詞と不規則動詞の対比。",
             "japanese": "小さな王子は点灯夫を見て、この点灯夫が好きになった。"
+          },
+          {
+            "french": "L'allumeur fit sa manoeuvre.",
+            "breakdown": "fit（faireの単純過去3人称単数：-is型）+ sa manoeuvre（操作）。faire→fis/fis/fit/fîmes/fîtes/firent。",
+            "japanese": "点灯夫はいつもの操作をした。"
+          },
+          {
+            "french": "Il voulut aider l'allumeur mais ne put rien faire.",
+            "breakdown": "voulut（vouloirの単純過去3人称単数：-us型→voulus/voulus/voulut）+ put（pouvoirの単純過去：-us型→pus/pus/put）。",
+            "japanese": "彼は点灯夫を助けたかったが、何もできなかった。"
           }
         ]
       },
       {
         "title": "接続法現在 — paraître の後",
-        "explanation": "「il paraît que...（～のようだ）」の否定形の後では接続法が使われます。「ne...pas paraître + que + 接続法」は「～とは思えない」の意味。",
+        "explanation": "接続法は「le seul qui（唯一の〜）」「le premier qui（最初の〜）」など、最上級的・限定的な先行詞の後の関係節で使われる。paraître（〜に見える）の否定形の後でも接続法が求められる。直説法が客観的事実を述べるのに対し、接続法は主観的判断・感情・不確実性を表す。日本語には接続法に相当する文法がないため、「話者の主観が入る → 接続法」と覚えるのが実用的。この章の「唯一ばかげて見えない人」という表現が典型例。",
         "examples": [
           {
             "french": "C'est le seul qui ne me paraisse pas ridicule.",
-            "breakdown": "le seul qui（唯一の～で：接続法を要求する先行詞）+ ne me paraisse pas（paraîtreの接続法現在）+ ridicule",
+            "breakdown": "le seul qui（唯一の〜：最上級的表現→接続法を要求）+ ne me paraisse pas（paraîtreの接続法現在3人称単数）+ ridicule（ばかげた）。",
             "japanese": "この人だけが、僕にはばかげて見えない。"
+          },
+          {
+            "french": "C'est le seul dont je puisse me faire un ami.",
+            "breakdown": "le seul dont（唯一の〜：接続法を要求）+ je puisse（pouvoirの接続法現在1人称単数）+ me faire un ami（友達になれる）。",
+            "japanese": "友達になれそうなのはこの人だけだ。"
+          },
+          {
+            "french": "Il n'y a personne qui puisse comprendre.",
+            "breakdown": "personne qui（誰も〜ない：否定的先行詞→接続法を要求）+ puisse comprendre（理解できる）。",
+            "japanese": "理解できる人は誰もいない。"
           }
         ]
       },
       {
         "title": "未来形（le futur simple）— vouloir の未来形",
-        "explanation": "未来形は不定詞の語幹 + -ai, -as, -a, -ons, -ez, -ont。不規則語幹の動詞もあります（vouloir → voudr-）。この章では「quand tu voudras」の形で繰り返されます。",
+        "explanation": "未来形は不定詞語幹（-er/-ir動詞はそのまま）+ -ai/-as/-a/-ons/-ez/-ont。不規則語幹を持つ動詞：vouloir→voudr-、pouvoir→pourr-、avoir→aur-、être→ser-、faire→fer-、aller→ir-。「quand + 未来形」で「〜する時」を表す（英語と異なりwhenの後にも未来形を使う点に注意）。日本語の「〜するだろう」「〜する予定」に相当するが、フランス語の未来形は確実な予定や意志も表せる。",
         "examples": [
           {
             "french": "Tu n'as qu'à marcher assez lentement pour rester toujours au soleil. Quand tu voudras te reposer tu marcheras.",
-            "breakdown": "voudras（vouloirの未来形・tu）+ marcheras（marcherの未来形・tu）",
+            "breakdown": "voudras（vouloirの未来形tu：voudr- + -as）+ marcheras（marcherの未来形tu）。quand + 未来形で「〜したい時は」。",
             "japanese": "ゆっくり歩いていつも日なたにいればいい。休みたいときは歩けばいい。"
+          },
+          {
+            "french": "Je ferai ce que tu voudras.",
+            "breakdown": "ferai（faireの未来形1人称単数：fer- + -ai）+ voudras（vouloirの未来形2人称単数）。「君が望むことをしよう」。",
+            "japanese": "君が望むことを何でもしよう。"
+          },
+          {
+            "french": "La consigne n'aura pas changé.",
+            "breakdown": "aura changé（changer未来完了：avoir未来形 + 過去分詞）+ ne...pas（否定）。未来完了で「変わっていないだろう」。",
+            "japanese": "規則は変わっていないだろう。"
           }
         ]
       }
@@ -7423,44 +7808,64 @@
     "grammar": [
       {
         "title": "条件法現在（le conditionnel présent）- 仮定の帰結",
-        "explanation": "「もし～だったら、…だろう」を表す条件法。si + 半過去 → 条件法現在。また、語り手の推量や丁寧さにも使われます。この章では仮定の状況説明に多用されています。",
+        "explanation": "「si + 半過去 → 条件法現在」で現在の事実に反する仮定とその帰結を表す。「もし〜だったら、…だろうに」。また、条件法単独でも推量（〜だろう）、婉曲（〜かもしれない）、伝聞（〜だそうだ）を表す。この章では地理学者が仮定の状況を説明する場面で多用される。日本語の「〜だろう」「〜のに」に近いが、フランス語ではsi節の時制（半過去）と帰結節の時制（条件法現在）が厳密に対応する点に注意。si + 条件法は不可（si + 半過去のみ）。",
         "examples": [
           {
             "french": "Un explorateur qui mentirait entraînerait des catastrophes dans les livres de géographie.",
-            "breakdown": "qui mentirait（mentirの条件法現在）+ entraînerait（entraînerの条件法現在）— 仮定の帰結",
+            "breakdown": "qui mentirait（mentirの条件法現在：仮定の関係節）+ entraînerait（entraînerの条件法現在：帰結）。「もし嘘をつく探検家がいたら」の含意。",
             "japanese": "嘘をつく探検家がいたら、地理の本に大惨事を引き起こすことになる。"
           },
           {
             "french": "Je connais quelqu'un qui serait mauvais explorateur.",
-            "breakdown": "qui serait（êtreの条件法現在）— 婉曲的な推量",
+            "breakdown": "qui serait（êtreの条件法現在）— 婉曲的な推量。「〜になるだろう人」。直説法serait→確実ではない推測を表す。",
             "japanese": "ひどい探検家になりそうな人を一人知っている。"
+          },
+          {
+            "french": "Si l'explorateur avait mauvaise réputation, on ne le croirait pas.",
+            "breakdown": "Si + avait（avoir半過去：仮定節）→ ne le croirait pas（croire条件法現在・否定：帰結節）。「もし評判が悪ければ、信じてもらえないだろう」。",
+            "japanese": "もしその探検家の評判が悪ければ、誰も信じないだろう。"
           }
         ]
       },
       {
         "title": "接続法過去 — ait fourni（時制の一致）",
-        "explanation": "「attendre que + 接続法」の構文で、完了を表すために接続法過去（ait + 過去分詞）が使われます。主節が現在でも、従属節の行為が先に完了する場合に用います。",
+        "explanation": "接続法過去はavoir/êtreの接続法現在 + 過去分詞で作る。主節が現在でも、従属節の行為が先に完了する場合に用いる（前時性）。attendre que（〜を待つ）、avant que（〜する前に）等の後で頻出。直説法の複合過去に相当する接続法の時制。日本語話者は「完了」の概念がフランス語と異なるため、「まだ起きていないが完了が期待される行為」に接続法過去を使う点を意識するとよい。接続法現在との違いは「完了しているかどうか」。",
         "examples": [
           {
             "french": "On attend, pour noter à l'encre, que l'explorateur ait fourni des preuves.",
-            "breakdown": "attend（attendre の現在形）+ que + ait fourni（fournirの接続法過去：ait + fourni）",
+            "breakdown": "attend（attendre現在形）+ que + ait fourni（fournirの接続法過去：ait + fourni）。「探検家が証拠を提出し終えるのを待つ」。提出の完了を要求。",
             "japanese": "インクで記録するために、探検家が証拠を提出するのを待つ。"
+          },
+          {
+            "french": "Avant qu'il ait prouvé ses découvertes, on les note au crayon.",
+            "breakdown": "Avant que（〜する前に：接続法を要求）+ ait prouvé（prouverの接続法過去）。avant queは常に接続法を取る。",
+            "japanese": "発見を証明する前は、鉛筆で記録する。"
+          },
+          {
+            "french": "Il faut que l'explorateur ait fait ses recherches.",
+            "breakdown": "Il faut que（〜しなければならない）+ ait fait（faireの接続法過去）。研究の完了が必要だと述べている。",
+            "japanese": "探検家は調査を済ませていなければならない。"
           }
         ]
       },
       {
         "title": "間接疑問文 — 「Qu'est-ce que signifie...?」の繰り返し構造",
-        "explanation": "小さな王子が「エフェメール」の意味を繰り返し聞く場面。フランス語では「Qu'est-ce que signifie X?」（Xとはどういう意味か）が直接疑問、「ce que signifie X」が間接疑問になります。",
+        "explanation": "「Qu'est-ce que signifie X?」（Xとはどういう意味か）は直接疑問。間接疑問では「ce que signifie X」となりest-ce queが消える。signifier（意味する）は3群動詞で不定詞が主語になれる。この章では小さな王子が「エフェメール（はかない）」の意味を繰り返し尋ね、話が本筋から逸れていく場面で使われる。物語上は王子の執拗な好奇心を表すと同時に、地理学者の学問が「はかないもの」を記録しない矛盾を浮き彫りにする。",
         "examples": [
           {
             "french": "Qu'est-ce que signifie: \"éphémère\"?",
-            "breakdown": "Qu'est-ce que（何を）+ signifie（signifier の3人称単数）+ éphémère（主語）",
+            "breakdown": "Qu'est-ce que（何を：直接疑問の強調形）+ signifie（signifier3人称単数現在）+ éphémère（はかない：主語の役割）。",
             "japanese": "「はかない」とはどういう意味ですか？"
           },
           {
             "french": "Ça signifie \"qui est menacé de disparition prochaine\".",
-            "breakdown": "Ça signifie（それは～を意味する）+ qui est menacé（脅かされている）+ de disparition prochaine（近い消滅の）",
+            "breakdown": "Ça signifie（それは〜を意味する）+ qui est menacé（脅かされている：関係代名詞qui）+ de disparition prochaine（近い消滅の）。",
             "japanese": "それは「近い将来消え去る恐れがある」という意味だ。"
+          },
+          {
+            "french": "Ma fleur est éphémère, et elle n'a que quatre épines pour se défendre!",
+            "breakdown": "éphémère（はかない：形容詞）+ n'a que（〜しか持っていない：ne...que限定）+ quatre épines（4本の棘）+ pour se défendre（身を守るために）。",
+            "japanese": "僕の花ははかなくて、身を守る棘が4本しかないんだ！"
           }
         ]
       }
@@ -8062,44 +8467,64 @@
     "grammar": [
       {
         "title": "数詞と数量表現（les nombres et les quantités）",
-        "explanation": "フランス語の大きな数の読み方：million(s)は名詞扱いで「de」を伴う。milliardも同様。centとvingtは条件付きで複数の-sが付く（後に他の数が続かない場合：deux cents, vingt et un）。millは不変。",
+        "explanation": "フランス語の大きな数の規則：million(s)/milliard(s)は名詞扱いで「de + 名詞」を伴う（deux millions d'habitants）。mille（千）は不変で複数のsが付かない。cent（百）は後に数が続かない場合のみ複数のsが付く（deux cents vs deux cent un）。vingt（20）も同様（quatre-vingts vs quatre-vingt-un）。1990年の正書法改革以降、複合数詞はすべてハイフンで繋ぐ（vingt-et-un）。日本語の万・億とは桁の区切りが異なる（仏：千→百万→十億 vs 日：万→億）ため換算に注意。",
         "examples": [
           {
             "french": "On y compte cent onze rois, sept mille géographes, neuf cent mille businessmen.",
-            "breakdown": "cent onze（111）、sept mille（7,000）、neuf cent mille（900,000）— milleは不変、centは後に数が続くので-sなし",
+            "breakdown": "cent onze（111）、sept mille（7,000：milleは不変）、neuf cent mille（900,000：centの後にmilleが続くので-sなし）。",
             "japanese": "そこには111人の王、7000人の地理学者、90万人の実業家がいる。"
           },
           {
             "french": "Quatre cent soixante-deux mille cinq cent onze allumeurs de réverbères.",
-            "breakdown": "462,511 — quatre cent（後にsoixante-deuxが続くので-sなし）+ soixante-deux mille + cinq cent onze",
+            "breakdown": "462,511：quatre cent（後にsoixante-deuxが続くので-sなし）+ soixante-deux mille（62×1000）+ cinq cent onze（511：centの後にonzeが続くので-sなし）。",
             "japanese": "46万2511人の点灯夫。"
+          },
+          {
+            "french": "Deux milliards de grandes personnes vivent sur la Terre.",
+            "breakdown": "deux milliards de（20億の：milliardは名詞扱いで複数のs付き + de）+ grandes personnes（大人たち）。",
+            "japanese": "20億の大人が地球に住んでいる。"
           }
         ]
       },
       {
         "title": "代名詞 y の用法",
-        "explanation": "「y」は場所を表す前置詞句（à/dans/sur + 場所）の代わりに使われます。「そこに/そこで」の意味。動詞の前に置きます。また「y + 動詞」で慣用表現もあります。",
+        "explanation": "yは「à/dans/sur/en + 場所」を置き換える代名詞で「そこに・そこで」の意味。動詞の前に置く（il y va = 彼はそこに行く）。場所以外に「à + 事柄」も置き換える（j'y pense = それについて考える）。il y aは「〜がある」の存在表現でyが固定化した慣用句。日本語の「そこ」に近いが、前置詞の意味（に・で・へ）も含む点が異なる。enが「de + 名詞」を置き換えるのに対し、yは「à + 名詞」を置き換えると覚えるとよい。",
         "examples": [
           {
             "french": "On y compte cent onze rois.",
-            "breakdown": "y（= sur la Terre：地球には）+ compte（compterの3人称単数）",
+            "breakdown": "y（= sur la Terre：地球には）+ compte（compterの3人称単数）。yが場所「地球」を受けている。",
             "japanese": "そこ（地球）には111人の王がいる。"
           },
           {
             "french": "On y devait entretenir une véritable armée d'allumeurs.",
-            "breakdown": "y（= sur la Terre）+ devait entretenir（維持しなければならなかった）",
+            "breakdown": "y（= sur la Terre：そこでは）+ devait entretenir（維持しなければならなかった：devoir半過去 + 不定詞）。",
             "japanese": "そこでは点灯夫の本物の軍隊を維持しなければならなかった。"
+          },
+          {
+            "french": "J'y ai pensé longuement.",
+            "breakdown": "y（= à cette question：その問題について）+ ai pensé（penser複合過去）。yが「à + 事柄」を受けるパターン。",
+            "japanese": "私はそのことについて長く考えた。"
           }
         ]
       },
       {
         "title": "分詞構文（le participe présent/passé composé）",
-        "explanation": "「ayant + 過去分詞」は複合分詞構文で、主節の行為より前に完了した行為を表します。主語が主節と同じ場合に使います。",
+        "explanation": "現在分詞（-ant）は形容詞的に名詞を修飾するか、分詞構文として副詞的に主節を修飾する。「ayant + 過去分詞」は複合分詞構文で、主節の動作より前に完了した行為を表す（〜した後で・〜したので）。主語は主節と同じでなければならない。ジェロンディフ（en + 現在分詞）は同時進行を表すが、分詞構文は接続詞なしで副詞節の役割を果たす。日本語の「〜して」「〜してから」に近いが、時間の前後関係がayantの有無で明確になる点が特徴的。",
         "examples": [
           {
             "french": "Ceux-ci, ayant allumé leurs lampions, s'en allaient dormir.",
-            "breakdown": "ayant allumé（allumerの複合分詞：先に灯した後で）+ s'en allaient dormir（眠りに行った）",
+            "breakdown": "ayant allumé（allumerの複合分詞：allumer + 完了 = 先に灯した後で）+ s'en allaient dormir（眠りに行った：s'en aller半過去）。主語はceux-ci（彼ら）。",
             "japanese": "彼らは灯火を灯し終えると、眠りについた。"
+          },
+          {
+            "french": "Les allumeurs, exécutant leur consigne, allumaient et éteignaient les réverbères.",
+            "breakdown": "exécutant（exécuterの現在分詞：〜を実行しながら）+ leur consigne（彼らの規則を）。分詞構文で同時進行を表す。",
+            "japanese": "点灯夫たちは規則を実行しながら、街灯を点けたり消したりしていた。"
+          },
+          {
+            "french": "Ayant terminé son travail, l'allumeur se reposa enfin.",
+            "breakdown": "Ayant terminé（terminerの複合分詞：仕事を終えた後で）+ se reposa（se reposer単純過去：ついに休んだ）。前時性を表す。",
+            "japanese": "仕事を終えると、点灯夫はようやく休んだ。"
           }
         ]
       }
@@ -8450,34 +8875,64 @@
     "grammar": [
       {
         "title": "条件法現在（le conditionnel）— 推量と可能性",
-        "explanation": "条件法は「si + 半過去」の帰結だけでなく、単独で推量（～だろう）や丁寧な表現にも使われます。「pourrait」は可能性を、条件法は仮定なしでも不確実さを表します。",
+        "explanation": "条件法は「si + 半過去」の帰結節以外にも、単独で推量（〜だろう）、可能性（〜かもしれない）、丁寧な表現（〜していただけますか）に使える。pourrait（pouvoir条件法）は「〜できるだろう」、serait（être条件法）は「〜だろう」を表す。報道文ではunconfirmedな情報を条件法で伝える（Il serait mort = 亡くなったらしい）。日本語の「〜らしい」「〜だろう」に近いが、フランス語では形態的に明確に区別される。si節なしの条件法は仮定が暗黙的に含まれている点に注意。",
         "examples": [
           {
             "french": "On pourrait entasser l'humanité sur le moindre petit îlot du Pacifique.",
-            "breakdown": "pourrait（pouvoirの条件法現在・on）— 仮定的可能性「～できるだろう」",
+            "breakdown": "pourrait（pouvoirの条件法現在3人称単数・on）— 仮定的可能性「〜できるだろう」+ entasser（詰め込む）+ le moindre（最も小さい：最上級）。",
             "japanese": "人類を太平洋のどんな小さな島にでも詰め込めるだろう。"
+          },
+          {
+            "french": "Les grandes personnes ne vous croiraient pas.",
+            "breakdown": "ne croiraient pas（croire条件法現在3人称複数・否定）。推量「信じないだろう」。si節が暗黙的（もしそう言ったら）。",
+            "japanese": "大人たちはあなたを信じないだろう。"
+          },
+          {
+            "french": "Cela leur donnerait une haute idée de la géographie.",
+            "breakdown": "donnerait（donner条件法現在3人称単数）+ une haute idée de（〜について高い評価を）。「もしそう聞いたら」という暗黙の仮定。",
+            "japanese": "それは彼らに地理学の素晴らしさを印象づけるだろう。"
           }
         ]
       },
       {
         "title": "代名詞 en の用法",
-        "explanation": "「en」は「de + 名詞」を置き換える代名詞。場所（そこから）、部分（そのうちの）、原因（そのために）など多義的です。この章では蛇の謎めいたセリフで効果的に使われています。",
+        "explanation": "enは「de + 名詞」を置き換える代名詞で、「それの・そこから・そのうちの」等の意味を持つ。場所（de ce lieu = そこから）、部分（de cela = そのうちの）、原因（de cela = そのために）を表す。動詞の前に置く。代名動詞 + de の場合：se souvenir de → s'en souvenir、se débarrasser de → s'en débarrasser。yが「à + 名詞」ならenは「de + 名詞」と対比して覚える。この章では蛇の謎めいたセリフでdont（= de qui/de quoi）がenに近い機能を果たしている。",
         "examples": [
           {
             "french": "Celui que je touche, je le rends à la terre dont il est sorti.",
-            "breakdown": "dont（= de laquelle：関係代名詞）+ il est sorti（出てきた）— 「en」の代わりに「dont」で場所の起源を表現",
+            "breakdown": "dont（= de laquelle：関係代名詞でde + 場所）+ il est sorti（出てきた）。dont il est sorti = 「彼がそこから出てきた土地に」。enで置き換えるなら「il en est sorti」。",
             "japanese": "私が触れた者は、出てきた大地に帰す。"
+          },
+          {
+            "french": "J'en suis capable, dit le serpent.",
+            "breakdown": "en（= de faire cela：そのことが）+ suis capable（capable de〜：〜する能力がある）。être capable de → en être capable。",
+            "japanese": "私にはそれができる、と蛇は言った。"
+          },
+          {
+            "french": "Tu me fais pitié, toi si faible, sur cette Terre de granit. Je puis t'en aider un jour.",
+            "breakdown": "t'（= te：君を）+ en（= de ta planète：君の星のことで）+ aider（助ける）。aider qqn de qqch → t'en aider。",
+            "japanese": "かわいそうに、こんな花崗岩の地球で弱々しい君を。いつかそのことで助けてあげられる。"
           }
         ]
       },
       {
         "title": "条件文（la phrase conditionnelle）— si + 現在 → 現在/未来",
-        "explanation": "「si + 現在形」は実現可能な条件を表します。帰結は現在形（一般的事実）または未来形（将来の結果）。この章では蛇が暗示的に条件文を使っています。",
+        "explanation": "「si + 現在形」は実現可能な条件（1型条件文）を表し、帰結節は現在形（一般的事実）か未来形（将来の結果）。si + 半過去 → 条件法現在（2型：非現実の仮定）、si + 大過去 → 条件法過去（3型：過去の非現実）と区別する。重要：si節の中では未来形・条件法を使わない（si je viendrai×→si je viens○）。日本語の「もし〜なら」は時制を意識しないが、フランス語ではsiの後の時制で仮定の現実性が決まる。この章の蛇の条件文は意図的に曖昧で、不気味な暗示を含む。",
         "examples": [
           {
             "french": "Je puis t'aider un jour si tu regrettes trop ta planète.",
-            "breakdown": "si（もし）+ regrettes（regretter の現在形・tu）→ puis t'aider（助けることができる：現在形の帰結）",
+            "breakdown": "si（もし）+ regrettes（regretter現在形tu：実現可能な条件）→ puis t'aider（pouvoir現在形1人称単数 + 助ける：帰結）。pusはpeux の文語形。",
             "japanese": "もし自分の星が恋しくてたまらなくなったら、いつか助けてあげられる。"
+          },
+          {
+            "french": "Si tu veux un ami, apprivoise-moi.",
+            "breakdown": "Si（もし）+ tu veux（vouloir現在形：条件節）→ apprivoise-moi（apprivoiserの命令法tu：帰結節・命令形も可能）。第21章の有名なセリフ。",
+            "japanese": "もし友達が欲しいなら、僕を飼い慣らして。"
+          },
+          {
+            "french": "Si les chiffres vous convainquent, ne tenez pas compte de tout cela.",
+            "breakdown": "Si + convainquent（convaincre現在形3人称複数）→ ne tenez pas compte de（tenir compte de〜の否定命令vous形）。条件節 + 命令法の帰結。",
+            "japanese": "もし数字の方が説得力があるなら、そんなことは気にしないでください。"
           }
         ]
       }
@@ -8902,23 +9357,43 @@
     "grammar": [
       {
         "title": "条件文 — 現実の条件と結果",
-        "explanation": "この章は短いですが、花の観察に基づく一般的条件の構造が見られます。「manquer de + 名詞」（～が不足している）は条件的な原因を暗示し、「ça les gêne」がその結果です。",
+        "explanation": "この章は短いが、原因と結果の論理構造が見られる。「manquer de + 名詞」（〜が不足している）は状態を表し、その結果を別の節で述べる構造。また、一般的真理を述べる条件文は現在形で「AだからB」の因果関係を表す。si節がなくても文脈的に条件・原因を暗示する構文がある。日本語の「〜なので〜だ」に近いが、フランス語ではmanquer de / avoir besoin de 等の表現で「不足・必要」を明示する。gêner（困らせる）は人を主語にせず、物事がgênerする非人称的用法が特徴的。",
         "examples": [
           {
             "french": "Ils manquent de racines, ça les gêne beaucoup.",
-            "breakdown": "manquent de（～が不足している：原因）+ ça les gêne（それが彼らを困らせる：結果）",
+            "breakdown": "manquent de（manquer de〜：〜が不足している）+ racines（根）。ça（= manquer de racines：そのこと）+ les gêne（彼らを困らせる：gênerの3人称単数）。",
             "japanese": "彼らには根がない。それがとても困るのだ。"
+          },
+          {
+            "french": "Le vent les promène, et de manquer de racines les gêne beaucoup.",
+            "breakdown": "les promène（promener：風が彼らを連れ回す）+ de manquer de racines（根がないことが：de + 不定詞が主語）+ les gêne（彼らを困らせる）。",
+            "japanese": "風が彼らを連れ回す。根がないことがとても困るのだ。"
+          },
+          {
+            "french": "Où sont les hommes? On est un peu seul dans le désert.",
+            "breakdown": "Où sont（どこにいる：疑問副詞 + être倒置）+ les hommes（人間たち）。On est seul（一般のon：人は孤独だ）+ dans le désert（砂漠では）。",
+            "japanese": "人間たちはどこにいるの？砂漠ではちょっと寂しいね。"
           }
         ]
       },
       {
         "title": "大過去（le plus-que-parfait）— 過去のさらに前の過去",
-        "explanation": "大過去は「過去のある時点よりもさらに前に起きた出来事」を表します。構造：avoir/êtreの半過去 + 過去分詞。この章では花が「かつて見た」ことを語る場面で使われます。",
+        "explanation": "大過去はavoir/êtreの半過去 + 過去分詞で「過去のある時点よりもさらに前に起きた出来事」を表す。物語の中で回想・経験を語る場面で使われ、「〜したことがあった」「すでに〜していた」の意味。複合過去が「現在から見た過去」なら、大過去は「過去から見たさらなる過去」。日本語では「〜していた」で表せるが、半過去との区別が曖昧になりやすい。半過去は「過去の状態・進行中」、大過去は「過去の完了・経験」と区別する。知覚動詞 + 不定詞（voir + passer = 通り過ぎるのを見る）の構文にも注目。",
         "examples": [
           {
             "french": "La fleur, un jour, avait vu passer une caravane.",
-            "breakdown": "avait vu（avoirの半過去 + vu：voirの過去分詞 = 大過去）+ passer（通り過ぎるのを：知覚動詞+不定詞）",
+            "breakdown": "avait vu（avoir半過去 + vu：voirの過去分詞 = 大過去）+ passer（通り過ぎる：知覚動詞voir + 不定詞で「〜するのを見る」）+ une caravane（隊商を）。",
             "japanese": "花はかつて、隊商が通り過ぎるのを見たことがあった。"
+          },
+          {
+            "french": "Elle avait aperçu les hommes de loin.",
+            "breakdown": "avait aperçu（apercevoir大過去：avoir半過去 + 過去分詞）+ les hommes（人間たちを）+ de loin（遠くから）。「かつて遠くから見かけたことがあった」。",
+            "japanese": "彼女はかつて遠くから人間たちを見かけたことがあった。"
+          },
+          {
+            "french": "Le petit prince n'avait jamais rencontré de fleur aussi simple.",
+            "breakdown": "n'avait jamais rencontré（rencontrer大過去・否定：一度も出会ったことがなかった）+ de fleur aussi simple（こんなに素朴な花に：否定文でdeになる）。",
+            "japanese": "小さな王子はこんなに素朴な花に出会ったことがなかった。"
           }
         ]
       }
@@ -9145,28 +9620,53 @@
     "grammar": [
       {
         "title": "接続法半過去（subjonctif imparfait）— 文学的表現",
-        "explanation": "接続法半過去は、現代フランス語では文学的・格式高い文体でのみ使われます。主節が過去時制のとき、従属節で接続法を要求する場面で用いられます。日常会話では接続法現在で代用されます。",
+        "explanation": "接続法半過去は、主節が過去時制のとき従属節で接続法を要求する場面で用いる文学的時制です。現代会話では接続法現在で代用されますが、サン＝テグジュペリのような格式ある文体では頻出します。日本語話者は接続法自体に馴染みが薄いため、まず「主観・非現実を表す法」という概念を理解し、その上で半過去形の活用（-asse, -isseなど）を覚えるのが効果的です。seul, uniqueなど最上級的表現の後でも接続法が要求される点に注意しましょう。",
         "examples": [
           {
             "french": "Les seules montagnes qu'il eût jamais connues étaient les trois volcans.",
-            "breakdown": "eût connues = 接続法半過去（avoir の接続法半過去 + 過去分詞）。関係節内で「唯一の〜」を表す最上級的表現のため接続法が必要。",
+            "breakdown": "eût connues = 接続法半過去（avoir の接続法半過去 eût + 過去分詞 connues）。関係節内で「唯一の〜」を表す最上級的表現のため接続法が必要。connues は女性複数 montagnes に性数一致。",
             "japanese": "彼がこれまでに知っていた唯一の山は三つの火山だった。"
+          },
+          {
+            "french": "Il fallait qu'il se mît au travail tout de suite.",
+            "breakdown": "il fallait que + 接続法半過去 se mît（se mettre の接続法半過去）。il faut que は接続法を要求する代表的構文。主節が半過去 fallait なので従属節も接続法半過去。",
+            "japanese": "彼はすぐに仕事に取りかからなければならなかった。"
+          },
+          {
+            "french": "Je ne croyais pas qu'il pût me comprendre.",
+            "breakdown": "croyais（croire 半過去）+ que + pût（pouvoir 接続法半過去）。否定文の croire は接続法を誘発する。現代語なら puisse を使う。",
+            "japanese": "彼が私を理解できるとは思わなかった。"
+          },
+          {
+            "french": "C'était le seul ami qu'il eût jamais eu.",
+            "breakdown": "le seul...que + 接続法半過去 eût eu（avoir の接続法半過去＋過去分詞）。「唯一の〜」という最上級的限定が接続法を要求。",
+            "japanese": "それは彼がかつて持った唯一の友だった。"
           }
         ]
       },
       {
         "title": "関係代名詞 que と限定的用法",
-        "explanation": "関係代名詞 que は、先行詞が従属節の直接目的語になるときに使います。「唯一の」「最初の」などの限定表現の後では、文学的文体で接続法が使われることがあります。",
+        "explanation": "関係代名詞 que は先行詞が従属節の直接目的語になるときに使います。qui（主語）との混同に注意が必要です。判別法は、que の後に主語＋動詞が続くなら que、動詞が直接続くなら qui です。また「唯一の」「最初の」「最上級」などの限定的先行詞の後では、文学的文体で接続法が使われることがあります。日本語には関係代名詞がないため、「後ろから前の名詞を修飾する」という語順の違いに慣れることが重要です。",
         "examples": [
           {
             "french": "Les seules montagnes qu'il eût jamais connues...",
-            "breakdown": "les seules montagnes（先行詞）+ qu'（= que、直接目的語の関係代名詞）+ il eût connues（接続法半過去）",
+            "breakdown": "les seules montagnes（先行詞・女性複数）+ qu'（= que、母音前で省略）+ il eût connues（接続法半過去）。que は connues の直接目的語。",
             "japanese": "彼がかつて知っていた唯一の山々は…"
           },
           {
             "french": "Ils répètent ce qu'on leur dit...",
-            "breakdown": "ce qu'on leur dit = 人が彼らに言うこと。ce que は「〜すること」を表す関係代名詞。",
+            "breakdown": "ce qu'on leur dit = 人が彼らに言うこと。ce que は「〜すること・もの」を表す関係代名詞。ce は先行詞、que は直接目的語。",
             "japanese": "彼らは人が言ったことを繰り返す…"
+          },
+          {
+            "french": "La fleur que j'ai choisie est plus belle que toutes les autres.",
+            "breakdown": "la fleur（先行詞・女性単数）+ que（直接目的語の関係代名詞）+ j'ai choisie（複合過去・過去分詞は先行する直接目的語 fleur に一致して女性形 -e）。",
+            "japanese": "僕が選んだ花は他のどの花よりも美しい。"
+          },
+          {
+            "french": "Le premier homme qu'il rencontra fut un aiguilleur.",
+            "breakdown": "le premier homme（先行詞）+ que（直接目的語）+ il rencontra（単純過去）。「最初の〜」という限定表現だが、ここでは直説法が使われている。",
+            "japanese": "彼が最初に出会った人は転轍手だった。"
           }
         ]
       }
@@ -9436,39 +9936,69 @@
     "grammar": [
       {
         "title": "条件法現在（conditionnel présent）— 仮定・推量",
-        "explanation": "条件法現在は、仮定の状況での帰結や、推量・丁寧な表現に使います。「もし〜なら、〜だろう」という構文で si + 半過去と組み合わせます。",
+        "explanation": "条件法現在は、仮定の帰結（si＋半過去と組み合わせ）、推量、丁寧表現に用います。未来形の語幹＋半過去の語尾（-ais, -ais, -ait, -ions, -iez, -aient）で作ります。日本語の「〜だろう」「〜のに」に近いですが、仮定法のない日本語話者には、現実と非現実を動詞の形で区別する感覚が掴みにくい点に注意。英語の would に相当しますが、丁寧表現（voudrais, pourrais）にも使われる点が異なります。",
         "examples": [
           {
             "french": "Elle serait bien vexée si elle voyait ça...",
-            "breakdown": "serait vexée（条件法現在）+ si elle voyait（半過去）= もし彼女がこれを見たら、ひどく傷つくだろう",
+            "breakdown": "serait vexée（être の条件法現在 + 過去分詞＝条件法現在受動態）+ si elle voyait（voir の半過去）。si＋半過去 → 条件法現在の典型構文。",
             "japanese": "もし彼女がこれを見たら、とても気を悪くするだろう…"
           },
           {
             "french": "je serais bien obligé de faire semblant de la soigner",
-            "breakdown": "serais obligé（条件法現在）= 〜せざるを得ないだろう",
+            "breakdown": "serais obligé（être obligé de の条件法現在）= 〜せざるを得ないだろう。faire semblant de = 〜するふりをする。",
             "japanese": "僕は彼女の看病をするふりをせざるを得ないだろう"
+          },
+          {
+            "french": "Je voudrais bien voir un coucher de soleil...",
+            "breakdown": "voudrais（vouloir の条件法現在）= 〜したいのですが。条件法による丁寧な願望表現。直説法 je veux より柔らかい。",
+            "japanese": "夕日が見たいのだけど…"
+          },
+          {
+            "french": "On pourrait croire qu'elles sont toutes les mêmes.",
+            "breakdown": "pourrait（pouvoir の条件法現在）= 〜と思うかもしれない。推量・可能性を表す条件法。on は一般の人々。",
+            "japanese": "それらはすべて同じだと思うかもしれない。"
           }
         ]
       },
       {
         "title": "関係代名詞 dont の用法",
-        "explanation": "dont は de + 関係代名詞の役割を果たし、先行詞が de を伴う動詞・形容詞・名詞と結びつくときに使います。",
+        "explanation": "dont は de＋関係代名詞の役割を果たし、先行詞が de を伴う動詞（parler de, avoir besoin de）、形容詞（fier de, content de）、名詞の所有関係（les chenilles de la fleur）と結びつくときに使います。英語の whose / of which に近いですが、dont の後の語順は「主語＋動詞＋目的語」と通常の語順になる点が特徴です。日本語話者は「〜の」「〜について」など、de の多義性を意識して使い分けましょう。",
         "examples": [
           {
             "french": "Ça et mes trois volcans qui m'arrivent au genou, et dont l'un, peut-être, est éteint pour toujours",
-            "breakdown": "dont l'un = そのうちの一つ（de mes volcans → dont）。l'un de... の de が dont に変わっている。",
+            "breakdown": "dont l'un = そのうちの一つ（de mes volcans の de → dont）。l'un de... の de が dont に吸収されている。est éteint = 消えている（受動態）。",
             "japanese": "それと膝までしかない三つの火山、そのうちの一つはおそらく永遠に消えている"
+          },
+          {
+            "french": "C'est une fleur dont je suis responsable.",
+            "breakdown": "dont = de laquelle。être responsable de（〜に責任がある）の de が dont に変わる。je suis responsable de cette fleur → une fleur dont je suis responsable。",
+            "japanese": "それは僕が責任を持っている花だ。"
+          },
+          {
+            "french": "Voilà un mystère dont je n'ai jamais compris la raison.",
+            "breakdown": "dont = de ce mystère。la raison de ce mystère（この謎の理由）→ un mystère dont...la raison。dont の後は通常語順（主語＋動詞＋目的語）。",
+            "japanese": "ここに、理由を一度も理解できなかった謎がある。"
           }
         ]
       },
       {
         "title": "分詞構文（participe présent）— ayant + 過去分詞",
-        "explanation": "ayant + 過去分詞は、主節の動作より前に起きた動作を表す複合分詞構文です。「〜した後で」「〜したので」という意味になります。",
+        "explanation": "複合分詞構文（ayant/étant＋過去分詞）は、主節の動作より前に完了した動作を表します。「〜した後で」「〜したので」という意味で、原因・時間の前後関係を示します。単純分詞（現在分詞のみ）は同時進行を表すのに対し、複合形は時間差を明示する点が異なります。日本語の「〜してから」「〜したので」に相当しますが、書き言葉・文学的表現で多用され、日常会話ではあまり使われません。",
         "examples": [
           {
             "french": "le petit prince, ayant longtemps marché à travers les sables, les rocs et les neiges, découvrit enfin une route.",
-            "breakdown": "ayant marché = 長い間歩いた後で（複合分詞構文）→ découvrit（単純過去：ついに発見した）",
+            "breakdown": "ayant marché = ayant（avoir の現在分詞）+ marché（marcher の過去分詞）= 長い間歩いた後で（複合分詞構文・主節動作より前の完了）→ découvrit（découvrir の単純過去：ついに発見した）。",
             "japanese": "小さな王子は、砂や岩や雪の中を長い間歩いた末に、ついに一本の道を見つけた。"
+          },
+          {
+            "french": "Étant arrivé au sommet, il aperçut la vallée tout entière.",
+            "breakdown": "Étant arrivé = étant（être の現在分詞）+ arrivé（arriver の過去分詞）。移動動詞 arriver は être を助動詞にとる。山頂に到着した後で → aperçut（apercevoir 単純過去）。",
+            "japanese": "頂上に着いてから、彼は谷全体を見渡した。"
+          },
+          {
+            "french": "N'ayant reçu aucune réponse, il répéta sa question.",
+            "breakdown": "N'ayant reçu aucune réponse = 何の返事も受け取らなかったので（否定の複合分詞構文）。ne は n' に省略、pas は不要で aucune が否定を担う。",
+            "japanese": "何の返事も得られなかったので、彼は質問を繰り返した。"
           }
         ]
       }
@@ -9901,60 +10431,95 @@
     "grammar": [
       {
         "title": "強調構文 c'est...que / c'est...qui（mise en relief）",
-        "explanation": "c'est...qui（主語を強調）/ c'est...que（目的語や補語を強調）は、文の特定の要素を際立たせるための構文です。第21章では、王子が自分のバラの特別さを語る場面で繰り返し使われ、強い感情的効果を生んでいます。",
+        "explanation": "c'est...qui は主語を、c'est...que は目的語・補語・副詞句を強調する構文です。日本語の「〜こそが」「〜なのは…だ」に相当します。第21章ではキツネとの対話で王子が自分のバラの唯一性を語る場面で繰り返し使われ、感情的な強調効果を生んでいます。英語の It is...that 構文に似ていますが、フランス語では人称・時制に応じて c'est/ce sont/c'était 等に変化します。過去分詞の性数一致にも注意が必要です。",
         "examples": [
           {
             "french": "Puisque c'est elle que j'ai arrosée.",
-            "breakdown": "c'est elle que = 彼女こそ〜（目的語 elle を強調）+ j'ai arrosée（複合過去・性数一致）",
+            "breakdown": "c'est elle que = 彼女こそ〜（目的語 elle を強調）+ j'ai arrosée（arroser の複合過去。過去分詞 arrosée は先行する直接目的語 elle＝女性単数に一致して -e）。",
             "japanese": "なぜなら、僕が水をやったのは彼女だから。"
           },
           {
             "french": "Puisque c'est elle que j'ai mise sous globe.",
-            "breakdown": "c'est elle que = 彼女こそ〜 + j'ai mise（mise は elle に一致して女性形）",
+            "breakdown": "c'est elle que = 彼女こそ〜 + j'ai mise（mettre の過去分詞 mis が elle に一致して女性形 mise）。sous globe = ガラスの覆いの下に。",
             "japanese": "なぜなら、僕がガラスの覆いをかけてあげたのは彼女だから。"
           },
           {
             "french": "Puisque c'est elle dont j'ai tué les chenilles.",
-            "breakdown": "c'est elle dont = 彼女の〜こそ（dont = de qui、所有を表す関係代名詞）",
+            "breakdown": "c'est elle dont = 彼女の〜こそ（dont = de qui、所有を表す関係代名詞）。les chenilles de elle → dont j'ai tué les chenilles。",
             "japanese": "なぜなら、僕が毛虫を退治してあげたのは彼女だから。"
+          },
+          {
+            "french": "C'est le temps que tu as perdu pour ta rose qui fait ta rose si importante.",
+            "breakdown": "C'est le temps...qui = 時間こそが〜（主語 le temps を強調する c'est...qui 構文）。que tu as perdu = 君が費やした（関係代名詞 que による修飾）。二重の関係節が入れ子になった構文。",
+            "japanese": "君がバラのために費やした時間こそが、君のバラをそんなに大切なものにしているんだ。"
           }
         ]
       },
       {
         "title": "関係代名詞 dont — 所有と de の関係",
-        "explanation": "dont は de + 先行詞の代わりをする関係代名詞です。「〜の」（所有）、「〜について」（de qqch）、「〜のうちの」（parmi）などを表します。",
+        "explanation": "dont は de＋先行詞の代わりをする関係代名詞で、所有（〜の）、de を伴う動詞（parler de, se souvenir de）、数量（l'un de, plusieurs de）などを表します。英語の whose に近いですが、物にも人にも使える点が異なります。dont の後の語順は「主語＋動詞＋補語」と通常語順を保つのが特徴で、日本語話者は英語の whose のように所有形容詞を省略しがちですが、dont の後にも定冠詞が必要です（dont j'ai tué les chenilles）。",
         "examples": [
           {
             "french": "Puisque c'est elle dont j'ai tué les chenilles.",
-            "breakdown": "dont = de elle（彼女の毛虫）。j'ai tué les chenilles de elle → dont j'ai tué les chenilles",
+            "breakdown": "dont = de elle（彼女の毛虫）。j'ai tué les chenilles de elle → dont j'ai tué les chenilles。dont の後に les（定冠詞）が必要な点に注意。",
             "japanese": "なぜなら僕が毛虫を殺してあげたのは彼女だから。"
+          },
+          {
+            "french": "Tu deviens responsable pour toujours de ce que tu as apprivoisé.",
+            "breakdown": "de ce que = 〜したもの・ことについて。apprivoiser（飼いならす・絆を結ぶ）の過去分詞。devenir responsable de = 〜に責任を持つようになる。",
+            "japanese": "君は、自分が絆を結んだものに対して、永遠に責任を持つんだ。"
+          },
+          {
+            "french": "C'est une chose dont les hommes ont oublié la vérité.",
+            "breakdown": "dont = de cette chose。oublier la vérité de cette chose → une chose dont les hommes ont oublié la vérité。dont の後は通常語順。",
+            "japanese": "それは人間たちがその真実を忘れてしまったことだ。"
           }
         ]
       },
       {
         "title": "間接話法と時制の一致（discours indirect）",
-        "explanation": "直接話法を間接話法に変えるとき、主節が過去時制なら従属節の時制も変わります（現在→半過去、複合過去→大過去など）。",
+        "explanation": "直接話法（引用符内の発言）を間接話法に変えるとき、主節が過去時制なら従属節の時制がずれます：現在→半過去、複合過去→大過去、未来→条件法現在。人称代名詞や指示語も変化します（je→il/elle、ici→là）。日本語には厳密な時制の一致がないため、フランス語特有のこの規則は意識的な練習が必要です。英語の時制の一致と同様ですが、接続法を含む場合はさらに複雑になります。",
         "examples": [
           {
             "french": "Sa fleur lui avait raconté qu'elle était seule de son espèce dans l'univers.",
-            "breakdown": "avait raconté（大過去：語った）+ qu'elle était（半過去：〜だと）— 直接話法では « Je suis seule de mon espèce »",
+            "breakdown": "avait raconté（raconter の大過去：語った）+ qu'elle était（être の半過去：〜だと）。直接話法では « Je suis seule de mon espèce » と現在形だが、主節が過去なので半過去に一致。",
             "japanese": "彼の花は、自分が宇宙でただ一つの種だと話していた。"
+          },
+          {
+            "french": "Le renard lui dit qu'il ne pouvait pas jouer avec lui.",
+            "breakdown": "dit（dire の単純過去）+ qu'il ne pouvait pas（pouvoir の半過去）。直接話法「Je ne peux pas jouer avec toi」→ 間接話法で現在→半過去、tu→lui に変化。",
+            "japanese": "キツネは、一緒に遊べないと彼に言った。"
+          },
+          {
+            "french": "Il m'a répondu qu'il reviendrait le lendemain.",
+            "breakdown": "a répondu（répondre の複合過去）+ qu'il reviendrait（revenir の条件法現在）。直接話法「Je reviendrai demain」→ 未来形が条件法現在に、demain が le lendemain に変化。",
+            "japanese": "彼は翌日戻ると答えた。"
           }
         ]
       },
       {
         "title": "ne...que の限定表現と point の否定",
-        "explanation": "ne...que は「〜だけ、〜しか」という限定を表します。また、ne...point は ne...pas の文学的・強い形で「全く〜ない」を意味します。",
+        "explanation": "ne...que は否定ではなく「〜だけ、〜しか…ない」という限定（restriction）を表します。seulement と同義ですが、より文学的です。一方、ne...point は ne...pas の古語的・文学的な強い否定形で「全く〜ない」を意味します。日本語話者は ne...que を否定と誤解しやすいですが、実際は肯定的な限定です。また ne...point は現代の日常会話ではほぼ使われず、文学作品や格言で見かける表現です。pas と point の強さの違いにも注目しましょう。",
         "examples": [
           {
             "french": "On ne voit bien qu'avec le coeur.",
-            "breakdown": "ne...qu' = 〜でしか。「心でしかちゃんと見えない」",
+            "breakdown": "ne...qu' = 〜でしか（限定）。avec le coeur = 心で。「心でしかちゃんと見えない」。キツネの名言で、que の後の要素（avec le coeur）だけが真実。",
             "japanese": "心でしか、ものごとはよく見えない。"
           },
           {
             "french": "comme il n'existe point de marchands d'amis, les hommes n'ont plus d'amis.",
-            "breakdown": "ne...point = 全く〜ない（pas より強い否定）。友達の商人は存在しない。",
+            "breakdown": "ne...point = 全く〜ない（pas より強い文学的否定）。il n'existe point de = 〜は全く存在しない。n'ont plus = もはや〜ない。",
             "japanese": "友達を売る商人はどこにもいないので、人間にはもう友達がいない。"
+          },
+          {
+            "french": "L'essentiel est invisible pour les yeux. On ne le voit qu'avec le coeur.",
+            "breakdown": "ne...qu'avec le coeur = 心でしか見えない（限定）。l'essentiel = 本質的なもの。invisible pour les yeux = 目には見えない。二つの文が対になった構造。",
+            "japanese": "大切なものは目には見えない。心でしか見えないんだ。"
+          },
+          {
+            "french": "Tu n'es encore pour moi qu'un petit garçon tout semblable à cent mille petits garçons.",
+            "breakdown": "ne...que = 〜にすぎない（限定）。tout semblable à = 〜と全く同じ。まだ絆を結ぶ前のキツネの言葉。ne...que が「ただの〜にすぎない」という意味を強調。",
+            "japanese": "君はまだ僕にとって、十万人の男の子と全く同じ、ただの男の子にすぎない。"
           }
         ]
       }
@@ -10751,39 +11316,79 @@
     "grammar": [
       {
         "title": "ジェロンディフ（gérondif）— 同時進行の動作",
-        "explanation": "en + 現在分詞で「〜しながら」「〜することで」を表します。主語は主節と同じでなければなりません。本章では分詞構文（現在分詞のみ）も文学的な描写に使われています。",
+        "explanation": "en＋現在分詞で「〜しながら」「〜することで」「〜するとき」を表す副詞的表現です。主語は必ず主節と同じでなければなりません（懸垂分詞構文は誤り）。ジェロンディフ（en＋現在分詞）と分詞構文（現在分詞のみ）の違いに注意：ジェロンディフは同時性・手段を、分詞構文は原因・付帯状況を表します。日本語の「〜ながら」に近いですが、手段（〜することで）や条件の意味もある点が日本語話者には盲点になりがちです。",
         "examples": [
           {
             "french": "un rapide illuminé, grondant comme le tonnerre, fit trembler la cabine d'aiguillage.",
-            "breakdown": "grondant = 現在分詞（分詞構文）「雷のように轟きながら」。主語は un rapide illuminé。",
+            "breakdown": "grondant = gronder の現在分詞（分詞構文・ジェロンディフではない）「雷のように轟きながら」。主語は un rapide illuminé（明かりのついた急行列車）。comme le tonnerre = 雷のように（直喩）。",
             "japanese": "明かりのついた急行列車が、雷のように轟きながら、信号小屋を揺らした。"
+          },
+          {
+            "french": "Les voyageurs pressés passent en courant.",
+            "breakdown": "en courant = 走りながら（ジェロンディフ：en + courir の現在分詞 courant）。同時進行の動作。主語 les voyageurs が走る主体。",
+            "japanese": "急いでいる旅行者たちは走りながら通り過ぎる。"
+          },
+          {
+            "french": "C'est en forgeant qu'on devient forgeron.",
+            "breakdown": "en forgeant = 鍛えることで（ジェロンディフ・手段の用法）。c'est...que の強調構文と組み合わさったことわざ。「〜することによって」という手段を表す。",
+            "japanese": "鍛えることで鍛冶屋になる。（習うより慣れろ）"
+          },
+          {
+            "french": "Il répondit en souriant doucement.",
+            "breakdown": "en souriant = 微笑みながら（ジェロンディフ：en + sourire の現在分詞 souriant）。同時進行：答えると同時に微笑む。doucement = 静かに、優しく。",
+            "japanese": "彼は静かに微笑みながら答えた。"
           }
         ]
       },
       {
         "title": "不定代名詞 on の多義性",
-        "explanation": "on は「人は（一般的に）」「私たちは」「誰かが」など、文脈によって様々な意味を持ちます。本章では一般的真理を述べるのに使われています。",
+        "explanation": "on は文脈によって「人は（一般論）」「私たちは（nous の口語的代用）」「誰かが（不特定の人）」など多様な意味を持つ不定代名詞です。動詞は常に三人称単数で活用しますが、属詞や過去分詞は意味上の主語に合わせて性数一致することがあります（On est contents = 私たちは嬉しい）。日本語話者にとって、一つの語がこれほど多義的であることは驚きかもしれません。英語の one, we, they, someone に相当する場面を一語で担います。",
         "examples": [
           {
             "french": "On n'est jamais content là où on est.",
-            "breakdown": "on = 人は（一般論）。「人は自分がいる場所では決して満足しない」",
+            "breakdown": "on = 人は（一般論・格言的用法）。jamais content = 決して満足しない。là où on est = 自分がいる場所で。on が二回使われ、どちらも一般の人を指す。",
             "japanese": "人は自分のいる場所に決して満足しない。"
+          },
+          {
+            "french": "On ne sait jamais ce qu'on cherche.",
+            "breakdown": "on = 人は（一般論）。ce qu'on cherche = 人が探しているもの。savoir の否定で「分からない」。一般的真理を述べる表現。",
+            "japanese": "人は自分が何を探しているのか決して分からない。"
+          },
+          {
+            "french": "On est bien ici, dit-il.",
+            "breakdown": "on = 私たちは（nous の口語的代用）。on est bien = 居心地がいい。話し手と聞き手を含む「私たち」。",
+            "japanese": "「ここは居心地がいいね」と彼は言った。"
+          },
+          {
+            "french": "On dirait qu'ils sont perdus.",
+            "breakdown": "on dirait que = 〜のように見える（慣用表現・条件法現在）。on は不特定の主語。il semble que と同義だが、より口語的。",
+            "japanese": "彼らは迷子になっているように見える。"
           }
         ]
       },
       {
         "title": "慣用表現 tantôt...tantôt... と seul の強調用法",
-        "explanation": "tantôt...tantôt... は「あるときは〜、あるときは〜」と交替を表します。seul は名詞の後に置くと「〜だけが」という排他的意味になります。",
+        "explanation": "tantôt...tantôt... は「あるときは〜、あるときは〜」と交替・反復を表す対句表現です。二つの対照的な状況を並べることで、揺れ動きや変化を生き生きと描写します。一方、seul は名詞の前に置くと「たった一つの」（数量的限定）、後に置くと「〜だけが」（排他的強調）と意味が変わります。この前置・後置による意味の違いは、日本語話者が見落としやすいフランス語形容詞の重要な特徴です。",
         "examples": [
           {
             "french": "tantôt vers la droite, tantôt vers la gauche",
-            "breakdown": "tantôt...tantôt... = あるときは右に、あるときは左に",
+            "breakdown": "tantôt...tantôt... = あるときは〜、あるときは〜。vers la droite = 右に向かって、vers la gauche = 左に向かって。対照的な方向の交替。",
             "japanese": "あるときは右へ、あるときは左へ"
           },
           {
             "french": "Les enfants seuls savent ce qu'ils cherchent.",
-            "breakdown": "Les enfants seuls = 子供たちだけが（seuls が後置されて「〜だけ」の意味）",
+            "breakdown": "Les enfants seuls = 子供たちだけが（seuls が後置されて「〜だけ」の排他的意味）。ce qu'ils cherchent = 自分が何を探しているか。seuls を前置すると「たった一人の子供たち」と数量的意味に変わる。",
             "japanese": "子供たちだけが、自分が何を探しているか知っている。"
+          },
+          {
+            "french": "Tantôt il pleut, tantôt il fait beau.",
+            "breakdown": "tantôt...tantôt... = あるときは雨、あるときは晴れ。天候の交替を表す日常的な用法。il は非人称主語。",
+            "japanese": "あるときは雨が降り、あるときは晴れる。"
+          },
+          {
+            "french": "Un seul mot suffit pour comprendre.",
+            "breakdown": "un seul mot = たった一語（seul が前置されて数量的限定「たった一つの」）。suffit = 十分だ（suffire の現在形）。後置の seuls（〜だけ）との意味の違いに注意。",
+            "japanese": "理解するにはたった一語で十分だ。"
           }
         ]
       }
@@ -11056,28 +11661,53 @@
     "grammar": [
       {
         "title": "条件法現在による非現実の仮定（si + 半過去 → 条件法現在）",
-        "explanation": "「もし〜なら、〜するだろうに」という現在の事実に反する仮定を表す構文です。si節は半過去、帰結節は条件法現在を使います。",
+        "explanation": "「もし〜なら、〜するだろうに」という現在の事実に反する仮定を表す構文です。si 節には半過去を、帰結節には条件法現在を使います。si 節に条件法を置くのは誤りです（si + 条件法は不可）。日本語では「もし〜なら」で仮定と現実の区別が曖昧ですが、フランス語では時制の組み合わせで明確に区別します。過去の非現実仮定（si + 大過去 → 条件法過去）との違いも重要です。第23章では、小さな王子が「もし53分あったら」と非現実の仮定で語る場面が印象的です。",
         "examples": [
           {
             "french": "si j'avais cinquante-trois minutes à dépenser, je marcherais tout doucement vers une fontaine...",
-            "breakdown": "si j'avais（半過去：もし持っていたら）→ je marcherais（条件法現在：歩くだろう）",
+            "breakdown": "si j'avais（avoir の半過去：もし持っていたら）→ je marcherais（marcher の条件法現在：歩くだろう）。tout doucement = ゆっくりと。現在の非現実仮定。",
             "japanese": "もし53分使えるなら、僕はゆっくりと泉に向かって歩いていくだろう…"
+          },
+          {
+            "french": "Si j'étais riche, je voyagerais autour du monde.",
+            "breakdown": "si j'étais（être の半過去：もし〜だったら）→ je voyagerais（voyager の条件法現在：旅行するだろう）。現在の事実に反する仮定（実際は裕福ではない）。",
+            "japanese": "もし僕が金持ちだったら、世界中を旅するだろうに。"
+          },
+          {
+            "french": "Si tu venais à quatre heures, dès trois heures je commencerais d'être heureux.",
+            "breakdown": "si tu venais（venir の半過去）→ je commencerais（commencer の条件法現在）。キツネの言葉。dès trois heures = 3時から。commencer de + 不定詞 = 〜し始める。",
+            "japanese": "もし君が4時に来るなら、3時からもう僕は幸せになり始めるだろう。"
+          },
+          {
+            "french": "Si on pouvait acheter du bonheur, la vie serait plus simple.",
+            "breakdown": "si on pouvait（pouvoir の半過去）→ la vie serait（être の条件法現在）。plus simple = より単純な。現在の非現実仮定で一般論を述べる。",
+            "japanese": "もし幸せを買えるなら、人生はもっと単純だろうに。"
           }
         ]
       },
       {
         "title": "慣用表現：時間の節約と消費",
-        "explanation": "フランス語では時間を「節約する」(épargner du temps)、「費やす」(dépenser du temps / perdre du temps)と、お金のメタファーで表現します。本章のテーマそのものです。",
+        "explanation": "フランス語では時間をお金のメタファーで表現します。épargner du temps（時間を節約する）、dépenser du temps（時間を費やす）、perdre du temps（時間を無駄にする）、gagner du temps（時間を稼ぐ）など。第23章の丸薬売りとの対話はこのメタファーがテーマそのものです。日本語でも「時間を節約する」「時間を浪費する」と言いますが、フランス語では économie（節約・経済）という語が時間にも金銭にも等しく使われ、物質主義への風刺が込められています。",
         "examples": [
           {
             "french": "C'est une grosse économie de temps.",
-            "breakdown": "économie de temps = 時間の節約。grosse = 大きな。",
+            "breakdown": "économie de temps = 時間の節約。grosse = 大きな（経済的な語彙を時間に転用）。une économie は「節約」の意味の女性名詞。",
             "japanese": "時間の大きな節約になる。"
           },
           {
             "french": "On épargne cinquante-trois minutes par semaine.",
-            "breakdown": "épargner = 節約する。par semaine = 週に。",
+            "breakdown": "épargner = 節約する（本来は貯金する意味の動詞）。par semaine = 週に。on = 人は（一般論）。",
             "japanese": "週に53分節約できる。"
+          },
+          {
+            "french": "Moi, si j'avais cinquante-trois minutes à dépenser, je marcherais tout doucement vers une fontaine...",
+            "breakdown": "dépenser = 費やす・使う（本来は出費する意味）。Moi は主語の強調形。時間を「使う」ことへの王子なりの価値観が表れる。",
+            "japanese": "僕なら、もし53分使えるとしたら、ゆっくりと泉に向かって歩いていくだろう…"
+          },
+          {
+            "french": "Les hommes ne savent plus perdre leur temps à regarder les étoiles.",
+            "breakdown": "perdre du temps à + 不定詞 = 〜するのに時間を浪費する。ne...plus = もはや〜ない。星を眺めることを「時間の浪費」と捉える大人への批判。",
+            "japanese": "人間たちはもう星を眺めることに時間を費やすことを知らない。"
           }
         ]
       }
@@ -11364,44 +11994,79 @@
     "grammar": [
       {
         "title": "大過去（plus-que-parfait）— 過去のさらに前の過去",
-        "explanation": "大過去は「（過去のある時点より）さらに前に起きたこと」を表す時制です。avoir/être の半過去 + 過去分詞で作ります。回想や背景説明でよく使われます。",
+        "explanation": "大過去は「過去のある時点よりさらに前に起きたこと」を表す時制で、avoir/être の半過去＋過去分詞で作ります。英語の past perfect（had done）に相当します。回想・背景説明・間接話法の時制の一致で頻出します。日本語では「〜していた」「〜してしまっていた」で表しますが、時制の前後関係が文法的に明示されない日本語と異なり、フランス語では大過去を使うことで時系列が明確になります。複合過去との使い分けが日本語話者の難所です。",
         "examples": [
           {
             "french": "j'avais écouté l'histoire du marchand en buvant la dernière goutte de ma provision d'eau",
-            "breakdown": "avais écouté = 大過去（聞いていた）。物語の時点よりさらに前の出来事。",
+            "breakdown": "avais écouté = avoir の半過去 avais + écouter の過去分詞 écouté（大過去）。en buvant = 飲みながら（ジェロンディフ）。物語の現在時点よりさらに前の出来事。",
             "japanese": "水の蓄えの最後の一滴を飲みながら、商人の話を聞いていたのだった。"
           },
           {
             "french": "la légende racontait qu'un trésor y était enfoui",
-            "breakdown": "était enfoui = 大過去の受動態（埋められていた）。伝説が語っていた時点よりさらに前。",
+            "breakdown": "racontait（raconter の半過去）+ qu'...était enfoui（enfouir の大過去受動態：埋められていた）。伝説が語る時点よりさらに前に宝が埋められた。y = そこに。",
             "japanese": "伝説はそこに宝が埋められていると語っていた。"
+          },
+          {
+            "french": "Il se souvint de tout ce que le renard lui avait dit.",
+            "breakdown": "se souvint（se souvenir の単純過去：思い出した）+ avait dit（dire の大過去：言っていた）。思い出した時点（単純過去）より前にキツネが言った（大過去）。",
+            "japanese": "彼はキツネが言ってくれたことを全て思い出した。"
+          },
+          {
+            "french": "Quand je suis arrivé, il était déjà parti.",
+            "breakdown": "suis arrivé（arriver の複合過去：到着した）+ était parti（partir の大過去：すでに出発していた）。到着時点より前に出発が完了。déjà = すでに。",
+            "japanese": "私が到着したとき、彼はすでに出発していた。"
           }
         ]
       },
       {
         "title": "Ce qui / Ce que を使った強調構文",
-        "explanation": "Ce qui（主語）/ Ce que（目的語）は「〜するもの、〜すること」を意味する関係代名詞です。主題を前に出して強調する構文によく使われます。",
+        "explanation": "Ce qui（〜するもの・こと＝主語）と Ce que（〜するもの・こと＝目的語）は、先行詞を含む関係代名詞です。「Ce qui/que..., c'est...」の形で主題を前に出し強調する構文によく使われます。英語の What...is... に相当します。Ce qui の後には動詞が直接続き、Ce que の後には主語＋動詞が続く点で区別します。日本語話者は「〜するのは…だ」という構文に慣れていますが、qui と que の選択で迷いやすいので、従属節内での文法的役割（主語か目的語か）を意識しましょう。",
         "examples": [
           {
             "french": "Ce qui embellit le désert, c'est qu'il cache un puits quelque part...",
-            "breakdown": "Ce qui embellit = 砂漠を美しくするもの（主語の関係代名詞）→ c'est qu' = それは〜ということだ",
+            "breakdown": "Ce qui embellit = 砂漠を美しくするもの（qui は従属節内の主語）→ c'est qu' = それは〜ということだ。quelque part = どこかに。主題提示の強調構文。",
             "japanese": "砂漠を美しくしているのは、どこかに井戸を隠しているということだ…"
           },
           {
             "french": "Ce que je vois là n'est qu'une écorce.",
-            "breakdown": "Ce que je vois = 私が見ているもの（目的語の関係代名詞）",
+            "breakdown": "Ce que je vois = 私が見ているもの（que は従属節内の目的語）。n'est qu' = 〜にすぎない（ne...que の限定）。une écorce = 外皮・殻。",
             "japanese": "ここに見えるのは外皮にすぎない。"
+          },
+          {
+            "french": "Ce qui est important, c'est ce qu'on ne voit pas.",
+            "breakdown": "Ce qui est important = 大切なもの（主語の ce qui）→ c'est ce qu'on ne voit pas = 見えないもの（目的語の ce que）。ce qui と ce que が一文中で対比的に使われている。",
+            "japanese": "大切なものは、目に見えないものだ。"
+          },
+          {
+            "french": "Ce dont j'ai peur, c'est la solitude.",
+            "breakdown": "Ce dont = 〜するところのもの（de を伴う関係代名詞 dont の先行詞付き形）。avoir peur de = 〜を恐れる → ce dont j'ai peur = 私が恐れるもの。",
+            "japanese": "私が恐れているのは、孤独だ。"
           }
         ]
       },
       {
         "title": "接続法半過去の文学的用法（続き）",
-        "explanation": "il semble que / il me semblait que の後に接続法が使われることがあります。文学的文体では接続法半過去が用いられます。",
+        "explanation": "接続法半過去は、主節が過去時制で従属節に接続法が要求される場面で、文学的文体に用いられます。il semble que, il me semblait que, bien que, sans que, pour que など接続法を誘発する表現の後に現れます。現代口語では接続法現在で代用されますが、サン＝テグジュペリの文体では格調高さを出すために一貫して接続法半過去が使われています。活用は不規則動詞が多く、être→fût, avoir→eût, pouvoir→pût, faire→fît などの形を覚える必要があります。",
         "examples": [
           {
             "french": "Il me semblait même qu'il n'y eût rien de plus fragile sur la Terre.",
-            "breakdown": "il me semblait que + 接続法半過去（eût）= 〜のように思えた。n'y eût rien = 何もなかった。",
+            "breakdown": "il me semblait que + 接続法半過去（eût）= 〜のように思えた。n'y eût rien de plus fragile = これより壊れやすいものは何もなかった。eût = avoir の接続法半過去。",
             "japanese": "地球上にこれより壊れやすいものは何もないように思えた。"
+          },
+          {
+            "french": "Je craignais qu'il ne fût trop tard.",
+            "breakdown": "craignais（craindre の半過去）+ que + fût（être の接続法半過去）。craindre que は接続法を要求する。ne は虚辞の ne（否定の意味はない）。",
+            "japanese": "もう遅すぎるのではないかと恐れた。"
+          },
+          {
+            "french": "Bien qu'il fît très froid, il continua sa route.",
+            "breakdown": "bien que + fît（faire の接続法半過去）= 〜にもかかわらず。bien que は常に接続法を要求する譲歩の接続詞。il faisait froid の接続法半過去形。",
+            "japanese": "とても寒かったにもかかわらず、彼は道を歩き続けた。"
+          },
+          {
+            "french": "Il fallait que je comprisse la raison de sa tristesse.",
+            "breakdown": "il fallait que + comprisse（comprendre の接続法半過去）。-isse は -re 動詞の接続法半過去語尾。現代語なら que je comprenne（接続法現在）。",
+            "japanese": "彼の悲しみの理由を理解しなければならなかった。"
           }
         ]
       }
@@ -11916,39 +12581,79 @@
     "grammar": [
       {
         "title": "条件法過去（conditionnel passé）— 実現しなかった仮定",
-        "explanation": "条件法過去は「〜だったのに（実際にはそうならなかった）」「〜できたはずだった」など、過去の非現実の仮定を表します。avoir/être の条件法現在 + 過去分詞で作ります。",
+        "explanation": "条件法過去は avoir/être の条件法現在＋過去分詞で作り、「〜だったのに（実際はそうならなかった）」「〜できたはずだった」など過去の非現実の仮定を表します。si＋大過去と組み合わせると「もし〜だったなら、〜だっただろうに」という構文になります。また、推量（〜したかもしれない）や丁寧な過去表現にも使われます。日本語では「〜できたのに」「〜すればよかった」に近い後悔のニュアンスを含むことが多く、条件法現在（現在の非現実）との時制の違いを意識することが重要です。",
         "examples": [
           {
             "french": "Et cependant ce qu'ils cherchent pourrait être trouvé dans une seule rose ou un peu d'eau...",
-            "breakdown": "pourrait être trouvé = 条件法現在受動態「見つけることができるのに」（可能性を示す条件法）",
+            "breakdown": "pourrait être trouvé = pouvoir の条件法現在 + 受動態不定詞（être trouvé）。「見つけることができるのに」。条件法が実際にはそうしない非現実性を示す。",
             "japanese": "それなのに、彼らが探しているものは、一本のバラや少しの水の中に見つけることができるのに…"
+          },
+          {
+            "french": "Si j'avais su, je serais resté auprès d'elle.",
+            "breakdown": "si j'avais su（savoir の大過去：もし知っていたら）→ je serais resté（rester の条件法過去：留まっていただろう）。過去の非現実仮定の典型構文。resté は主語に性数一致。",
+            "japanese": "もし知っていたら、彼女のそばにいただろうに。"
+          },
+          {
+            "french": "J'aurais dû la juger sur les actes et non sur les mots.",
+            "breakdown": "aurais dû（devoir の条件法過去）= 〜すべきだった（後悔）。la juger = 彼女を判断する。sur les actes = 行動で。non sur les mots = 言葉ではなく。",
+            "japanese": "言葉ではなく行動で彼女を判断すべきだった。"
+          },
+          {
+            "french": "Il aurait pu vivre heureux s'il n'avait pas quitté sa planète.",
+            "breakdown": "aurait pu（pouvoir の条件法過去）+ vivre heureux = 幸せに暮らせたのに。s'il n'avait pas quitté（quitter の大過去否定）= もし去らなかったなら。",
+            "japanese": "もし自分の星を去らなければ、彼は幸せに暮らせたかもしれない。"
           }
         ]
       },
       {
         "title": "接続法の用法 — il faut que / vouloir que",
-        "explanation": "il faut que（〜しなければならない）や vouloir que（〜してほしい）の後には接続法が必要です。意志・必要性・感情を表す表現に続きます。",
+        "explanation": "il faut que（〜しなければならない）や vouloir que（〜してほしい）の後には必ず接続法が続きます。これは「事実」ではなく「意志・必要性・願望」を表すためです。接続法を要求する主な表現：il faut que, vouloir que, souhaiter que, craindre que, avant que, pour que, bien que など。日本語には接続法がないため、「接続法＝主観・非確定の世界」というイメージを持つと理解しやすいです。文学的文体では接続法半過去（fît, pûtなど）が使われますが、現代口語では接続法現在で代用します。",
         "examples": [
           {
             "french": "Je ne voulais pas qu'il fît un effort.",
-            "breakdown": "voulais que + 接続法半過去（fît）= 彼に努力させたくなかった。文学的文体では接続法半過去を使用。",
+            "breakdown": "voulais（vouloir の半過去）+ que + fît（faire の接続法半過去）。vouloir que は接続法を要求。主節が過去時制なので文学的文体では接続法半過去を使用。現代語なら qu'il fasse。",
             "japanese": "私は彼に無理をさせたくなかった。"
           },
           {
             "french": "Il faut que tu tiennes ta promesse.",
-            "breakdown": "il faut que + 接続法現在（tiennes）= 約束を守らなければならない",
+            "breakdown": "il faut que + tiennes（tenir の接続法現在・tu 形）。tenir sa promesse = 約束を守る。il faut que は最もよく使う接続法の誘発表現。",
             "japanese": "約束を守ってくれなくちゃ。"
+          },
+          {
+            "french": "Je souhaite que tu sois heureux.",
+            "breakdown": "souhaite（souhaiter の現在形）+ que + sois（être の接続法現在・tu 形）。souhaiter que も接続法を要求する願望表現。直説法 es ではなく接続法 sois を使う。",
+            "japanese": "僕は君が幸せであることを願っている。"
+          },
+          {
+            "french": "Il fallait qu'il partît avant le lever du soleil.",
+            "breakdown": "il fallait que + partît（partir の接続法半過去）。主節が半過去の il fallait なので、文学的文体では接続法半過去。現代語なら qu'il parte（接続法現在）。",
+            "japanese": "彼は日の出前に出発しなければならなかった。"
           }
         ]
       },
       {
         "title": "quand on + 動詞 — 一般的真理の表現",
-        "explanation": "quand on... は「〜するとき（一般的に）」を意味し、普遍的な真理やことわざ的な表現で使われます。",
+        "explanation": "quand on＋動詞は「〜するとき（一般的に）」を意味し、普遍的な真理やことわざ的な表現で使われます。on は特定の誰かではなく「人間一般」を指し、現在形と組み合わせて時代や個人を超えた真理を述べます。『星の王子さま』では、キツネや王子がこの構文を使って人生の本質的な教訓を語ります。日本語の「〜するとき」と構造は似ていますが、on の一般性（誰にでも当てはまる）を意識することが大切です。lorsque（より文語的）や si（条件）との使い分けにも注意しましょう。",
         "examples": [
           {
             "french": "quand on rougit, ça signifie « oui », n'est-ce pas?",
-            "breakdown": "quand on rougit = 人が赤面するとき（一般論）→ ça signifie « oui » = それは「はい」を意味する",
+            "breakdown": "quand on rougit = 人が赤面するとき（一般論・現在形）。ça signifie = それは意味する。n'est-ce pas = 〜だよね（付加疑問）。",
             "japanese": "赤くなるということは「はい」という意味だよね？"
+          },
+          {
+            "french": "Quand on a fini de se mettre en ordre le matin, il faut faire la toilette de la planète.",
+            "breakdown": "quand on a fini de = 〜し終えたとき（複合過去で完了を表す）。se mettre en ordre = 身支度する。il faut = 〜しなければならない。faire la toilette = 手入れをする。",
+            "japanese": "朝の身支度が済んだら、星の手入れをしなければならない。"
+          },
+          {
+            "french": "Quand on veut faire de l'esprit, il arrive qu'on mente un peu.",
+            "breakdown": "quand on veut = 人が〜したいとき。faire de l'esprit = 気の利いたことを言う。il arrive que + 接続法 mente（mentir）= 〜することがある。",
+            "japanese": "気の利いたことを言おうとすると、少し嘘をついてしまうことがある。"
+          },
+          {
+            "french": "Quand le mystère est trop impressionnant, on n'ose pas désobéir.",
+            "breakdown": "quand le mystère est = 謎が〜であるとき。trop impressionnant = あまりに印象的な。oser + 不定詞 = あえて〜する。désobéir = 従わない。",
+            "japanese": "謎があまりに強烈なとき、人はあえて逆らおうとはしない。"
           }
         ]
       }
@@ -12621,54 +13326,79 @@
     "grammar": [
       {
         "title": "接続法の用法まとめ — 感情・意志・可能性",
-        "explanation": "接続法は、事実ではなく話者の主観（感情・意志・疑い・可能性）を表す節で使われます。第26章には多くの接続法の用例が見られます。",
+        "explanation": "接続法は事実ではなく話者の主観（感情・意志・疑い・可能性）を表す節で使われます。主な誘発表現：感情（je suis content que, j'ai peur que）、意志（vouloir que, ordonner que）、可能性（il est possible que）、目的（pour que, afin que）、譲歩（bien que, quoique）、否定前提（sans que, avant que）。第26章は別れの場面で感情表現が集中するため、接続法の用例が特に豊富です。日本語話者はまず「接続法を要求する表現リスト」を覚え、パターンとして定着させるのが効果的です。",
         "examples": [
           {
             "french": "sans que je pusse rien pour le retenir...",
-            "breakdown": "sans que + 接続法半過去（pusse）= 〜することなしに。「私が彼を引き止めるために何もできないまま」",
+            "breakdown": "sans que + 接続法半過去 pusse（pouvoir の接続法半過去）= 〜することなしに。sans que は常に接続法を要求。rien = 何も。pour le retenir = 彼を引き止めるために。",
             "japanese": "私が彼を引き止めるすべもなく…"
           },
           {
             "french": "C'est trop petit chez moi pour que je te montre où se trouve la mienne.",
-            "breakdown": "pour que + 接続法現在（montre）= 〜するために（目的の接続法）。「僕の星はあまりに小さいので見せることができない」",
+            "breakdown": "pour que + 接続法現在 montre（montrer の接続法現在）= 〜するために。trop...pour que = 〜するには…すぎる（結果の接続法）。chez moi = 僕の星では。",
             "japanese": "僕の星は小さすぎて、僕の星がどこにあるか君に見せることができない。"
+          },
+          {
+            "french": "J'ai peur que tu ne souffres en me regardant partir.",
+            "breakdown": "j'ai peur que + 接続法現在 souffres（souffrir の接続法現在・tu 形）。avoir peur que は感情表現で接続法を要求。ne は虚辞（否定の意味なし）。en me regardant = 私が去るのを見ながら。",
+            "japanese": "僕が去るのを見て君が苦しむのではないかと心配だ。"
+          },
+          {
+            "french": "Il voulait que je me souvienne de lui en regardant les étoiles.",
+            "breakdown": "voulait que + 接続法現在 me souvienne（se souvenir の接続法現在）。vouloir que は意志表現で接続法を要求。en regardant = 見るとき（ジェロンディフ）。",
+            "japanese": "彼は、星を見るたびに自分のことを思い出してほしかった。"
           }
         ]
       },
       {
         "title": "文学的比喩表現（style littéraire）— 直喩と暗喩",
-        "explanation": "サン＝テグジュペリは comme（〜のように）を使った直喩や、暗喩（メタファー）を多用します。第26章では別れの場面で特に詩的な比喩が集中しています。",
+        "explanation": "サン＝テグジュペリは comme（〜のように）を使った直喩（simile）と、comme を使わず直接たとえる暗喩（métaphore）を巧みに使い分けます。第26章の別れの場面では特に詩的な比喩が集中し、死・別れという重いテーマを美しく昇華しています。直喩では comme, tel que, semblable à などが目印になります。暗喩は目印がないため、文脈から比喩であることを読み取る力が必要です。日本語話者は「〜のような」と「〜だ」の違いとして理解すると分かりやすいでしょう。",
         "examples": [
           {
             "french": "Je sentais battre son coeur comme celui d'un oiseau qui meurt, quand on l'a tiré à la carabine.",
-            "breakdown": "comme celui d'un oiseau qui meurt = 死にゆく鳥の心臓のように（直喩）。celui = coeur を指す指示代名詞。",
+            "breakdown": "comme celui d'un oiseau qui meurt = 死にゆく鳥の心臓のように（直喩）。celui = coeur を指す指示代名詞（男性単数）。tirer à la carabine = 猟銃で撃つ。",
             "japanese": "猟銃で撃たれて死にゆく鳥のように、彼の心臓が鳴るのを感じた。"
           },
           {
             "french": "Il tomba doucement comme tombe un arbre.",
-            "breakdown": "comme tombe un arbre = 木が倒れるように（直喩・倒置）。静かで厳かな倒れ方。",
+            "breakdown": "comme tombe un arbre = 木が倒れるように（直喩・主語倒置で文学的効果）。doucement = 静かに。倒置により「倒れる」動作が強調される。pas は不要（音もなく静かに）。",
             "japanese": "木が倒れるように、彼は静かに倒れた。"
+          },
+          {
+            "french": "Tu auras des étoiles qui savent rire!",
+            "breakdown": "des étoiles qui savent rire = 笑うことのできる星（暗喩）。星が「笑う」という人間的属性を持つ擬人化。実際は「王子を思い出して微笑む」の暗喩。savoir + 不定詞 = 〜できる。",
+            "japanese": "君には、笑うことのできる星があるんだ！"
+          },
+          {
+            "french": "Ce sera comme si je t'avais donné des grelots qui savent rire.",
+            "breakdown": "comme si + 大過去 j'avais donné = まるで〜したかのように（直喩＋非現実の比較）。des grelots = 鈴。qui savent rire = 笑える（擬人化）。星を鈴にたとえる多層的比喩。",
+            "japanese": "まるで笑える鈴をあげたようなものだよ。"
           }
         ]
       },
       {
         "title": "未来形による約束と予言",
-        "explanation": "単純未来形は、未来の事実の他に、約束や予言を表すことがあります。第26章では小さな王子が語り手に「贈り物」としての星の意味を語る場面で多用されます。",
+        "explanation": "単純未来形（語幹＋-ai, -as, -a, -ons, -ez, -ont）は、未来の事実の他に、約束・予言・確信を表します。第26章では小さな王子が語り手に「贈り物」としての星の意味を語る場面で多用され、別れの悲しみを未来の希望に変える効果を生んでいます。日本語では未来を現在形で表すことが多い（「明日行く」）ため、未来形の使い分けに戸惑う学習者が多いです。約束の未来形は、話者の意志と確信が込められており、aller＋不定詞（近接未来）より格式が高く、宣言的なニュアンスがあります。",
         "examples": [
           {
             "french": "Toi, tu auras des étoiles comme personne n'en a...",
-            "breakdown": "tu auras = 君は持つことになる（未来形＝約束・予言）",
+            "breakdown": "tu auras = avoir の未来形（君は持つことになる＝約束）。comme personne n'en a = 誰も持っていないような。en = des étoiles を受ける中性代名詞。toi の前置で強調。",
             "japanese": "君は、誰も持っていないような星を持つことになる…"
           },
           {
             "french": "Tu auras, toi, des étoiles qui savent rire!",
-            "breakdown": "tu auras = 君は持つだろう（未来形）+ qui savent rire = 笑うことのできる（関係節）",
+            "breakdown": "tu auras = 未来形（約束）。toi は挿入された強調形。qui savent rire = 笑うことのできる（関係節）。未来形が約束と預言を兼ねる。",
             "japanese": "君には、笑うことのできる星があるんだ！"
           },
           {
             "french": "J'aurai l'air d'avoir mal...j'aurai un peu l'air de mourir.",
-            "breakdown": "j'aurai l'air = 〜のように見えるだろう（未来形）。avoir l'air de = 〜のように見える",
+            "breakdown": "j'aurai l'air = 〜のように見えるだろう（avoir l'air de の未来形）。d'avoir mal = 苦しんでいるように。de mourir = 死ぬように。未来の状況を予言的に語る。",
             "japanese": "僕は苦しそうに見えるだろう…少し死にそうに見えるだろう。"
+          },
+          {
+            "french": "Quand tu regarderas le ciel, la nuit, ce sera comme si toutes les étoiles riaient.",
+            "breakdown": "regarderas（regarder の未来形）= 君が見るとき。ce sera（être の未来形）= それは〜だろう。comme si + 半過去 riaient（rire）= まるで笑っているかのように。未来形と comme si の組み合わせ。",
+            "japanese": "夜、君が空を見上げるとき、全ての星が笑っているように思えるだろう。"
           }
         ]
       }
@@ -13518,39 +14248,74 @@
     "grammar": [
       {
         "title": "条件法過去（conditionnel passé）— 後悔と推量",
-        "explanation": "条件法過去（avoir/être の条件法現在 + 過去分詞）は、過去に実現しなかったことへの後悔や、過去の推量を表します。",
+        "explanation": "条件法過去（avoir/être の条件法現在＋過去分詞）は、過去に実現しなかったことへの後悔や、過去の推量を表します。「〜だっただろう」「〜できたはずなのに」というニュアンスです。また前未来形（futur antérieur：avoir/être の未来形＋過去分詞）と形が似ているため混同に注意が必要です。前未来は未来のある時点までに完了する動作を表し、推量のニュアンスを持つこともあります。日本語話者は「〜したはず」「〜だったろう」など、推量と後悔の文脈で使い分けを意識しましょう。",
         "examples": [
           {
             "french": "Il n'aura jamais pu l'attacher au mouton.",
-            "breakdown": "aura pu = 前未来形だが、推量のニュアンス。「口輪を羊に取り付けることは決してできなかっただろう」",
+            "breakdown": "aura pu = pouvoir の前未来形（avoir の未来形 aura + 過去分詞 pu）。推量のニュアンス：「きっと〜できなかっただろう」。l'attacher = 口輪を取り付ける。au mouton = 羊に。",
             "japanese": "口輪を羊に取り付けることは決してできなかっただろう。"
+          },
+          {
+            "french": "Il aurait fallu que j'oublie cette courroie.",
+            "breakdown": "aurait fallu（falloir の条件法過去）+ que + j'oublie（oublier の接続法現在）。「紐を忘れてしまうべきだったかもしれない」。後悔・推量の条件法過去。",
+            "japanese": "あの紐のことを忘れるべきだったのかもしれない。"
+          },
+          {
+            "french": "J'aurais dû ne pas l'écouter.",
+            "breakdown": "aurais dû（devoir の条件法過去）= 〜すべきだった（後悔）。ne pas l'écouter = 彼女の言うことを聞かない。否定の不定詞は ne pas を前に置く。",
+            "japanese": "彼女の言うことを聞くべきではなかった。"
+          },
+          {
+            "french": "Tout aurait pu être différent.",
+            "breakdown": "aurait pu（pouvoir の条件法過去）+ être différent = 違っていたかもしれない。過去の実現しなかった可能性への推量。tout = すべてが。",
+            "japanese": "すべてが違っていたかもしれない。"
           }
         ]
       },
       {
         "title": "tantôt...tantôt...（交替表現の復習と拡張）",
-        "explanation": "tantôt...tantôt... は「あるときは〜、またあるときは〜」という交替・動揺を表します。第27章では語り手の揺れ動く心情を表すのに効果的に使われています。",
+        "explanation": "tantôt...tantôt... は「あるときは〜、またあるときは〜」という交替・動揺を表す対句表現です。第27章では語り手の揺れ動く心情（希望と不安の間）を表すのに効果的に使われています。同様の交替表現として parfois...parfois...（時々〜、時々〜）、un jour...un autre jour...（ある日は〜、別の日は〜）もあります。tantôt は単独で「さっき・もうすぐ」の意味もありますが、対で使うと交替の意味になります。日本語の「〜たり〜たり」に近い表現です。",
         "examples": [
           {
             "french": "Tantôt je me dis: « Sûrement non! » ... Tantôt je me dis: « On est distrait une fois ou l'autre... »",
-            "breakdown": "tantôt...tantôt... = あるときは〜、あるときは〜。希望と不安の間で揺れ動く心理。",
+            "breakdown": "tantôt...tantôt... = あるときは〜、あるときは〜。je me dis = 自分に言い聞かせる（代名動詞）。sûrement non = きっと大丈夫。on est distrait = うっかりする。希望と不安の交替。",
             "japanese": "あるときは「きっと大丈夫！」と思い…あるときは「うっかりすることもある…」と思う。"
+          },
+          {
+            "french": "Tantôt je suis heureux, tantôt je suis triste en pensant à lui.",
+            "breakdown": "tantôt...tantôt... = あるときは〜、あるときは〜。heureux / triste = 幸せ / 悲しい（対照的な形容詞）。en pensant à = 〜のことを考えると（ジェロンディフ）。",
+            "japanese": "彼のことを考えると、あるときは幸せで、あるときは悲しい。"
+          },
+          {
+            "french": "Le ciel change tantôt de rose, tantôt de violet au crépuscule.",
+            "breakdown": "tantôt de rose, tantôt de violet = あるときはバラ色に、あるときは紫に。changer de = 〜に変わる。au crépuscule = 夕暮れに。色の交替を描写。",
+            "japanese": "夕暮れどき、空はあるときはバラ色に、あるときは紫に変わる。"
           }
         ]
       },
       {
         "title": "文体の総括 — 読者への直接呼びかけ",
-        "explanation": "第27章（最終章）では、語り手が読者に直接語りかけます。命令法（Regardez, Demandez-vous）や vous を使い、物語世界と読者の世界を結びつける文学的技法です。",
+        "explanation": "第27章（最終章）では、語り手が読者に直接語りかける文学的技法（apostrophe）が使われます。命令法の vous 形（Regardez, Demandez-vous, écrivez-moi）で読者に行動を促し、物語世界と読者の世界を結びつけます。この技法により、物語は「閉じた虚構」ではなく「読者に開かれた体験」になります。日本語話者にとって、文学作品での命令法は唐突に感じられるかもしれませんが、フランス文学では読者との親密な関係を築く伝統的な手法です。vous は丁寧さと距離感を同時に表現します。",
         "examples": [
           {
             "french": "Regardez le ciel. Demandez-vous: le mouton oui ou non a-t-il mangé la fleur?",
-            "breakdown": "Regardez（命令法・vous形）= 空を見てください。Demandez-vous = 自問してください。読者への直接的な呼びかけ。",
+            "breakdown": "Regardez（regarder の命令法・vous 形）= 見てください。Demandez-vous（se demander の命令法・vous 形）= 自問してください。a-t-il mangé = 倒置疑問の複合過去。読者への直接的な呼びかけ。",
             "japanese": "空を見てください。自分に問いかけてください。羊は花を食べたのか、食べなかったのか？"
           },
           {
             "french": "Ne me laissez pas tellement triste: écrivez-moi vite qu'il est revenu...",
-            "breakdown": "Ne me laissez pas（否定命令法）= 私をこんなに悲しいままにしないでください。écrivez-moi = 私に書いてください。",
+            "breakdown": "Ne me laissez pas（laisser の否定命令法・vous 形）= 〜のままにしないでください。tellement triste = こんなに悲しい。écrivez-moi = 私に書いてください。qu'il est revenu = 彼が戻ったと。",
             "japanese": "僕をこんなに悲しいままにしないでください。彼が戻ってきたと、早く手紙をください…"
+          },
+          {
+            "french": "Aucune grande personne ne comprendra jamais que ça a tellement d'importance!",
+            "breakdown": "aucune grande personne = どの大人も〜ない（否定の不定形容詞）。ne...jamais = 決して〜ない。que ça a tellement d'importance = それがこんなに重要だということを。感嘆符で読者の共感を促す。",
+            "japanese": "どんな大人も、それがどれほど大切かを決して理解しないだろう！"
+          },
+          {
+            "french": "C'est, pour moi, le plus beau et le plus triste paysage du monde.",
+            "breakdown": "C'est = これは〜だ。pour moi = 私にとって。le plus beau et le plus triste = 最も美しく最も悲しい（最上級の対比）。paysage du monde = 世界の風景。最終章の余韻を残す結びの一文。",
+            "japanese": "ここは、僕にとって、世界で最も美しく、最も悲しい場所だ。"
           }
         ]
       }
